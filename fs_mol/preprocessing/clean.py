@@ -97,13 +97,16 @@ def standardize(
 
     # drop NaN standard values
     df.drop(df[df.apply(clean_values, axis=1)].index, inplace=True)
+    print("After dropping NaNs", len(df.index))
 
     # drop anything that the molecular weight is too high
     df = df.loc[df.molecular_weight <= max_mol_weight]
+    print("After dropping high molecular weight", len(df.index))
 
     # remove duplicates
     # first need to just keep one of the duplicates if smiles and value are *exactly* the same
     df = df.drop_duplicates(subset=["canonical_smiles", "standard_value"], keep="first")
+    print("After dropping duplicates", len(df.index))
 
     if len(df) > 0:
 
@@ -121,8 +124,20 @@ def standardize(
         # close measurements are just noisy measurements of the same thing
         # NOTE: this currently scales badly so we only apply it to smaller dataframes,
         # larger assays are removed from the dataset in later stages.
-        if len(df) < 5000:
-            df = remove_far_duplicates(df)
+
+        # I am finding this not working, so we replace it with our own implementation
+        # if len(df) < 5000:
+        #     df = remove_far_duplicates(df)
+        #     print("After dropping far duplicates", len(df.index))
+
+        # If canonical smile appears more than once. It is with two different standard values
+        # But if it is the same active/inactive classification we can keep one
+        df = df.drop_duplicates(subset=["canonical_smiles", "active"], keep="first")
+        
+        # If a canonical smile appears more than once, we drop both because it is classified active and inactive
+        df = df.drop_duplicates(subset=["canonical_smiles"], keep=False)
+        print("After dropping far duplicates--our version", len(df.index))
+
 
         df["max_num_atoms"] = df.num_atoms.max()
         df["max_molecular_weight"] = df.molecular_weight.max()
