@@ -336,7 +336,7 @@ def standardize_smiles(x: pd.DataFrame, taut_canonicalization: bool = True) -> p
             return Chem.MolToSmiles(standardized_mol), mol_weight, num_atoms
         except Exception:
             # return a fail as None (downstream filtering)
-            print("FAIL")
+            print("FAILED TO STANDARDIZE")
             return None
 
     standard = df["smiles"].apply(lambda row: standardize_smile(row))
