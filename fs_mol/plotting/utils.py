@@ -9,10 +9,11 @@ from glob import glob
 
 from typing import Tuple, List, Optional, Callable, Dict, Iterable, Union
 
-from pandas.core.base import DataError
+# from pandas.core.base import DataError
 
 
-TRAIN_SIZES_TO_COMPARE = [16, 32, 64, 128, 256]
+# MODIFIED FROM ORIGINAL CODE
+TRAIN_SIZES_TO_COMPARE = [16]       # mod
 
 plt.rcParams.update(
     {
@@ -201,12 +202,16 @@ def process_file(
         for val in select_values:
             if summary_dfs[val].empty:
                 summary_dfs[val] = pd.DataFrame(columns=results_df.columns)
-            summary_dfs[val] = summary_dfs[val].append(
-                results_df.loc[results_df[grouping_column] == val], ignore_index=True
+            # Rewrite using "concat"
+            summary_dfs[val] = pd.concat(
+                [summary_dfs[val], results_df.loc[results_df[grouping_column] == val]]
             )
+            # summary_dfs[val] = summary_dfs[val].append(
+            #     results_df.loc[results_df[grouping_column] == val], ignore_index=True
+            # )
 
         print(f"Summarised results for test on assay {assay}")
-    except DataError as e:
+    except ValueError as e:
         print(f"Failed to process {file}, likely empty: {e}")
 
     return summary_dfs
@@ -520,7 +525,7 @@ def merge_loaded_dfs(
         merge_on.append("EC_super_class")
         merged_df = (
             merged_df.groupby(["TASK_ID"])
-            .mean()
+            .mean(numeric_only=True)
             .reset_index()
             .merge(merged_df_without_fracs, on=merge_on)
             # .astype({"EC_super_class": int})
@@ -528,7 +533,7 @@ def merge_loaded_dfs(
     else:
         merged_df = (
             merged_df.groupby(["TASK_ID"])
-            .mean()
+            .mean(numeric_only=True)
             .reset_index()
             .merge(merged_df_without_fracs, on=merge_on)
         )

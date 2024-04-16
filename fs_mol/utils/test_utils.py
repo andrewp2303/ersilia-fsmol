@@ -23,7 +23,6 @@ from fs_mol.utils.cli_utils import set_seed
 from fs_mol.utils.logging import prefix_log_msgs, set_up_logging
 from fs_mol.utils.metrics import BinaryEvalMetrics
 
-
 logger = logging.getLogger(__name__)
 
 
@@ -73,10 +72,12 @@ def add_eval_cli_args(parser: argparse.ArgumentParser) -> None:
 
     parser.add_argument("--seed", type=int, default=0, help="Random seed to use.")
 
+    # MODIFIED FROM ORIGINAL FS_MOL
     parser.add_argument(
         "--train-sizes",
         type=json.loads,
-        default=[16, 32, 64, 128, 256],
+        # default=[16, 32, 64, 128, 256],
+        default=[16],       # mod
         help="JSON list of number of training points to sample.",
     )
 
@@ -97,7 +98,9 @@ def set_up_dataset(args: argparse.Namespace, **kwargs):
         ), "If DATA_PATH is a directory it must contain test/ sub-directory for evaluation."
 
         return FSMolDataset.from_directory(
-            args.DATA_PATH[0], task_list_file=RichPath.create(args.task_list_file), **kwargs
+            args.DATA_PATH[0], 
+            # task_list_file=RichPath.create(args.task_list_file), 
+            **kwargs
         )
     else:
         return FSMolDataset(test_data_paths=[RichPath.create(p) for p in args.DATA_PATH], **kwargs)

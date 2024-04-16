@@ -122,12 +122,16 @@ class FSMolTask:
                 else:
                     adjacency_lists.append(np.zeros(shape=(0, 2), dtype=np.int64))
 
+            # MODIFIED FROM ORIGINAL CODE
             samples.append(
                 MoleculeDatapoint(
                     task_name=get_task_name_from_path(path),
-                    smiles=raw_sample["SMILES"],
-                    bool_label=bool(float(raw_sample["Property"])),
-                    numeric_label=float(raw_sample.get("RegressionProperty") or "nan"),
+                    smiles=raw_sample["smiles"],        # mod
+                    bool_label=bool(float(raw_sample["active"])), # mod
+                    numeric_label=float(raw_sample.get("pchembl_value") or "nan"), # mod
+                    # smiles=raw_sample["SMILES"],
+                    # bool_label=bool(float(raw_sample["Property"])),
+                    # numeric_label=float(raw_sample.get("RegressionProperty") or "nan"),
                     fingerprint=fingerprint,
                     descriptors=descriptors,
                     graph=GraphData(
