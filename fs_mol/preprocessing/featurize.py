@@ -59,7 +59,7 @@ def get_filenames(input_dir: str) -> List[str]:
     return glob(os.path.join(input_dir, "CHEMBL*.csv"), recursive=True)
 
 
-def filter_assays(summary: str, args) -> List[str]:
+def filter_assays(summary: str, args) -> pd.DataFrame:
 
     """
     Perform a filter on assays using the summary csv
@@ -83,11 +83,13 @@ def filter_assays(summary: str, args) -> List[str]:
         & (sdf["cleaned_size"] <= max_size)
     ]
 
+    # MODIFIED BY PHEVOS
     # please note this syntax breaks if pandas version < 1.2.4
-    if args.sapiens_only:
-        sdf = sdf.loc[sdf["assay_organism"].str.contains("sapiens", regex=False, na=False)]
+    # if args.sapiens_only:
+        # sdf = sdf.loc[sdf["assay_organism"].str.contains("sapiens", regex=False, na=False)]
 
-    return sdf["chembl_id"].tolist()
+    # return sdf["chembl_id"].tolist()
+    return sdf
 
 
 def run(args):
