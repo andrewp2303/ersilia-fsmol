@@ -333,6 +333,10 @@ class StratifiedTaskSampler(TaskSampler):
         self._allow_smaller_test = allow_smaller_test
 
     def sample(self, task: FSMolTask, seed: int = 0) -> FSMolTaskSample:
+        # MODIFIED TO OUTPUT THE TASK NAME
+        logger.info(
+            f"{task.name}:"
+        )
         # Just defer to the sklearn splitter:
         pos_samples, neg_samples = task.get_pos_neg_separated()
         num_neg_samples = len(neg_samples)

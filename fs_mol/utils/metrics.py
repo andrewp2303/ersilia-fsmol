@@ -73,7 +73,8 @@ def avg_metrics_over_tasks(
     aggregated_over_tasks = {}
     for metric_field in dataclasses.fields(BinaryEvalMetrics):
         metric_values = [x.get(metric_field.name)[0] for _, x in aggregated_metrics.items()]
-        aggregated_over_tasks[metric_field.name] = (np.mean(metric_values), np.std(metric_values))
+        # MODIFIED TO IGNORE NAN
+        aggregated_over_tasks[metric_field.name] = (np.nanmean(metric_values), np.nanstd(metric_values))
 
     return aggregated_over_tasks
 

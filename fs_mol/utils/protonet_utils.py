@@ -244,7 +244,9 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
                 generic_name = our_name[len(gnn_feature_extractor_param_name) :]
                 if generic_name.startswith("readout_layer."):
                     generic_name = f"readout{generic_name[len('readout_layer'):]}"
-                our_param.copy_(gnn_model_state_dict[generic_name])
+                # MODIFIED (and commented out old version)
+                our_param.copy_(gnn_model_state_dict[our_name])
+                # our_param.copy_(gnn_model_state_dict[generic_name])
                 logger.debug(f"I: Loaded parameter {our_name} from {generic_name} in {path}.")
                 gnn_params.append(our_param)
             else:
