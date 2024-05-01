@@ -354,3 +354,4 @@ MigrationBackup/
 .DS_Store
 *.pt
 *.pkl
+*.csv

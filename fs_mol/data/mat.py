@@ -6,6 +6,8 @@ from typing import Any, Dict, List, Tuple
 import numpy as np
 import torch
 from dpu_utils.utils import RichPath
+import sys
+from pyprojroot import here as project_root
 
 from fs_mol.data import (
     FSMolBatcher,

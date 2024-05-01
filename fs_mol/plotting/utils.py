@@ -279,7 +279,7 @@ def collate_experiment_results(
             .agg(lambda x: np.nan if x.isnull().all() else x.dropna())
             .reset_index()
         )
-        merged_df = merged_df.groupby(["TASK_ID"]).mean().reset_index().merge(rdf, on="TASK_ID")
+        merged_df = merged_df.groupby(["TASK_ID"]).mean(numeric_only=True).reset_index().merge(rdf, on="TASK_ID")
 
     return merged_df
 

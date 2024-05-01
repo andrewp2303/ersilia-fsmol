@@ -113,7 +113,7 @@ python fs_mol/maml_train.py /path/to/data
 Evaluation is run as: 
 
 ```bash
-python fs_mol/maml_test.py /path/to/data --trained_model /path/to/gnn-maml-checkpoint
+python fs_mol/maml_test.py /path/to/gnn-maml-checkpoint /path/to/data
 ```
 
 ### GNN-MT pre-training and evaluation
