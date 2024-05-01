@@ -222,8 +222,6 @@ def load_model_weights(
     quiet: bool = False,
     device: Optional[torch.device] = None,
 ) -> None:
-    # THIS WAS COMMENTED OUT ON SUPERCLOUD
-    # device = device or torch.device("cpu")
     checkpoint = torch.load(path, map_location=device)
     model.load_model_state(checkpoint, load_task_specific_weights, quiet)
 
