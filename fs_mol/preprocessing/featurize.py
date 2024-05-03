@@ -77,7 +77,8 @@ def filter_assays(summary: str, args) -> pd.DataFrame:
         filter_balance = (0.0, 100.0)
 
     sdf = sdf.loc[
-        (sdf["cleaned_size"] >= args.min_size)
+        # MODIFIED TO BE >= MIN.SIZE + 2 because this is ultimately what we need
+        (sdf["cleaned_size"] >= args.min_size + 2)
         & (sdf["percentage_pos"] >= min(filter_balance))
         & (sdf["percentage_pos"] <= max(filter_balance))
         & (sdf["cleaned_size"] <= max_size)
