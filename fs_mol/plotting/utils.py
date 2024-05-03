@@ -672,7 +672,8 @@ def plot_task_performances_by_id(
         f"AUPRC improvement over random classification: $|T_s|$ = {support_set_size}"
     )
 
-    assay_id_to_improv_ax.set_xticklabels(merged_df["TASK_ID"][0:-1:4], Rotation=90)
+    assay_id_to_improv_ax.set_xticklabels(merged_df["TASK_ID"][0:-1:4])
+    assay_id_to_improv_ax.tick_params(axis="x", rotation=90)
 
     assay_id_to_improv_ax.set_xticks(merged_df["TASK_ID"][0:-1:4])
 
