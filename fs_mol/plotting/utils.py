@@ -600,8 +600,8 @@ def plot_task_performances_by_id(
     assay_id_to_improv_ax = ax[1]
 
     # Draw baseline diagonal:
-    n = np.linspace(0, 1.0, 100)
-    frac_pos_to_auprc_ax.plot(n, n, color="black")
+    # n = np.linspace(0, 1.0, 100)
+    # frac_pos_to_auprc_ax.plot(n, n, color="black")
 
     for i, model_name in enumerate(model_summaries.keys()):
         color = plt.get_cmap("plasma").colors[i * 40 + 10]
