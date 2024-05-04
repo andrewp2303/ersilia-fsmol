@@ -563,10 +563,11 @@ def load_data(
 def expand_values(
     df: pd.DataFrame,
     model_summaries: Dict[str, str],
+    train_sizes: List[int] = TRAIN_SIZES_TO_COMPARE,
 ) -> pd.DataFrame:
 
     all_df = df.copy()
-    for num_samples in TRAIN_SIZES_TO_COMPARE:
+    for num_samples in train_sizes:
         for model_name in model_summaries.keys():
             all_df[f"{num_samples}_train ({model_name}) std"] = all_df.apply(
                 lambda row: get_number_from_val_plusminus_error(
@@ -581,7 +582,7 @@ def expand_values(
                 axis=1,
             )
 
-    return calculate_delta_auprc(all_df, model_summaries)
+    return calculate_delta_auprc(all_df, model_summaries, train_samples_to_compare=train_sizes)
 
 
 def plot_task_performances_by_id(
@@ -931,11 +932,12 @@ def box_plot(
 def get_aggregates_across_sizes(
     df: pd.DataFrame,
     model_summaries: Dict[str, str],
+    train_sizes: List[int] = TRAIN_SIZES_TO_COMPARE,
 ) -> pd.DataFrame:
 
     full_df = None
 
-    for train_size in TRAIN_SIZES_TO_COMPARE:
+    for train_size in train_sizes:
 
         aggregation = aggregate_by_class(
             df, model_summaries, classes=list(df.organism_taxonomy_l1.unique()), num_samples=train_size
@@ -989,6 +991,7 @@ def plot_by_size(
     plot_all_classes: bool = False,
     highlight_class: Optional[str] = None,
     plot_output_dir: Optional[str] = None,
+    train_sizes: List[int] = TRAIN_SIZES_TO_COMPARE,
 ):
     """
     Plotting function to create the aggregation-by-support-set-size plot.
@@ -1057,7 +1060,7 @@ def plot_by_size(
         for cls, i in plot_dict.items():
             ls, lw, label, alpha = get_style(cls, model_name)
             ax.errorbar(
-                TRAIN_SIZES_TO_COMPARE,
+                train_sizes,
                 a.values[i],
                 v.values[i],
                 label=label,
@@ -1073,16 +1076,13 @@ def plot_by_size(
     ax.legend(loc="best", ncol=2)
     ax.set_ylabel("$\Delta$ AUPRC")
     ax.set_xlabel("$|\mathcal{T}_{u, support}|$")
-    ax.set_xticks(TRAIN_SIZES_TO_COMPARE)
-    ax.set_xticklabels(TRAIN_SIZES_TO_COMPARE)
+    ax.set_xticks(train_sizes)
+    ax.set_xticklabels(train_sizes)
     ax.set_ylim([0.0, 0.35])
     plt.grid(True, color="grey", alpha=0.3, linestyle="--")
 
     if plot_output_dir is not None:
-        plt.savefig(
-            os.path.join(plot_output_dir, f"comparison_plot_hc_{highlight_class}.png"),
-            bbox_inches="tight",
-        )
+        plt.savefig(f"comparison_plot_hc_{highlight_class}.png", bbox_inches="tight")
 
     # need to do this to get autorank to work (does not work by setting in notebook)
     plt.rcParams.update(

@@ -112,7 +112,7 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--support-set-sizes",
-        default=[16, 32, 64, 128, 256],
+        default=[4,8,16],
         type=lambda s: [int(v) for v in s.split(",")],
         help="Values to group results for.",
     )
