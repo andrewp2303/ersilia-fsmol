@@ -235,11 +235,14 @@ def collate_experiment_results(
     # across all number of training points
     df_list = []
     # these are here for back compatibility
+
+    # ADD num_test
     frac_cols = [
         "fraction_positive_train",
         "fraction_positive_test",
         "fraction_positive_train_std",
         "fraction_positive_test_std",
+        "num_test"
     ]
 
     for num in support_set_size:
@@ -477,7 +480,7 @@ def load_model_results(
     df = pd.read_csv(file)
 
     # keep only columns we need (statistics + results at requested train sizes)
-    columns_to_keep = ["TASK_ID", "fraction_positive_train", "fraction_positive_test"]
+    columns_to_keep = ["TASK_ID", "fraction_positive_train", "fraction_positive_test", "num_test"]
     if "organism_taxonomy_l1" in df.columns:
         columns_to_keep.append("organism_taxonomy_l1")
     columns_to_keep.extend(f"{train_size}_train" for train_size in train_sizes)
@@ -512,12 +515,13 @@ def merge_loaded_dfs(
     merged_df = df_list[0]
     for df in df_list[1:]:
         merged_df = merged_df.merge(
-            df, how="outer", on=["TASK_ID", "fraction_positive_train", "fraction_positive_test"]
+            # ADDED num_test
+            df, how="outer", on=["TASK_ID", "fraction_positive_train", "fraction_positive_test", "num_test"]
         )
 
     # Average out the columns on fractions of positives, which may have minor differences between runs due
     # to small differences in (stratified) sampling in some corner cases:
-    frac_cols = ["fraction_positive_train", "fraction_positive_test"]
+    frac_cols = ["fraction_positive_train", "fraction_positive_test", "num_test"]
     merged_df_without_fracs = (
         merged_df.drop(columns=frac_cols)
         .groupby("TASK_ID")
@@ -590,7 +594,7 @@ def plot_task_performances_by_id(
     model_summaries: Dict[str, str],
     support_set_size: int = 16,
     plot_output_dir: str = None,
-    highlight_class: Optional[str] = None,
+    # highlight_class: Optional[str] = None,
 ) -> None:
 
     markers = ["s", "P", "*", "X", "^", "o", "D", "p"]
@@ -602,7 +606,8 @@ def plot_task_performances_by_id(
     ax.flatten()
 
     frac_pos_to_auprc_ax = ax[0]
-    assay_id_to_improv_ax = ax[1]
+    num_test_to_auprc_ax = ax[1]
+    # assay_id_to_improv_ax = ax[1]
 
     # Draw baseline diagonal:
     # n = np.linspace(0, 1.0, 100)
@@ -624,44 +629,53 @@ def plot_task_performances_by_id(
             marker=markers[i],
         )
 
+        num_test_to_auprc_ax.scatter(
+            merged_df["num_test"],
+            model_auprcs,
+            s=20,
+            marker=markers[i],
+            label=model_name,
+            color=color,
+            alpha=0.3,
+        )
         # select section to highlight
-        if highlight_class is not None:
-            hdf = merged_df[merged_df.organism_taxonomy_l1 == highlight_class].index
-            nhdf = merged_df[merged_df.organism_taxonomy_l1 != highlight_class].index
-            highlight_class_str = f", {highlight_class}"
-        else:
-            hdf = merged_df.index
-            nhdf = None
-            highlight_class_str = ""
+        # if highlight_class is not None:
+        #     hdf = merged_df[merged_df.organism_taxonomy_l1 == highlight_class].index
+        #     nhdf = merged_df[merged_df.organism_taxonomy_l1 != highlight_class].index
+        #     highlight_class_str = f", {highlight_class}"
+        # else:
+        #     hdf = merged_df.index
+        #     nhdf = None
+        #     highlight_class_str = ""
 
         # Compute improvement over weighted random coinflip:
-        model_auprc_diff_to_random = (
-            merged_df.apply(
-                lambda row: get_number_from_val_plusminus_error(
-                    row[f"{support_set_size}_train ({model_name})"]
-                ),
-                axis=1,
-            ).fillna(0)
-            - frac_positives
-        )
-        assay_id_to_improv_ax.scatter(
-            merged_df.iloc[hdf]["TASK_ID"],
-            model_auprc_diff_to_random.iloc[hdf],
-            s=100,
-            marker="+",
-            label=f"{model_name}{highlight_class_str}",
-            color=color,
-        )
-        if nhdf is not None:
-            assay_id_to_improv_ax.scatter(
-                merged_df.iloc[nhdf]["TASK_ID"],
-                model_auprc_diff_to_random.iloc[nhdf],
-                s=20,
-                marker=markers[i],
-                label=f"{model_name}",
-                color=color,
-                alpha=0.3,
-            )
+        # model_auprc_diff_to_random = (
+        #     merged_df.apply(
+        #         lambda row: get_number_from_val_plusminus_error(
+        #             row[f"{support_set_size}_train ({model_name})"]
+        #         ),
+        #         axis=1,
+        #     ).fillna(0)
+        #     - frac_positives
+        # )
+        # assay_id_to_improv_ax.scatter(
+        #     merged_df.iloc[hdf]["TASK_ID"],
+        #     model_auprc_diff_to_random.iloc[hdf],
+        #     s=100,
+        #     marker="+",
+        #     label=f"{model_name}{highlight_class_str}",
+        #     color=color,
+        # )
+        # if nhdf is not None:
+        #     assay_id_to_improv_ax.scatter(
+        #         merged_df.iloc[nhdf]["TASK_ID"],
+        #         model_auprc_diff_to_random.iloc[nhdf],
+        #         s=20,
+        #         marker=markers[i],
+        #         label=f"{model_name}",
+        #         color=color,
+        #         alpha=0.3,
+        #     )
 
     frac_pos_to_auprc_ax.set_xlabel("fraction positive points")
     frac_pos_to_auprc_ax.set_ylabel(f"Average precision with {support_set_size} train points")
@@ -669,22 +683,27 @@ def plot_task_performances_by_id(
     frac_pos_to_auprc_ax.set_xlim([0.29, 0.51])
     frac_pos_to_auprc_ax.set_title(f"Class imbalance vs. AUPRC: $|T_s|$ = {support_set_size}")
 
-    assay_id_to_improv_ax.set_xlabel("TASK ID")
-    assay_id_to_improv_ax.set_ylabel(f"AUPRC gain with {support_set_size} train points")
-    assay_id_to_improv_ax.set_ylim([-0.01, 0.42])
-    assay_id_to_improv_ax.legend()
-    assay_id_to_improv_ax.set_title(
-        f"AUPRC improvement over random classification: $|T_s|$ = {support_set_size}"
-    )
+    num_test_to_auprc_ax.set_xlabel("Number of test points")
+    num_test_to_auprc_ax.set_ylabel(f"Average precision with {support_set_size} train points")
+    num_test_to_auprc_ax.legend()
+    num_test_to_auprc_ax.set_title(f"Test set size vs. AUPRC: $|T_s|$ = {support_set_size}")
 
-    assay_id_to_improv_ax.set_xticklabels(merged_df["TASK_ID"][0:-1:4])
-    assay_id_to_improv_ax.tick_params(axis="x", rotation=90)
+    # assay_id_to_improv_ax.set_xlabel("TASK ID")
+    # assay_id_to_improv_ax.set_ylabel(f"AUPRC gain with {support_set_size} train points")
+    # assay_id_to_improv_ax.set_ylim([-0.01, 0.42])
+    # assay_id_to_improv_ax.legend()
+    # assay_id_to_improv_ax.set_title(
+    #     f"AUPRC improvement over random classification: $|T_s|$ = {support_set_size}"
+    # )
 
-    assay_id_to_improv_ax.set_xticks(merged_df["TASK_ID"][0:-1:4])
+    # assay_id_to_improv_ax.set_xticklabels(merged_df["TASK_ID"][0:-1:4])
+    # assay_id_to_improv_ax.tick_params(axis="x", rotation=90)
+
+    # assay_id_to_improv_ax.set_xticks(merged_df["TASK_ID"][0:-1:4])
 
     # CHANGED BECAUSE SUPERCLOUD WAS BUGGING
     if plot_output_dir is not None:
-        plt.savefig(f"model_comparison_{support_set_size}{highlight_class_str}.png")
+        plt.savefig(f"model_comparison_{support_set_size}.png")
 
     plt.show(fig)
     plt.close(fig)
