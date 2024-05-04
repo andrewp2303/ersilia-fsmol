@@ -73,6 +73,7 @@ def run_on_batches(
     for batch_features, batch_labels in zip(batches, batch_labels):
         # Compute task loss
         batch_logits = model(batch_features)
+        print(batch_logits)
         batch_loss = model.compute_loss(batch_logits, batch_labels)
         # divide this batch loss by the total number of accumulation steps
         batch_loss = batch_loss / num_gradient_accumulation_steps
@@ -222,6 +223,44 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
             for name, param in optimizer_weights.items():
                 self.optimizer.state_dict()[name].copy_(param)
 
+    def load_model_pn_weights(
+        self,
+        path: str,
+        device: Optional[torch.device] = None,
+    ):
+        pretrained_state_dict = torch.load(path, map_location=device)
+
+        pn_model_state_dict = pretrained_state_dict["model_state_dict"]
+        our_state_dict = self.state_dict()
+
+        # Load parameters (names specialised to GNNMultitask model), but also collect
+        # parameters for GNN parts / rest, so that we can create a LR warmup schedule:
+        pn_params, other_params = [], []
+        for our_name, our_param in our_state_dict.items():
+            if our_name in pn_model_state_dict:
+                our_param.copy_(pn_model_state_dict[our_name])
+                # our_param.copy_(gnn_model_state_dict[generic_name])
+                logger.debug(f"I: Loaded parameter {our_name} from {our_name} in {path}.")
+                pn_params.append(our_param)
+            else:
+                logger.debug(f"I: Not loading parameter {our_name}.")
+                other_params.append(our_param)
+
+        self.optimizer = torch.optim.Adam(
+            [
+                {"params": other_params, "lr": self.config.learning_rate},
+                {"params": pn_params, "lr": self.config.learning_rate / 10},
+            ],
+        )
+
+        self.lr_scheduler = torch.optim.lr_scheduler.LambdaLR(
+            optimizer=self.optimizer,
+            lr_lambda=[
+                partial(linear_warmup, warmup_steps=0),  # for all params
+                partial(linear_warmup, warmup_steps=100),  # for loaded GNN params
+            ],
+        )
+
     def load_model_gnn_weights(
         self,
         path: str,
@@ -320,7 +359,6 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
 
             task_batch_losses: List[float] = []
             task_batch_metrics: List[BinaryEvalMetrics] = []
-            logger.info("STEP", step)
             for _ in range(self.config.tasks_per_batch):
                 task_sample = next(train_task_sample_iterator)
                 train_task_sample = torchify(task_sample, device=device)
@@ -338,7 +376,6 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
             if self.config.clip_value is not None:
                 torch.nn.utils.clip_grad_norm_(self.parameters(), self.config.clip_value)
             self.optimizer.step()
-            logger.info("COMPLETED UPDATE STEP")
             if self.lr_scheduler is not None:
                 self.lr_scheduler.step()
 

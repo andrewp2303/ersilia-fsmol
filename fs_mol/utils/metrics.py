@@ -39,10 +39,16 @@ def compute_binary_task_metrics(predictions: List[float], labels: List[float]) -
         pred >= 0.5 for pred in predictions
     ]  # Normalise probabilities to bool values
 
-    if np.sum(labels) == len(labels) or np.sum(labels) == 0:
+    print("------------------------------------------------------")
+    print(f"Labels: {labels}")
+    print(f"Predictions: {predictions}")
+    print(f"Predictions contain nan: {np.isnan(predictions).any()}")
+    if np.sum(labels) == len(labels) or np.sum(labels) == 0 or np.isnan(predictions).any():
         roc_auc = 0.0
+        average_precision = 0.0
     else:
         roc_auc = roc_auc_score(labels, predictions)
+        average_precision = average_precision_score(labels, predictions)
 
     return BinaryEvalMetrics(
         size=len(predictions),
@@ -52,7 +58,7 @@ def compute_binary_task_metrics(predictions: List[float], labels: List[float]) -
         prec=precision_score(labels, normalized_predictions, zero_division=1),
         recall=recall_score(labels, normalized_predictions, zero_division=1),
         roc_auc=roc_auc,
-        avg_precision=average_precision_score(labels, predictions),
+        avg_precision=average_precision,
         kappa=cohen_kappa_score(labels, normalized_predictions),
     )
 
