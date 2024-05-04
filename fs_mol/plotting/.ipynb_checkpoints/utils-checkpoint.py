@@ -24,6 +24,8 @@ plt.rcParams.update(
     }
 )
 
+## IMPORTANT: CHANGED ALL MENTIONS OF EC_SUPER_CLASS TO organism_taxonomy_l1 SO THAT WE CAN GET RESULTS THAT ARE SEGREGATED BY ORGANISM TYPE!!!
+
 
 def default_taskname_extractor_fn(filename: str) -> str:
     filename = os.path.basename(filename)
@@ -474,8 +476,8 @@ def load_model_results(
 
     # keep only columns we need (statistics + results at requested train sizes)
     columns_to_keep = ["TASK_ID", "fraction_positive_train", "fraction_positive_test"]
-    if "EC_super_class" in df.columns:
-        columns_to_keep.append("EC_super_class")
+    if "organism_taxonomy_l1" in df.columns:
+        columns_to_keep.append("organism_taxonomy_l1")
     columns_to_keep.extend(f"{train_size}_train" for train_size in train_sizes)
     todrop = list(set(df.columns) - set(columns_to_keep))
     df.drop(columns=todrop, inplace=True)
@@ -521,14 +523,14 @@ def merge_loaded_dfs(
         .reset_index()
     )
     merge_on = ["TASK_ID"]
-    if "EC_super_class" in merged_df.columns:
-        merge_on.append("EC_super_class")
+    if "organism_taxonomy_l1" in merged_df.columns:
+        merge_on.append("organism_taxonomy_l1")
         merged_df = (
             merged_df.groupby(["TASK_ID"])
             .mean(numeric_only=True)
             .reset_index()
             .merge(merged_df_without_fracs, on=merge_on)
-            # .astype({"EC_super_class": int})
+            # .astype({"organism_taxonomy_l1": int})
         )
     else:
         merged_df = (
@@ -600,8 +602,8 @@ def plot_task_performances_by_id(
     assay_id_to_improv_ax = ax[1]
 
     # Draw baseline diagonal:
-    n = np.linspace(0, 1.0, 100)
-    frac_pos_to_auprc_ax.plot(n, n, color="black")
+    # n = np.linspace(0, 1.0, 100)
+    # frac_pos_to_auprc_ax.plot(n, n, color="black")
 
     for i, model_name in enumerate(model_summaries.keys()):
         color = plt.get_cmap("plasma").colors[i * 40 + 10]
@@ -621,8 +623,8 @@ def plot_task_performances_by_id(
 
         # select section to highlight
         if highlight_class is not None:
-            hdf = merged_df[merged_df.EC_super_class == highlight_class].index
-            nhdf = merged_df[merged_df.EC_super_class != highlight_class].index
+            hdf = merged_df[merged_df.organism_taxonomy_l1 == highlight_class].index
+            nhdf = merged_df[merged_df.organism_taxonomy_l1 != highlight_class].index
             highlight_class_str = f", {highlight_class}"
         else:
             hdf = merged_df.index
@@ -672,19 +674,16 @@ def plot_task_performances_by_id(
         f"AUPRC improvement over random classification: $|T_s|$ = {support_set_size}"
     )
 
-    assay_id_to_improv_ax.set_xticklabels(merged_df["TASK_ID"][0:-1:4], Rotation=90)
+    assay_id_to_improv_ax.set_xticklabels(merged_df["TASK_ID"][0:-1:4])
+    assay_id_to_improv_ax.tick_params(axis="x", rotation=90)
 
     assay_id_to_improv_ax.set_xticks(merged_df["TASK_ID"][0:-1:4])
+    
+    if plot_output_dir is not None:
+        plt.savefig(f"model_comparison_{support_set_size}{highlight_class_str}.png")
 
     plt.show(fig)
     plt.close(fig)
-
-    if plot_output_dir is not None:
-        plt.savefig(
-            os.path.join(
-                plot_output_dir, f"model_comparison_{support_set_size}{highlight_class_str}.png"
-            )
-        )
 
 
 def aggregate_by_class(
@@ -698,7 +697,7 @@ def aggregate_by_class(
     aggregation = None
     for highlight_class in classes:
 
-        hdf = ecmerged[ecmerged.EC_super_class == highlight_class].index
+        hdf = ecmerged[ecmerged.organism_taxonomy_l1 == highlight_class].index
         aggresults = pd.DataFrame()
         aggerrors = pd.DataFrame()
 
@@ -888,7 +887,7 @@ def make_box_plot(
 
     if plot_output_dir is not None:
         plt.savefig(
-            os.path.join(plot_output_dir, f"comparison_boxplot_{support_set_size}_hc_{hc}.png"),
+            fname = f"comparison_boxplot_{support_set_size}_hc_{hc}.png",
             bbox_inches="tight",
         )
 
@@ -910,7 +909,7 @@ def box_plot(
         model_names.append(f"{model_name}")
 
     if highlight_class is not None:
-        extend_df_highlighted = extend_df[extend_df["EC_super_class"] == highlight_class]
+        extend_df_highlighted = extend_df[extend_df["organism_taxonomy_l1"] == highlight_class]
         make_box_plot(
             extend_df_highlighted,
             model_cols,
@@ -935,7 +934,7 @@ def get_aggregates_across_sizes(
     for train_size in TRAIN_SIZES_TO_COMPARE:
 
         aggregation = aggregate_by_class(
-            df, model_summaries, classes=list(df.EC_super_class.unique()), num_samples=train_size
+            df, model_summaries, classes=list(df.organism_taxonomy_l1.unique()), num_samples=train_size
         )
 
         if full_df is None:
@@ -1019,6 +1018,7 @@ def plot_by_size(
 
     # pull all values out of the aggregate df
     vals, stds = collect_model_results(df, model_summaries)
+    print(vals)
     categories = {x: i for i, x in enumerate(vals["GNN-MAML"].index)}
     if highlight_class is not None:
         assert (
