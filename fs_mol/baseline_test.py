@@ -48,6 +48,7 @@ def test(
     use_grid_search: bool = True,
     grid_search_parameters: Optional[Dict[str, Any]] = None,
     model_params: Dict[str, Any] = {},
+    num_splits: int = 5,
 ) -> BinaryEvalMetrics:
     train_data = task_sample.train_samples
     test_data = task_sample.test_samples
@@ -71,7 +72,9 @@ def test(
                     x for x in grid_search_parameters["n_neighbors"] if x < int(len(train_data) / 2)
                 ]
                 grid_search_parameters.update({"n_neighbors": permitted_n_neighbors})
-            grid_search = GridSearchCV(NAME_TO_MODEL_CLS[model_name](), grid_search_parameters)
+            # MODIFIED CHANGE NUMBER OF SPLITS FOR LOW DATA
+            # We also need to check
+            grid_search = GridSearchCV(NAME_TO_MODEL_CLS[model_name](), grid_search_parameters, cv = num_splits)
         grid_search.fit(X_train, y_train)
         model = grid_search.best_estimator_
     else:
@@ -104,6 +107,7 @@ def run_from_args(args) -> None:
             task_sample=task_sample,
             use_grid_search=args.grid_search,
             model_params=args.model_params,
+            num_splits=args.num_splits,
         )
 
     eval_model(
@@ -147,6 +151,12 @@ def run():
             "JSON dictionary containing model hyperparameters, if not using grid search these will"
             " be used."
         ),
+    )
+    parser.add_argument(
+        "--num-splits",
+        type=int,
+        default=5,
+        help="Specify the number of splits for the grid search.",
     )
     parser.add_argument("--debug", dest="debug", action="store_true", help="Enable debug routines")
     args = parser.parse_args()
