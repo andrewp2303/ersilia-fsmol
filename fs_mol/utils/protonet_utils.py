@@ -320,6 +320,7 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
 
             task_batch_losses: List[float] = []
             task_batch_metrics: List[BinaryEvalMetrics] = []
+            logger.info("STEP", step)
             for _ in range(self.config.tasks_per_batch):
                 task_sample = next(train_task_sample_iterator)
                 train_task_sample = torchify(task_sample, device=device)
@@ -337,6 +338,7 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
             if self.config.clip_value is not None:
                 torch.nn.utils.clip_grad_norm_(self.parameters(), self.config.clip_value)
             self.optimizer.step()
+            logger.info("COMPLETED UPDATE STEP")
             if self.lr_scheduler is not None:
                 self.lr_scheduler.step()
 
