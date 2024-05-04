@@ -1,0 +1,1055 @@
+2024-05-03 15:35:59: Identified 655 training tasks.
+2024-05-03 15:35:59: Identified 34 validation tasks.
+2024-05-03 15:35:59: Identified 200 test tasks.
+2024-05-03 15:35:59: Starting test run FSMol_Eval_ProtoNet_2024-05-03_15-35-59 on 200 assays
+2024-05-03 15:35:59: 	Arguments: Namespace(TRAINED_MODEL='/home/gridsan/ppaschalidis/Ersilia-FS/weights/PN-Support64_best_validation.pt', DATA_PATH=['/home/gridsan/ppaschalidis/Ersilia-FS/dataset/min_size_16'], task_list_file='datasets/fsmol-0.1.json', save_dir='/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/outputs/FSMol_Eval_randomForest_2024-05-03-support-16', num_runs=10, seed=0, train_sizes=[16], test_size=None, batch_size=320, use_fresh_param_init=False)
+2024-05-03 15:35:59: 	Output dir: /home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/outputs/FSMol_Eval_randomForest_2024-05-03-support-16/FSMol_Eval_ProtoNet_2024-05-03_15-35-59
+Device: cpu
+2024-05-03 15:35:59: Using model weights loaded from /home/gridsan/ppaschalidis/Ersilia-FS/weights/PN-Support64_best_validation.pt.
+2024-05-03 15:35:59:  Loading model configuration from /home/gridsan/ppaschalidis/Ersilia-FS/weights/PN-Support64_best_validation.pt.
+2024-05-03 15:36:01: === Evaluating on CHEMBL1033643, #train 16, run 0
+2024-05-03 15:36:01:  Test - Task CHEMBL1033643 - Size  16 - Run 0 CHEMBL1033643:
+2024-05-03 15:36:02:  Test - Task CHEMBL1033643 - Size  16 - Run 0 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:02: === Evaluating on CHEMBL1033643, #train 16, run 1
+2024-05-03 15:36:02:  Test - Task CHEMBL1033643 - Size  16 - Run 1 CHEMBL1033643:
+2024-05-03 15:36:02:  Test - Task CHEMBL1033643 - Size  16 - Run 1 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 0.33333.
+2024-05-03 15:36:02: === Evaluating on CHEMBL1033643, #train 16, run 2
+2024-05-03 15:36:02:  Test - Task CHEMBL1033643 - Size  16 - Run 2 CHEMBL1033643:
+2024-05-03 15:36:02:  Test - Task CHEMBL1033643 - Size  16 - Run 2 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:02: === Evaluating on CHEMBL1033643, #train 16, run 3
+2024-05-03 15:36:02:  Test - Task CHEMBL1033643 - Size  16 - Run 3 CHEMBL1033643:
+2024-05-03 15:36:03:  Test - Task CHEMBL1033643 - Size  16 - Run 3 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:03: === Evaluating on CHEMBL1033643, #train 16, run 4
+2024-05-03 15:36:03:  Test - Task CHEMBL1033643 - Size  16 - Run 4 CHEMBL1033643:
+2024-05-03 15:36:03:  Test - Task CHEMBL1033643 - Size  16 - Run 4 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:03: === Evaluating on CHEMBL1033643, #train 16, run 5
+2024-05-03 15:36:03:  Test - Task CHEMBL1033643 - Size  16 - Run 5 CHEMBL1033643:
+2024-05-03 15:36:03:  Test - Task CHEMBL1033643 - Size  16 - Run 5 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:03: === Evaluating on CHEMBL1033643, #train 16, run 6
+2024-05-03 15:36:03:  Test - Task CHEMBL1033643 - Size  16 - Run 6 CHEMBL1033643:
+2024-05-03 15:36:03:  Test - Task CHEMBL1033643 - Size  16 - Run 6 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 0.50000.
+2024-05-03 15:36:03: === Evaluating on CHEMBL1033643, #train 16, run 7
+2024-05-03 15:36:03:  Test - Task CHEMBL1033643 - Size  16 - Run 7 CHEMBL1033643:
+2024-05-03 15:36:04:  Test - Task CHEMBL1033643 - Size  16 - Run 7 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:04: === Evaluating on CHEMBL1033643, #train 16, run 8
+2024-05-03 15:36:04:  Test - Task CHEMBL1033643 - Size  16 - Run 8 CHEMBL1033643:
+2024-05-03 15:36:04:  Test - Task CHEMBL1033643 - Size  16 - Run 8 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:04: === Evaluating on CHEMBL1033643, #train 16, run 9
+2024-05-03 15:36:04:  Test - Task CHEMBL1033643 - Size  16 - Run 9 CHEMBL1033643:
+2024-05-03 15:36:04:  Test - Task CHEMBL1033643 - Size  16 - Run 9 CHEMBL1033643:  16 support samples,   3 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:04: === Evaluating on CHEMBL1033992, #train 16, run 0
+2024-05-03 15:36:04:  Test - Task CHEMBL1033992 - Size  16 - Run 0 CHEMBL1033992:
+2024-05-03 15:36:05:  Test - Task CHEMBL1033992 - Size  16 - Run 0 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 0.99708.
+2024-05-03 15:36:05: === Evaluating on CHEMBL1033992, #train 16, run 1
+2024-05-03 15:36:05:  Test - Task CHEMBL1033992 - Size  16 - Run 1 CHEMBL1033992:
+2024-05-03 15:36:05:  Test - Task CHEMBL1033992 - Size  16 - Run 1 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 0.97029.
+2024-05-03 15:36:05: === Evaluating on CHEMBL1033992, #train 16, run 2
+2024-05-03 15:36:05:  Test - Task CHEMBL1033992 - Size  16 - Run 2 CHEMBL1033992:
+2024-05-03 15:36:05:  Test - Task CHEMBL1033992 - Size  16 - Run 2 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 0.98809.
+2024-05-03 15:36:05: === Evaluating on CHEMBL1033992, #train 16, run 3
+2024-05-03 15:36:05:  Test - Task CHEMBL1033992 - Size  16 - Run 3 CHEMBL1033992:
+2024-05-03 15:36:06:  Test - Task CHEMBL1033992 - Size  16 - Run 3 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:06: === Evaluating on CHEMBL1033992, #train 16, run 4
+2024-05-03 15:36:06:  Test - Task CHEMBL1033992 - Size  16 - Run 4 CHEMBL1033992:
+2024-05-03 15:36:06:  Test - Task CHEMBL1033992 - Size  16 - Run 4 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:06: === Evaluating on CHEMBL1033992, #train 16, run 5
+2024-05-03 15:36:06:  Test - Task CHEMBL1033992 - Size  16 - Run 5 CHEMBL1033992:
+2024-05-03 15:36:06:  Test - Task CHEMBL1033992 - Size  16 - Run 5 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 0.99444.
+2024-05-03 15:36:06: === Evaluating on CHEMBL1033992, #train 16, run 6
+2024-05-03 15:36:06:  Test - Task CHEMBL1033992 - Size  16 - Run 6 CHEMBL1033992:
+2024-05-03 15:36:07:  Test - Task CHEMBL1033992 - Size  16 - Run 6 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 0.97853.
+2024-05-03 15:36:07: === Evaluating on CHEMBL1033992, #train 16, run 7
+2024-05-03 15:36:07:  Test - Task CHEMBL1033992 - Size  16 - Run 7 CHEMBL1033992:
+2024-05-03 15:36:07:  Test - Task CHEMBL1033992 - Size  16 - Run 7 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 0.99444.
+2024-05-03 15:36:07: === Evaluating on CHEMBL1033992, #train 16, run 8
+2024-05-03 15:36:07:  Test - Task CHEMBL1033992 - Size  16 - Run 8 CHEMBL1033992:
+2024-05-03 15:36:08:  Test - Task CHEMBL1033992 - Size  16 - Run 8 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:08: === Evaluating on CHEMBL1033992, #train 16, run 9
+2024-05-03 15:36:08:  Test - Task CHEMBL1033992 - Size  16 - Run 9 CHEMBL1033992:
+2024-05-03 15:36:08:  Test - Task CHEMBL1033992 - Size  16 - Run 9 CHEMBL1033992:  16 support samples,  21 query samples. Avg. prec. 0.99444.
+2024-05-03 15:36:08: === Evaluating on CHEMBL1033993, #train 16, run 0
+2024-05-03 15:36:08:  Test - Task CHEMBL1033993 - Size  16 - Run 0 CHEMBL1033993:
+2024-05-03 15:36:08:  Test - Task CHEMBL1033993 - Size  16 - Run 0 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:08: === Evaluating on CHEMBL1033993, #train 16, run 1
+2024-05-03 15:36:08:  Test - Task CHEMBL1033993 - Size  16 - Run 1 CHEMBL1033993:
+2024-05-03 15:36:09:  Test - Task CHEMBL1033993 - Size  16 - Run 1 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:09: === Evaluating on CHEMBL1033993, #train 16, run 2
+2024-05-03 15:36:09:  Test - Task CHEMBL1033993 - Size  16 - Run 2 CHEMBL1033993:
+2024-05-03 15:36:09:  Test - Task CHEMBL1033993 - Size  16 - Run 2 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:09: === Evaluating on CHEMBL1033993, #train 16, run 3
+2024-05-03 15:36:09:  Test - Task CHEMBL1033993 - Size  16 - Run 3 CHEMBL1033993:
+2024-05-03 15:36:10:  Test - Task CHEMBL1033993 - Size  16 - Run 3 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 0.99737.
+2024-05-03 15:36:10: === Evaluating on CHEMBL1033993, #train 16, run 4
+2024-05-03 15:36:10:  Test - Task CHEMBL1033993 - Size  16 - Run 4 CHEMBL1033993:
+2024-05-03 15:36:10:  Test - Task CHEMBL1033993 - Size  16 - Run 4 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:10: === Evaluating on CHEMBL1033993, #train 16, run 5
+2024-05-03 15:36:10:  Test - Task CHEMBL1033993 - Size  16 - Run 5 CHEMBL1033993:
+2024-05-03 15:36:10:  Test - Task CHEMBL1033993 - Size  16 - Run 5 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 0.99499.
+2024-05-03 15:36:10: === Evaluating on CHEMBL1033993, #train 16, run 6
+2024-05-03 15:36:10:  Test - Task CHEMBL1033993 - Size  16 - Run 6 CHEMBL1033993:
+2024-05-03 15:36:11:  Test - Task CHEMBL1033993 - Size  16 - Run 6 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 0.99737.
+2024-05-03 15:36:11: === Evaluating on CHEMBL1033993, #train 16, run 7
+2024-05-03 15:36:11:  Test - Task CHEMBL1033993 - Size  16 - Run 7 CHEMBL1033993:
+2024-05-03 15:36:11:  Test - Task CHEMBL1033993 - Size  16 - Run 7 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:11: === Evaluating on CHEMBL1033993, #train 16, run 8
+2024-05-03 15:36:11:  Test - Task CHEMBL1033993 - Size  16 - Run 8 CHEMBL1033993:
+2024-05-03 15:36:12:  Test - Task CHEMBL1033993 - Size  16 - Run 8 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 0.99737.
+2024-05-03 15:36:12: === Evaluating on CHEMBL1033993, #train 16, run 9
+2024-05-03 15:36:12:  Test - Task CHEMBL1033993 - Size  16 - Run 9 CHEMBL1033993:
+2024-05-03 15:36:12:  Test - Task CHEMBL1033993 - Size  16 - Run 9 CHEMBL1033993:  16 support samples,  21 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:12: === Evaluating on CHEMBL2021151, #train 16, run 0
+2024-05-03 15:36:12:  Test - Task CHEMBL2021151 - Size  16 - Run 0 CHEMBL2021151:
+2024-05-03 15:36:12:  Test - Task CHEMBL2021151 - Size  16 - Run 0 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 0.83333.
+2024-05-03 15:36:12: === Evaluating on CHEMBL2021151, #train 16, run 1
+2024-05-03 15:36:12:  Test - Task CHEMBL2021151 - Size  16 - Run 1 CHEMBL2021151:
+2024-05-03 15:36:12:  Test - Task CHEMBL2021151 - Size  16 - Run 1 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 0.58333.
+2024-05-03 15:36:12: === Evaluating on CHEMBL2021151, #train 16, run 2
+2024-05-03 15:36:12:  Test - Task CHEMBL2021151 - Size  16 - Run 2 CHEMBL2021151:
+2024-05-03 15:36:13:  Test - Task CHEMBL2021151 - Size  16 - Run 2 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:13: === Evaluating on CHEMBL2021151, #train 16, run 3
+2024-05-03 15:36:13:  Test - Task CHEMBL2021151 - Size  16 - Run 3 CHEMBL2021151:
+2024-05-03 15:36:13:  Test - Task CHEMBL2021151 - Size  16 - Run 3 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:13: === Evaluating on CHEMBL2021151, #train 16, run 4
+2024-05-03 15:36:13:  Test - Task CHEMBL2021151 - Size  16 - Run 4 CHEMBL2021151:
+2024-05-03 15:36:13:  Test - Task CHEMBL2021151 - Size  16 - Run 4 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 0.83333.
+2024-05-03 15:36:13: === Evaluating on CHEMBL2021151, #train 16, run 5
+2024-05-03 15:36:13:  Test - Task CHEMBL2021151 - Size  16 - Run 5 CHEMBL2021151:
+2024-05-03 15:36:14:  Test - Task CHEMBL2021151 - Size  16 - Run 5 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 0.83333.
+2024-05-03 15:36:14: === Evaluating on CHEMBL2021151, #train 16, run 6
+2024-05-03 15:36:14:  Test - Task CHEMBL2021151 - Size  16 - Run 6 CHEMBL2021151:
+2024-05-03 15:36:14:  Test - Task CHEMBL2021151 - Size  16 - Run 6 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 0.41667.
+2024-05-03 15:36:14: === Evaluating on CHEMBL2021151, #train 16, run 7
+2024-05-03 15:36:14:  Test - Task CHEMBL2021151 - Size  16 - Run 7 CHEMBL2021151:
+2024-05-03 15:36:14:  Test - Task CHEMBL2021151 - Size  16 - Run 7 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:14: === Evaluating on CHEMBL2021151, #train 16, run 8
+2024-05-03 15:36:14:  Test - Task CHEMBL2021151 - Size  16 - Run 8 CHEMBL2021151:
+2024-05-03 15:36:15:  Test - Task CHEMBL2021151 - Size  16 - Run 8 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:15: === Evaluating on CHEMBL2021151, #train 16, run 9
+2024-05-03 15:36:15:  Test - Task CHEMBL2021151 - Size  16 - Run 9 CHEMBL2021151:
+2024-05-03 15:36:15:  Test - Task CHEMBL2021151 - Size  16 - Run 9 CHEMBL2021151:  16 support samples,   4 query samples. Avg. prec. 0.75000.
+2024-05-03 15:36:15: === Evaluating on CHEMBL1960329, #train 16, run 0
+2024-05-03 15:36:15:  Test - Task CHEMBL1960329 - Size  16 - Run 0 CHEMBL1960329:
+2024-05-03 15:36:16:  Test - Task CHEMBL1960329 - Size  16 - Run 0 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.88170.
+2024-05-03 15:36:16: === Evaluating on CHEMBL1960329, #train 16, run 1
+2024-05-03 15:36:16:  Test - Task CHEMBL1960329 - Size  16 - Run 1 CHEMBL1960329:
+2024-05-03 15:36:16:  Test - Task CHEMBL1960329 - Size  16 - Run 1 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.86126.
+2024-05-03 15:36:16: === Evaluating on CHEMBL1960329, #train 16, run 2
+2024-05-03 15:36:16:  Test - Task CHEMBL1960329 - Size  16 - Run 2 CHEMBL1960329:
+2024-05-03 15:36:16:  Test - Task CHEMBL1960329 - Size  16 - Run 2 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.90864.
+2024-05-03 15:36:16: === Evaluating on CHEMBL1960329, #train 16, run 3
+2024-05-03 15:36:16:  Test - Task CHEMBL1960329 - Size  16 - Run 3 CHEMBL1960329:
+2024-05-03 15:36:17:  Test - Task CHEMBL1960329 - Size  16 - Run 3 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.80293.
+2024-05-03 15:36:17: === Evaluating on CHEMBL1960329, #train 16, run 4
+2024-05-03 15:36:17:  Test - Task CHEMBL1960329 - Size  16 - Run 4 CHEMBL1960329:
+2024-05-03 15:36:17:  Test - Task CHEMBL1960329 - Size  16 - Run 4 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.90864.
+2024-05-03 15:36:17: === Evaluating on CHEMBL1960329, #train 16, run 5
+2024-05-03 15:36:17:  Test - Task CHEMBL1960329 - Size  16 - Run 5 CHEMBL1960329:
+2024-05-03 15:36:17:  Test - Task CHEMBL1960329 - Size  16 - Run 5 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.90864.
+2024-05-03 15:36:17: === Evaluating on CHEMBL1960329, #train 16, run 6
+2024-05-03 15:36:17:  Test - Task CHEMBL1960329 - Size  16 - Run 6 CHEMBL1960329:
+2024-05-03 15:36:18:  Test - Task CHEMBL1960329 - Size  16 - Run 6 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.94515.
+2024-05-03 15:36:18: === Evaluating on CHEMBL1960329, #train 16, run 7
+2024-05-03 15:36:18:  Test - Task CHEMBL1960329 - Size  16 - Run 7 CHEMBL1960329:
+2024-05-03 15:36:18:  Test - Task CHEMBL1960329 - Size  16 - Run 7 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.86559.
+2024-05-03 15:36:18: === Evaluating on CHEMBL1960329, #train 16, run 8
+2024-05-03 15:36:18:  Test - Task CHEMBL1960329 - Size  16 - Run 8 CHEMBL1960329:
+2024-05-03 15:36:19:  Test - Task CHEMBL1960329 - Size  16 - Run 8 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.84698.
+2024-05-03 15:36:19: === Evaluating on CHEMBL1960329, #train 16, run 9
+2024-05-03 15:36:19:  Test - Task CHEMBL1960329 - Size  16 - Run 9 CHEMBL1960329:
+2024-05-03 15:36:19:  Test - Task CHEMBL1960329 - Size  16 - Run 9 CHEMBL1960329:  16 support samples,  12 query samples. Avg. prec. 0.90864.
+2024-05-03 15:36:19: === Evaluating on CHEMBL2037882, #train 16, run 0
+2024-05-03 15:36:19:  Test - Task CHEMBL2037882 - Size  16 - Run 0 CHEMBL2037882:
+2024-05-03 15:36:19:  Test - Task CHEMBL2037882 - Size  16 - Run 0 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:19: === Evaluating on CHEMBL2037882, #train 16, run 1
+2024-05-03 15:36:19:  Test - Task CHEMBL2037882 - Size  16 - Run 1 CHEMBL2037882:
+2024-05-03 15:36:20:  Test - Task CHEMBL2037882 - Size  16 - Run 1 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:20: === Evaluating on CHEMBL2037882, #train 16, run 2
+2024-05-03 15:36:20:  Test - Task CHEMBL2037882 - Size  16 - Run 2 CHEMBL2037882:
+2024-05-03 15:36:20:  Test - Task CHEMBL2037882 - Size  16 - Run 2 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 0.50000.
+2024-05-03 15:36:20: === Evaluating on CHEMBL2037882, #train 16, run 3
+2024-05-03 15:36:20:  Test - Task CHEMBL2037882 - Size  16 - Run 3 CHEMBL2037882:
+2024-05-03 15:36:20:  Test - Task CHEMBL2037882 - Size  16 - Run 3 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:20: === Evaluating on CHEMBL2037882, #train 16, run 4
+2024-05-03 15:36:20:  Test - Task CHEMBL2037882 - Size  16 - Run 4 CHEMBL2037882:
+2024-05-03 15:36:20:  Test - Task CHEMBL2037882 - Size  16 - Run 4 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:20: === Evaluating on CHEMBL2037882, #train 16, run 5
+2024-05-03 15:36:20:  Test - Task CHEMBL2037882 - Size  16 - Run 5 CHEMBL2037882:
+2024-05-03 15:36:21:  Test - Task CHEMBL2037882 - Size  16 - Run 5 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:21: === Evaluating on CHEMBL2037882, #train 16, run 6
+2024-05-03 15:36:21:  Test - Task CHEMBL2037882 - Size  16 - Run 6 CHEMBL2037882:
+2024-05-03 15:36:21:  Test - Task CHEMBL2037882 - Size  16 - Run 6 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:21: === Evaluating on CHEMBL2037882, #train 16, run 7
+2024-05-03 15:36:21:  Test - Task CHEMBL2037882 - Size  16 - Run 7 CHEMBL2037882:
+2024-05-03 15:36:21:  Test - Task CHEMBL2037882 - Size  16 - Run 7 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:21: === Evaluating on CHEMBL2037882, #train 16, run 8
+2024-05-03 15:36:21:  Test - Task CHEMBL2037882 - Size  16 - Run 8 CHEMBL2037882:
+2024-05-03 15:36:21:  Test - Task CHEMBL2037882 - Size  16 - Run 8 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:21: === Evaluating on CHEMBL2037882, #train 16, run 9
+2024-05-03 15:36:21:  Test - Task CHEMBL2037882 - Size  16 - Run 9 CHEMBL2037882:
+2024-05-03 15:36:22:  Test - Task CHEMBL2037882 - Size  16 - Run 9 CHEMBL2037882:  16 support samples,   2 query samples. Avg. prec. 0.50000.
+2024-05-03 15:36:22: === Evaluating on CHEMBL1107216, #train 16, run 0
+2024-05-03 15:36:22:  Test - Task CHEMBL1107216 - Size  16 - Run 0 CHEMBL1107216:
+2024-05-03 15:36:22:  Test - Task CHEMBL1107216 - Size  16 - Run 0 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.66305.
+2024-05-03 15:36:22: === Evaluating on CHEMBL1107216, #train 16, run 1
+2024-05-03 15:36:22:  Test - Task CHEMBL1107216 - Size  16 - Run 1 CHEMBL1107216:
+2024-05-03 15:36:22:  Test - Task CHEMBL1107216 - Size  16 - Run 1 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.34177.
+2024-05-03 15:36:22: === Evaluating on CHEMBL1107216, #train 16, run 2
+2024-05-03 15:36:22:  Test - Task CHEMBL1107216 - Size  16 - Run 2 CHEMBL1107216:
+2024-05-03 15:36:23:  Test - Task CHEMBL1107216 - Size  16 - Run 2 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.39846.
+2024-05-03 15:36:23: === Evaluating on CHEMBL1107216, #train 16, run 3
+2024-05-03 15:36:23:  Test - Task CHEMBL1107216 - Size  16 - Run 3 CHEMBL1107216:
+2024-05-03 15:36:23:  Test - Task CHEMBL1107216 - Size  16 - Run 3 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.41987.
+2024-05-03 15:36:23: === Evaluating on CHEMBL1107216, #train 16, run 4
+2024-05-03 15:36:23:  Test - Task CHEMBL1107216 - Size  16 - Run 4 CHEMBL1107216:
+2024-05-03 15:36:24:  Test - Task CHEMBL1107216 - Size  16 - Run 4 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.36930.
+2024-05-03 15:36:24: === Evaluating on CHEMBL1107216, #train 16, run 5
+2024-05-03 15:36:24:  Test - Task CHEMBL1107216 - Size  16 - Run 5 CHEMBL1107216:
+2024-05-03 15:36:24:  Test - Task CHEMBL1107216 - Size  16 - Run 5 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.36179.
+2024-05-03 15:36:24: === Evaluating on CHEMBL1107216, #train 16, run 6
+2024-05-03 15:36:24:  Test - Task CHEMBL1107216 - Size  16 - Run 6 CHEMBL1107216:
+2024-05-03 15:36:25:  Test - Task CHEMBL1107216 - Size  16 - Run 6 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.67135.
+2024-05-03 15:36:25: === Evaluating on CHEMBL1107216, #train 16, run 7
+2024-05-03 15:36:25:  Test - Task CHEMBL1107216 - Size  16 - Run 7 CHEMBL1107216:
+2024-05-03 15:36:25:  Test - Task CHEMBL1107216 - Size  16 - Run 7 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.34300.
+2024-05-03 15:36:25: === Evaluating on CHEMBL1107216, #train 16, run 8
+2024-05-03 15:36:25:  Test - Task CHEMBL1107216 - Size  16 - Run 8 CHEMBL1107216:
+2024-05-03 15:36:25:  Test - Task CHEMBL1107216 - Size  16 - Run 8 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.46010.
+2024-05-03 15:36:25: === Evaluating on CHEMBL1107216, #train 16, run 9
+2024-05-03 15:36:25:  Test - Task CHEMBL1107216 - Size  16 - Run 9 CHEMBL1107216:
+2024-05-03 15:36:26:  Test - Task CHEMBL1107216 - Size  16 - Run 9 CHEMBL1107216:  16 support samples,  26 query samples. Avg. prec. 0.34459.
+2024-05-03 15:36:26: === Evaluating on CHEMBL2330536, #train 16, run 0
+2024-05-03 15:36:26:  Test - Task CHEMBL2330536 - Size  16 - Run 0 CHEMBL2330536:
+2024-05-03 15:36:26:  Test - Task CHEMBL2330536 - Size  16 - Run 0 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:26: === Evaluating on CHEMBL2330536, #train 16, run 1
+2024-05-03 15:36:26:  Test - Task CHEMBL2330536 - Size  16 - Run 1 CHEMBL2330536:
+2024-05-03 15:36:27:  Test - Task CHEMBL2330536 - Size  16 - Run 1 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:27: === Evaluating on CHEMBL2330536, #train 16, run 2
+2024-05-03 15:36:27:  Test - Task CHEMBL2330536 - Size  16 - Run 2 CHEMBL2330536:
+2024-05-03 15:36:27:  Test - Task CHEMBL2330536 - Size  16 - Run 2 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:27: === Evaluating on CHEMBL2330536, #train 16, run 3
+2024-05-03 15:36:27:  Test - Task CHEMBL2330536 - Size  16 - Run 3 CHEMBL2330536:
+2024-05-03 15:36:27:  Test - Task CHEMBL2330536 - Size  16 - Run 3 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:27: === Evaluating on CHEMBL2330536, #train 16, run 4
+2024-05-03 15:36:27:  Test - Task CHEMBL2330536 - Size  16 - Run 4 CHEMBL2330536:
+2024-05-03 15:36:28:  Test - Task CHEMBL2330536 - Size  16 - Run 4 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:28: === Evaluating on CHEMBL2330536, #train 16, run 5
+2024-05-03 15:36:28:  Test - Task CHEMBL2330536 - Size  16 - Run 5 CHEMBL2330536:
+2024-05-03 15:36:28:  Test - Task CHEMBL2330536 - Size  16 - Run 5 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:28: === Evaluating on CHEMBL2330536, #train 16, run 6
+2024-05-03 15:36:28:  Test - Task CHEMBL2330536 - Size  16 - Run 6 CHEMBL2330536:
+2024-05-03 15:36:28:  Test - Task CHEMBL2330536 - Size  16 - Run 6 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:28: === Evaluating on CHEMBL2330536, #train 16, run 7
+2024-05-03 15:36:28:  Test - Task CHEMBL2330536 - Size  16 - Run 7 CHEMBL2330536:
+2024-05-03 15:36:29:  Test - Task CHEMBL2330536 - Size  16 - Run 7 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:29: === Evaluating on CHEMBL2330536, #train 16, run 8
+2024-05-03 15:36:29:  Test - Task CHEMBL2330536 - Size  16 - Run 8 CHEMBL2330536:
+2024-05-03 15:36:29:  Test - Task CHEMBL2330536 - Size  16 - Run 8 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:29: === Evaluating on CHEMBL2330536, #train 16, run 9
+2024-05-03 15:36:29:  Test - Task CHEMBL2330536 - Size  16 - Run 9 CHEMBL2330536:
+2024-05-03 15:36:29:  Test - Task CHEMBL2330536 - Size  16 - Run 9 CHEMBL2330536:  16 support samples,  16 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:29: === Evaluating on CHEMBL3282590, #train 16, run 0
+2024-05-03 15:36:29:  Test - Task CHEMBL3282590 - Size  16 - Run 0 CHEMBL3282590:
+2024-05-03 15:36:30:  Test - Task CHEMBL3282590 - Size  16 - Run 0 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.76833.
+2024-05-03 15:36:30: === Evaluating on CHEMBL3282590, #train 16, run 1
+2024-05-03 15:36:30:  Test - Task CHEMBL3282590 - Size  16 - Run 1 CHEMBL3282590:
+2024-05-03 15:36:30:  Test - Task CHEMBL3282590 - Size  16 - Run 1 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.92500.
+2024-05-03 15:36:30: === Evaluating on CHEMBL3282590, #train 16, run 2
+2024-05-03 15:36:30:  Test - Task CHEMBL3282590 - Size  16 - Run 2 CHEMBL3282590:
+2024-05-03 15:36:30:  Test - Task CHEMBL3282590 - Size  16 - Run 2 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.83929.
+2024-05-03 15:36:30: === Evaluating on CHEMBL3282590, #train 16, run 3
+2024-05-03 15:36:30:  Test - Task CHEMBL3282590 - Size  16 - Run 3 CHEMBL3282590:
+2024-05-03 15:36:30:  Test - Task CHEMBL3282590 - Size  16 - Run 3 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.75444.
+2024-05-03 15:36:30: === Evaluating on CHEMBL3282590, #train 16, run 4
+2024-05-03 15:36:30:  Test - Task CHEMBL3282590 - Size  16 - Run 4 CHEMBL3282590:
+2024-05-03 15:36:31:  Test - Task CHEMBL3282590 - Size  16 - Run 4 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.91111.
+2024-05-03 15:36:31: === Evaluating on CHEMBL3282590, #train 16, run 5
+2024-05-03 15:36:31:  Test - Task CHEMBL3282590 - Size  16 - Run 5 CHEMBL3282590:
+2024-05-03 15:36:31:  Test - Task CHEMBL3282590 - Size  16 - Run 5 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.79619.
+2024-05-03 15:36:31: === Evaluating on CHEMBL3282590, #train 16, run 6
+2024-05-03 15:36:31:  Test - Task CHEMBL3282590 - Size  16 - Run 6 CHEMBL3282590:
+2024-05-03 15:36:31:  Test - Task CHEMBL3282590 - Size  16 - Run 6 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.72778.
+2024-05-03 15:36:31: === Evaluating on CHEMBL3282590, #train 16, run 7
+2024-05-03 15:36:31:  Test - Task CHEMBL3282590 - Size  16 - Run 7 CHEMBL3282590:
+2024-05-03 15:36:32:  Test - Task CHEMBL3282590 - Size  16 - Run 7 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.87667.
+2024-05-03 15:36:32: === Evaluating on CHEMBL3282590, #train 16, run 8
+2024-05-03 15:36:32:  Test - Task CHEMBL3282590 - Size  16 - Run 8 CHEMBL3282590:
+2024-05-03 15:36:32:  Test - Task CHEMBL3282590 - Size  16 - Run 8 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.91111.
+2024-05-03 15:36:32: === Evaluating on CHEMBL3282590, #train 16, run 9
+2024-05-03 15:36:32:  Test - Task CHEMBL3282590 - Size  16 - Run 9 CHEMBL3282590:
+2024-05-03 15:36:32:  Test - Task CHEMBL3282590 - Size  16 - Run 9 CHEMBL3282590:  16 support samples,  10 query samples. Avg. prec. 0.94286.
+2024-05-03 15:36:32: === Evaluating on CHEMBL2444082, #train 16, run 0
+2024-05-03 15:36:32:  Test - Task CHEMBL2444082 - Size  16 - Run 0 CHEMBL2444082:
+2024-05-03 15:36:33:  Test - Task CHEMBL2444082 - Size  16 - Run 0 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.89775.
+2024-05-03 15:36:33: === Evaluating on CHEMBL2444082, #train 16, run 1
+2024-05-03 15:36:33:  Test - Task CHEMBL2444082 - Size  16 - Run 1 CHEMBL2444082:
+2024-05-03 15:36:33:  Test - Task CHEMBL2444082 - Size  16 - Run 1 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.75740.
+2024-05-03 15:36:33: === Evaluating on CHEMBL2444082, #train 16, run 2
+2024-05-03 15:36:33:  Test - Task CHEMBL2444082 - Size  16 - Run 2 CHEMBL2444082:
+2024-05-03 15:36:34:  Test - Task CHEMBL2444082 - Size  16 - Run 2 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.93287.
+2024-05-03 15:36:34: === Evaluating on CHEMBL2444082, #train 16, run 3
+2024-05-03 15:36:34:  Test - Task CHEMBL2444082 - Size  16 - Run 3 CHEMBL2444082:
+2024-05-03 15:36:34:  Test - Task CHEMBL2444082 - Size  16 - Run 3 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.87082.
+2024-05-03 15:36:34: === Evaluating on CHEMBL2444082, #train 16, run 4
+2024-05-03 15:36:34:  Test - Task CHEMBL2444082 - Size  16 - Run 4 CHEMBL2444082:
+2024-05-03 15:36:34:  Test - Task CHEMBL2444082 - Size  16 - Run 4 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.86136.
+2024-05-03 15:36:34: === Evaluating on CHEMBL2444082, #train 16, run 5
+2024-05-03 15:36:34:  Test - Task CHEMBL2444082 - Size  16 - Run 5 CHEMBL2444082:
+2024-05-03 15:36:35:  Test - Task CHEMBL2444082 - Size  16 - Run 5 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.79080.
+2024-05-03 15:36:35: === Evaluating on CHEMBL2444082, #train 16, run 6
+2024-05-03 15:36:35:  Test - Task CHEMBL2444082 - Size  16 - Run 6 CHEMBL2444082:
+2024-05-03 15:36:35:  Test - Task CHEMBL2444082 - Size  16 - Run 6 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.78302.
+2024-05-03 15:36:35: === Evaluating on CHEMBL2444082, #train 16, run 7
+2024-05-03 15:36:35:  Test - Task CHEMBL2444082 - Size  16 - Run 7 CHEMBL2444082:
+2024-05-03 15:36:36:  Test - Task CHEMBL2444082 - Size  16 - Run 7 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.88533.
+2024-05-03 15:36:36: === Evaluating on CHEMBL2444082, #train 16, run 8
+2024-05-03 15:36:36:  Test - Task CHEMBL2444082 - Size  16 - Run 8 CHEMBL2444082:
+2024-05-03 15:36:36:  Test - Task CHEMBL2444082 - Size  16 - Run 8 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.75177.
+2024-05-03 15:36:36: === Evaluating on CHEMBL2444082, #train 16, run 9
+2024-05-03 15:36:36:  Test - Task CHEMBL2444082 - Size  16 - Run 9 CHEMBL2444082:
+2024-05-03 15:36:37:  Test - Task CHEMBL2444082 - Size  16 - Run 9 CHEMBL2444082:  16 support samples,  21 query samples. Avg. prec. 0.88373.
+2024-05-03 15:36:37: === Evaluating on CHEMBL3588716, #train 16, run 0
+2024-05-03 15:36:37:  Test - Task CHEMBL3588716 - Size  16 - Run 0 CHEMBL3588716:
+2024-05-03 15:36:37:  Test - Task CHEMBL3588716 - Size  16 - Run 0 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 0.91667.
+2024-05-03 15:36:37: === Evaluating on CHEMBL3588716, #train 16, run 1
+2024-05-03 15:36:37:  Test - Task CHEMBL3588716 - Size  16 - Run 1 CHEMBL3588716:
+2024-05-03 15:36:37:  Test - Task CHEMBL3588716 - Size  16 - Run 1 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 0.80417.
+2024-05-03 15:36:37: === Evaluating on CHEMBL3588716, #train 16, run 2
+2024-05-03 15:36:37:  Test - Task CHEMBL3588716 - Size  16 - Run 2 CHEMBL3588716:
+2024-05-03 15:36:38:  Test - Task CHEMBL3588716 - Size  16 - Run 2 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 0.85417.
+2024-05-03 15:36:38: === Evaluating on CHEMBL3588716, #train 16, run 3
+2024-05-03 15:36:38:  Test - Task CHEMBL3588716 - Size  16 - Run 3 CHEMBL3588716:
+2024-05-03 15:36:38:  Test - Task CHEMBL3588716 - Size  16 - Run 3 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 0.95000.
+2024-05-03 15:36:38: === Evaluating on CHEMBL3588716, #train 16, run 4
+2024-05-03 15:36:38:  Test - Task CHEMBL3588716 - Size  16 - Run 4 CHEMBL3588716:
+2024-05-03 15:36:38:  Test - Task CHEMBL3588716 - Size  16 - Run 4 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 0.67917.
+2024-05-03 15:36:38: === Evaluating on CHEMBL3588716, #train 16, run 5
+2024-05-03 15:36:38:  Test - Task CHEMBL3588716 - Size  16 - Run 5 CHEMBL3588716:
+2024-05-03 15:36:39:  Test - Task CHEMBL3588716 - Size  16 - Run 5 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:39: === Evaluating on CHEMBL3588716, #train 16, run 6
+2024-05-03 15:36:39:  Test - Task CHEMBL3588716 - Size  16 - Run 6 CHEMBL3588716:
+2024-05-03 15:36:39:  Test - Task CHEMBL3588716 - Size  16 - Run 6 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 0.80417.
+2024-05-03 15:36:39: === Evaluating on CHEMBL3588716, #train 16, run 7
+2024-05-03 15:36:39:  Test - Task CHEMBL3588716 - Size  16 - Run 7 CHEMBL3588716:
+2024-05-03 15:36:39:  Test - Task CHEMBL3588716 - Size  16 - Run 7 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 0.91667.
+2024-05-03 15:36:39: === Evaluating on CHEMBL3588716, #train 16, run 8
+2024-05-03 15:36:39:  Test - Task CHEMBL3588716 - Size  16 - Run 8 CHEMBL3588716:
+2024-05-03 15:36:40:  Test - Task CHEMBL3588716 - Size  16 - Run 8 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 0.73333.
+2024-05-03 15:36:40: === Evaluating on CHEMBL3588716, #train 16, run 9
+2024-05-03 15:36:40:  Test - Task CHEMBL3588716 - Size  16 - Run 9 CHEMBL3588716:
+2024-05-03 15:36:40:  Test - Task CHEMBL3588716 - Size  16 - Run 9 CHEMBL3588716:  16 support samples,   6 query samples. Avg. prec. 0.91667.
+2024-05-03 15:36:40: === Evaluating on CHEMBL3796292, #train 16, run 0
+2024-05-03 15:36:40:  Test - Task CHEMBL3796292 - Size  16 - Run 0 CHEMBL3796292:
+2024-05-03 15:36:41:  Test - Task CHEMBL3796292 - Size  16 - Run 0 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.50119.
+2024-05-03 15:36:41: === Evaluating on CHEMBL3796292, #train 16, run 1
+2024-05-03 15:36:41:  Test - Task CHEMBL3796292 - Size  16 - Run 1 CHEMBL3796292:
+2024-05-03 15:36:41:  Test - Task CHEMBL3796292 - Size  16 - Run 1 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.79286.
+2024-05-03 15:36:41: === Evaluating on CHEMBL3796292, #train 16, run 2
+2024-05-03 15:36:41:  Test - Task CHEMBL3796292 - Size  16 - Run 2 CHEMBL3796292:
+2024-05-03 15:36:41:  Test - Task CHEMBL3796292 - Size  16 - Run 2 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.64286.
+2024-05-03 15:36:41: === Evaluating on CHEMBL3796292, #train 16, run 3
+2024-05-03 15:36:41:  Test - Task CHEMBL3796292 - Size  16 - Run 3 CHEMBL3796292:
+2024-05-03 15:36:41:  Test - Task CHEMBL3796292 - Size  16 - Run 3 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.37798.
+2024-05-03 15:36:41: === Evaluating on CHEMBL3796292, #train 16, run 4
+2024-05-03 15:36:41:  Test - Task CHEMBL3796292 - Size  16 - Run 4 CHEMBL3796292:
+2024-05-03 15:36:42:  Test - Task CHEMBL3796292 - Size  16 - Run 4 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.45833.
+2024-05-03 15:36:42: === Evaluating on CHEMBL3796292, #train 16, run 5
+2024-05-03 15:36:42:  Test - Task CHEMBL3796292 - Size  16 - Run 5 CHEMBL3796292:
+2024-05-03 15:36:42:  Test - Task CHEMBL3796292 - Size  16 - Run 5 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.50119.
+2024-05-03 15:36:42: === Evaluating on CHEMBL3796292, #train 16, run 6
+2024-05-03 15:36:42:  Test - Task CHEMBL3796292 - Size  16 - Run 6 CHEMBL3796292:
+2024-05-03 15:36:42:  Test - Task CHEMBL3796292 - Size  16 - Run 6 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.43333.
+2024-05-03 15:36:42: === Evaluating on CHEMBL3796292, #train 16, run 7
+2024-05-03 15:36:42:  Test - Task CHEMBL3796292 - Size  16 - Run 7 CHEMBL3796292:
+2024-05-03 15:36:43:  Test - Task CHEMBL3796292 - Size  16 - Run 7 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.43333.
+2024-05-03 15:36:43: === Evaluating on CHEMBL3796292, #train 16, run 8
+2024-05-03 15:36:43:  Test - Task CHEMBL3796292 - Size  16 - Run 8 CHEMBL3796292:
+2024-05-03 15:36:43:  Test - Task CHEMBL3796292 - Size  16 - Run 8 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.40129.
+2024-05-03 15:36:43: === Evaluating on CHEMBL3796292, #train 16, run 9
+2024-05-03 15:36:43:  Test - Task CHEMBL3796292 - Size  16 - Run 9 CHEMBL3796292:
+2024-05-03 15:36:43:  Test - Task CHEMBL3796292 - Size  16 - Run 9 CHEMBL3796292:  16 support samples,   9 query samples. Avg. prec. 0.44444.
+2024-05-03 15:36:43: === Evaluating on CHEMBL3428285, #train 16, run 0
+2024-05-03 15:36:43:  Test - Task CHEMBL3428285 - Size  16 - Run 0 CHEMBL3428285:
+2024-05-03 15:36:44:  Test - Task CHEMBL3428285 - Size  16 - Run 0 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.84774.
+2024-05-03 15:36:44: === Evaluating on CHEMBL3428285, #train 16, run 1
+2024-05-03 15:36:44:  Test - Task CHEMBL3428285 - Size  16 - Run 1 CHEMBL3428285:
+2024-05-03 15:36:44:  Test - Task CHEMBL3428285 - Size  16 - Run 1 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.74276.
+2024-05-03 15:36:44: === Evaluating on CHEMBL3428285, #train 16, run 2
+2024-05-03 15:36:44:  Test - Task CHEMBL3428285 - Size  16 - Run 2 CHEMBL3428285:
+2024-05-03 15:36:45:  Test - Task CHEMBL3428285 - Size  16 - Run 2 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.74683.
+2024-05-03 15:36:45: === Evaluating on CHEMBL3428285, #train 16, run 3
+2024-05-03 15:36:45:  Test - Task CHEMBL3428285 - Size  16 - Run 3 CHEMBL3428285:
+2024-05-03 15:36:45:  Test - Task CHEMBL3428285 - Size  16 - Run 3 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.62074.
+2024-05-03 15:36:45: === Evaluating on CHEMBL3428285, #train 16, run 4
+2024-05-03 15:36:45:  Test - Task CHEMBL3428285 - Size  16 - Run 4 CHEMBL3428285:
+2024-05-03 15:36:46:  Test - Task CHEMBL3428285 - Size  16 - Run 4 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.56789.
+2024-05-03 15:36:46: === Evaluating on CHEMBL3428285, #train 16, run 5
+2024-05-03 15:36:46:  Test - Task CHEMBL3428285 - Size  16 - Run 5 CHEMBL3428285:
+2024-05-03 15:36:46:  Test - Task CHEMBL3428285 - Size  16 - Run 5 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.65180.
+2024-05-03 15:36:46: === Evaluating on CHEMBL3428285, #train 16, run 6
+2024-05-03 15:36:46:  Test - Task CHEMBL3428285 - Size  16 - Run 6 CHEMBL3428285:
+2024-05-03 15:36:47:  Test - Task CHEMBL3428285 - Size  16 - Run 6 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.69417.
+2024-05-03 15:36:47: === Evaluating on CHEMBL3428285, #train 16, run 7
+2024-05-03 15:36:47:  Test - Task CHEMBL3428285 - Size  16 - Run 7 CHEMBL3428285:
+2024-05-03 15:36:47:  Test - Task CHEMBL3428285 - Size  16 - Run 7 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.61172.
+2024-05-03 15:36:47: === Evaluating on CHEMBL3428285, #train 16, run 8
+2024-05-03 15:36:47:  Test - Task CHEMBL3428285 - Size  16 - Run 8 CHEMBL3428285:
+2024-05-03 15:36:47:  Test - Task CHEMBL3428285 - Size  16 - Run 8 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.62466.
+2024-05-03 15:36:47: === Evaluating on CHEMBL3428285, #train 16, run 9
+2024-05-03 15:36:47:  Test - Task CHEMBL3428285 - Size  16 - Run 9 CHEMBL3428285:
+2024-05-03 15:36:48:  Test - Task CHEMBL3428285 - Size  16 - Run 9 CHEMBL3428285:  16 support samples,  26 query samples. Avg. prec. 0.74197.
+2024-05-03 15:36:48: === Evaluating on CHEMBL1034004, #train 16, run 0
+2024-05-03 15:36:48:  Test - Task CHEMBL1034004 - Size  16 - Run 0 CHEMBL1034004:
+2024-05-03 15:36:48:  Test - Task CHEMBL1034004 - Size  16 - Run 0 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 0.95000.
+2024-05-03 15:36:48: === Evaluating on CHEMBL1034004, #train 16, run 1
+2024-05-03 15:36:48:  Test - Task CHEMBL1034004 - Size  16 - Run 1 CHEMBL1034004:
+2024-05-03 15:36:49:  Test - Task CHEMBL1034004 - Size  16 - Run 1 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:49: === Evaluating on CHEMBL1034004, #train 16, run 2
+2024-05-03 15:36:49:  Test - Task CHEMBL1034004 - Size  16 - Run 2 CHEMBL1034004:
+2024-05-03 15:36:49:  Test - Task CHEMBL1034004 - Size  16 - Run 2 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:49: === Evaluating on CHEMBL1034004, #train 16, run 3
+2024-05-03 15:36:49:  Test - Task CHEMBL1034004 - Size  16 - Run 3 CHEMBL1034004:
+2024-05-03 15:36:49:  Test - Task CHEMBL1034004 - Size  16 - Run 3 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:49: === Evaluating on CHEMBL1034004, #train 16, run 4
+2024-05-03 15:36:49:  Test - Task CHEMBL1034004 - Size  16 - Run 4 CHEMBL1034004:
+2024-05-03 15:36:49:  Test - Task CHEMBL1034004 - Size  16 - Run 4 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:49: === Evaluating on CHEMBL1034004, #train 16, run 5
+2024-05-03 15:36:49:  Test - Task CHEMBL1034004 - Size  16 - Run 5 CHEMBL1034004:
+2024-05-03 15:36:50:  Test - Task CHEMBL1034004 - Size  16 - Run 5 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 0.88750.
+2024-05-03 15:36:50: === Evaluating on CHEMBL1034004, #train 16, run 6
+2024-05-03 15:36:50:  Test - Task CHEMBL1034004 - Size  16 - Run 6 CHEMBL1034004:
+2024-05-03 15:36:50:  Test - Task CHEMBL1034004 - Size  16 - Run 6 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:50: === Evaluating on CHEMBL1034004, #train 16, run 7
+2024-05-03 15:36:50:  Test - Task CHEMBL1034004 - Size  16 - Run 7 CHEMBL1034004:
+2024-05-03 15:36:50:  Test - Task CHEMBL1034004 - Size  16 - Run 7 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:50: === Evaluating on CHEMBL1034004, #train 16, run 8
+2024-05-03 15:36:50:  Test - Task CHEMBL1034004 - Size  16 - Run 8 CHEMBL1034004:
+2024-05-03 15:36:51:  Test - Task CHEMBL1034004 - Size  16 - Run 8 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:51: === Evaluating on CHEMBL1034004, #train 16, run 9
+2024-05-03 15:36:51:  Test - Task CHEMBL1034004 - Size  16 - Run 9 CHEMBL1034004:
+2024-05-03 15:36:51:  Test - Task CHEMBL1034004 - Size  16 - Run 9 CHEMBL1034004:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:36:51: === Evaluating on CHEMBL2061397, #train 16, run 0
+2024-05-03 15:36:51:  Test - Task CHEMBL2061397 - Size  16 - Run 0 CHEMBL2061397:
+2024-05-03 15:36:51:  Test - Task CHEMBL2061397 - Size  16 - Run 0 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.42659.
+2024-05-03 15:36:51: === Evaluating on CHEMBL2061397, #train 16, run 1
+2024-05-03 15:36:51:  Test - Task CHEMBL2061397 - Size  16 - Run 1 CHEMBL2061397:
+2024-05-03 15:36:52:  Test - Task CHEMBL2061397 - Size  16 - Run 1 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.37798.
+2024-05-03 15:36:52: === Evaluating on CHEMBL2061397, #train 16, run 2
+2024-05-03 15:36:52:  Test - Task CHEMBL2061397 - Size  16 - Run 2 CHEMBL2061397:
+2024-05-03 15:36:52:  Test - Task CHEMBL2061397 - Size  16 - Run 2 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.62500.
+2024-05-03 15:36:52: === Evaluating on CHEMBL2061397, #train 16, run 3
+2024-05-03 15:36:52:  Test - Task CHEMBL2061397 - Size  16 - Run 3 CHEMBL2061397:
+2024-05-03 15:36:53:  Test - Task CHEMBL2061397 - Size  16 - Run 3 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.46111.
+2024-05-03 15:36:53: === Evaluating on CHEMBL2061397, #train 16, run 4
+2024-05-03 15:36:53:  Test - Task CHEMBL2061397 - Size  16 - Run 4 CHEMBL2061397:
+2024-05-03 15:36:53:  Test - Task CHEMBL2061397 - Size  16 - Run 4 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.42659.
+2024-05-03 15:36:53: === Evaluating on CHEMBL2061397, #train 16, run 5
+2024-05-03 15:36:53:  Test - Task CHEMBL2061397 - Size  16 - Run 5 CHEMBL2061397:
+2024-05-03 15:36:53:  Test - Task CHEMBL2061397 - Size  16 - Run 5 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.44444.
+2024-05-03 15:36:53: === Evaluating on CHEMBL2061397, #train 16, run 6
+2024-05-03 15:36:53:  Test - Task CHEMBL2061397 - Size  16 - Run 6 CHEMBL2061397:
+2024-05-03 15:36:54:  Test - Task CHEMBL2061397 - Size  16 - Run 6 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.45833.
+2024-05-03 15:36:54: === Evaluating on CHEMBL2061397, #train 16, run 7
+2024-05-03 15:36:54:  Test - Task CHEMBL2061397 - Size  16 - Run 7 CHEMBL2061397:
+2024-05-03 15:36:54:  Test - Task CHEMBL2061397 - Size  16 - Run 7 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.62500.
+2024-05-03 15:36:54: === Evaluating on CHEMBL2061397, #train 16, run 8
+2024-05-03 15:36:54:  Test - Task CHEMBL2061397 - Size  16 - Run 8 CHEMBL2061397:
+2024-05-03 15:36:54:  Test - Task CHEMBL2061397 - Size  16 - Run 8 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.43036.
+2024-05-03 15:36:54: === Evaluating on CHEMBL2061397, #train 16, run 9
+2024-05-03 15:36:54:  Test - Task CHEMBL2061397 - Size  16 - Run 9 CHEMBL2061397:
+2024-05-03 15:36:55:  Test - Task CHEMBL2061397 - Size  16 - Run 9 CHEMBL2061397:  16 support samples,   9 query samples. Avg. prec. 0.48611.
+2024-05-03 15:36:55: === Evaluating on CHEMBL4054625, #train 16, run 0
+2024-05-03 15:36:55:  Test - Task CHEMBL4054625 - Size  16 - Run 0 CHEMBL4054625:
+2024-05-03 15:36:55:  Test - Task CHEMBL4054625 - Size  16 - Run 0 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.58000.
+2024-05-03 15:36:55: === Evaluating on CHEMBL4054625, #train 16, run 1
+2024-05-03 15:36:55:  Test - Task CHEMBL4054625 - Size  16 - Run 1 CHEMBL4054625:
+2024-05-03 15:36:55:  Test - Task CHEMBL4054625 - Size  16 - Run 1 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.72000.
+2024-05-03 15:36:55: === Evaluating on CHEMBL4054625, #train 16, run 2
+2024-05-03 15:36:55:  Test - Task CHEMBL4054625 - Size  16 - Run 2 CHEMBL4054625:
+2024-05-03 15:36:55:  Test - Task CHEMBL4054625 - Size  16 - Run 2 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.85833.
+2024-05-03 15:36:55: === Evaluating on CHEMBL4054625, #train 16, run 3
+2024-05-03 15:36:55:  Test - Task CHEMBL4054625 - Size  16 - Run 3 CHEMBL4054625:
+2024-05-03 15:36:56:  Test - Task CHEMBL4054625 - Size  16 - Run 3 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.54444.
+2024-05-03 15:36:56: === Evaluating on CHEMBL4054625, #train 16, run 4
+2024-05-03 15:36:56:  Test - Task CHEMBL4054625 - Size  16 - Run 4 CHEMBL4054625:
+2024-05-03 15:36:56:  Test - Task CHEMBL4054625 - Size  16 - Run 4 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.90000.
+2024-05-03 15:36:56: === Evaluating on CHEMBL4054625, #train 16, run 5
+2024-05-03 15:36:56:  Test - Task CHEMBL4054625 - Size  16 - Run 5 CHEMBL4054625:
+2024-05-03 15:36:56:  Test - Task CHEMBL4054625 - Size  16 - Run 5 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.53333.
+2024-05-03 15:36:56: === Evaluating on CHEMBL4054625, #train 16, run 6
+2024-05-03 15:36:56:  Test - Task CHEMBL4054625 - Size  16 - Run 6 CHEMBL4054625:
+2024-05-03 15:36:57:  Test - Task CHEMBL4054625 - Size  16 - Run 6 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.71111.
+2024-05-03 15:36:57: === Evaluating on CHEMBL4054625, #train 16, run 7
+2024-05-03 15:36:57:  Test - Task CHEMBL4054625 - Size  16 - Run 7 CHEMBL4054625:
+2024-05-03 15:36:57:  Test - Task CHEMBL4054625 - Size  16 - Run 7 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.69262.
+2024-05-03 15:36:57: === Evaluating on CHEMBL4054625, #train 16, run 8
+2024-05-03 15:36:57:  Test - Task CHEMBL4054625 - Size  16 - Run 8 CHEMBL4054625:
+2024-05-03 15:36:57:  Test - Task CHEMBL4054625 - Size  16 - Run 8 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.70000.
+2024-05-03 15:36:57: === Evaluating on CHEMBL4054625, #train 16, run 9
+2024-05-03 15:36:57:  Test - Task CHEMBL4054625 - Size  16 - Run 9 CHEMBL4054625:
+2024-05-03 15:36:57:  Test - Task CHEMBL4054625 - Size  16 - Run 9 CHEMBL4054625:  16 support samples,  10 query samples. Avg. prec. 0.81000.
+2024-05-03 15:36:57: === Evaluating on CHEMBL2439555, #train 16, run 0
+2024-05-03 15:36:57:  Test - Task CHEMBL2439555 - Size  16 - Run 0 CHEMBL2439555:
+2024-05-03 15:36:58:  Test - Task CHEMBL2439555 - Size  16 - Run 0 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.55793.
+2024-05-03 15:36:58: === Evaluating on CHEMBL2439555, #train 16, run 1
+2024-05-03 15:36:58:  Test - Task CHEMBL2439555 - Size  16 - Run 1 CHEMBL2439555:
+2024-05-03 15:36:58:  Test - Task CHEMBL2439555 - Size  16 - Run 1 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.54509.
+2024-05-03 15:36:58: === Evaluating on CHEMBL2439555, #train 16, run 2
+2024-05-03 15:36:58:  Test - Task CHEMBL2439555 - Size  16 - Run 2 CHEMBL2439555:
+2024-05-03 15:36:59:  Test - Task CHEMBL2439555 - Size  16 - Run 2 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.68490.
+2024-05-03 15:36:59: === Evaluating on CHEMBL2439555, #train 16, run 3
+2024-05-03 15:36:59:  Test - Task CHEMBL2439555 - Size  16 - Run 3 CHEMBL2439555:
+2024-05-03 15:36:59:  Test - Task CHEMBL2439555 - Size  16 - Run 3 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.66570.
+2024-05-03 15:36:59: === Evaluating on CHEMBL2439555, #train 16, run 4
+2024-05-03 15:36:59:  Test - Task CHEMBL2439555 - Size  16 - Run 4 CHEMBL2439555:
+2024-05-03 15:36:59:  Test - Task CHEMBL2439555 - Size  16 - Run 4 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.66287.
+2024-05-03 15:36:59: === Evaluating on CHEMBL2439555, #train 16, run 5
+2024-05-03 15:36:59:  Test - Task CHEMBL2439555 - Size  16 - Run 5 CHEMBL2439555:
+2024-05-03 15:37:00:  Test - Task CHEMBL2439555 - Size  16 - Run 5 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.55340.
+2024-05-03 15:37:00: === Evaluating on CHEMBL2439555, #train 16, run 6
+2024-05-03 15:37:00:  Test - Task CHEMBL2439555 - Size  16 - Run 6 CHEMBL2439555:
+2024-05-03 15:37:00:  Test - Task CHEMBL2439555 - Size  16 - Run 6 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.65208.
+2024-05-03 15:37:00: === Evaluating on CHEMBL2439555, #train 16, run 7
+2024-05-03 15:37:00:  Test - Task CHEMBL2439555 - Size  16 - Run 7 CHEMBL2439555:
+2024-05-03 15:37:00:  Test - Task CHEMBL2439555 - Size  16 - Run 7 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.55434.
+2024-05-03 15:37:00: === Evaluating on CHEMBL2439555, #train 16, run 8
+2024-05-03 15:37:00:  Test - Task CHEMBL2439555 - Size  16 - Run 8 CHEMBL2439555:
+2024-05-03 15:37:01:  Test - Task CHEMBL2439555 - Size  16 - Run 8 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.54771.
+2024-05-03 15:37:01: === Evaluating on CHEMBL2439555, #train 16, run 9
+2024-05-03 15:37:01:  Test - Task CHEMBL2439555 - Size  16 - Run 9 CHEMBL2439555:
+2024-05-03 15:37:01:  Test - Task CHEMBL2439555 - Size  16 - Run 9 CHEMBL2439555:  16 support samples,  17 query samples. Avg. prec. 0.76667.
+2024-05-03 15:37:01: === Evaluating on CHEMBL3047384, #train 16, run 0
+2024-05-03 15:37:01:  Test - Task CHEMBL3047384 - Size  16 - Run 0 CHEMBL3047384:
+2024-05-03 15:37:01:  Test - Task CHEMBL3047384 - Size  16 - Run 0 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.83333.
+2024-05-03 15:37:01: === Evaluating on CHEMBL3047384, #train 16, run 1
+2024-05-03 15:37:01:  Test - Task CHEMBL3047384 - Size  16 - Run 1 CHEMBL3047384:
+2024-05-03 15:37:02:  Test - Task CHEMBL3047384 - Size  16 - Run 1 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.86667.
+2024-05-03 15:37:02: === Evaluating on CHEMBL3047384, #train 16, run 2
+2024-05-03 15:37:02:  Test - Task CHEMBL3047384 - Size  16 - Run 2 CHEMBL3047384:
+2024-05-03 15:37:02:  Test - Task CHEMBL3047384 - Size  16 - Run 2 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.91667.
+2024-05-03 15:37:02: === Evaluating on CHEMBL3047384, #train 16, run 3
+2024-05-03 15:37:02:  Test - Task CHEMBL3047384 - Size  16 - Run 3 CHEMBL3047384:
+2024-05-03 15:37:02:  Test - Task CHEMBL3047384 - Size  16 - Run 3 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.55556.
+2024-05-03 15:37:02: === Evaluating on CHEMBL3047384, #train 16, run 4
+2024-05-03 15:37:02:  Test - Task CHEMBL3047384 - Size  16 - Run 4 CHEMBL3047384:
+2024-05-03 15:37:03:  Test - Task CHEMBL3047384 - Size  16 - Run 4 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.86667.
+2024-05-03 15:37:03: === Evaluating on CHEMBL3047384, #train 16, run 5
+2024-05-03 15:37:03:  Test - Task CHEMBL3047384 - Size  16 - Run 5 CHEMBL3047384:
+2024-05-03 15:37:03:  Test - Task CHEMBL3047384 - Size  16 - Run 5 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.66667.
+2024-05-03 15:37:03: === Evaluating on CHEMBL3047384, #train 16, run 6
+2024-05-03 15:37:03:  Test - Task CHEMBL3047384 - Size  16 - Run 6 CHEMBL3047384:
+2024-05-03 15:37:03:  Test - Task CHEMBL3047384 - Size  16 - Run 6 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.83333.
+2024-05-03 15:37:03: === Evaluating on CHEMBL3047384, #train 16, run 7
+2024-05-03 15:37:03:  Test - Task CHEMBL3047384 - Size  16 - Run 7 CHEMBL3047384:
+2024-05-03 15:37:04:  Test - Task CHEMBL3047384 - Size  16 - Run 7 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.70000.
+2024-05-03 15:37:04: === Evaluating on CHEMBL3047384, #train 16, run 8
+2024-05-03 15:37:04:  Test - Task CHEMBL3047384 - Size  16 - Run 8 CHEMBL3047384:
+2024-05-03 15:37:04:  Test - Task CHEMBL3047384 - Size  16 - Run 8 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.72222.
+2024-05-03 15:37:04: === Evaluating on CHEMBL3047384, #train 16, run 9
+2024-05-03 15:37:04:  Test - Task CHEMBL3047384 - Size  16 - Run 9 CHEMBL3047384:
+2024-05-03 15:37:04:  Test - Task CHEMBL3047384 - Size  16 - Run 9 CHEMBL3047384:  16 support samples,   6 query samples. Avg. prec. 0.75556.
+2024-05-03 15:37:04: === Evaluating on CHEMBL3282587, #train 16, run 0
+2024-05-03 15:37:04:  Test - Task CHEMBL3282587 - Size  16 - Run 0 CHEMBL3282587:
+2024-05-03 15:37:05:  Test - Task CHEMBL3282587 - Size  16 - Run 0 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 0.96667.
+2024-05-03 15:37:05: === Evaluating on CHEMBL3282587, #train 16, run 1
+2024-05-03 15:37:05:  Test - Task CHEMBL3282587 - Size  16 - Run 1 CHEMBL3282587:
+2024-05-03 15:37:05:  Test - Task CHEMBL3282587 - Size  16 - Run 1 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 0.81000.
+2024-05-03 15:37:05: === Evaluating on CHEMBL3282587, #train 16, run 2
+2024-05-03 15:37:05:  Test - Task CHEMBL3282587 - Size  16 - Run 2 CHEMBL3282587:
+2024-05-03 15:37:05:  Test - Task CHEMBL3282587 - Size  16 - Run 2 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:05: === Evaluating on CHEMBL3282587, #train 16, run 3
+2024-05-03 15:37:05:  Test - Task CHEMBL3282587 - Size  16 - Run 3 CHEMBL3282587:
+2024-05-03 15:37:05:  Test - Task CHEMBL3282587 - Size  16 - Run 3 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 0.96667.
+2024-05-03 15:37:05: === Evaluating on CHEMBL3282587, #train 16, run 4
+2024-05-03 15:37:05:  Test - Task CHEMBL3282587 - Size  16 - Run 4 CHEMBL3282587:
+2024-05-03 15:37:06:  Test - Task CHEMBL3282587 - Size  16 - Run 4 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:06: === Evaluating on CHEMBL3282587, #train 16, run 5
+2024-05-03 15:37:06:  Test - Task CHEMBL3282587 - Size  16 - Run 5 CHEMBL3282587:
+2024-05-03 15:37:06:  Test - Task CHEMBL3282587 - Size  16 - Run 5 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 0.79619.
+2024-05-03 15:37:06: === Evaluating on CHEMBL3282587, #train 16, run 6
+2024-05-03 15:37:06:  Test - Task CHEMBL3282587 - Size  16 - Run 6 CHEMBL3282587:
+2024-05-03 15:37:06:  Test - Task CHEMBL3282587 - Size  16 - Run 6 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 0.87667.
+2024-05-03 15:37:06: === Evaluating on CHEMBL3282587, #train 16, run 7
+2024-05-03 15:37:06:  Test - Task CHEMBL3282587 - Size  16 - Run 7 CHEMBL3282587:
+2024-05-03 15:37:07:  Test - Task CHEMBL3282587 - Size  16 - Run 7 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 0.96667.
+2024-05-03 15:37:07: === Evaluating on CHEMBL3282587, #train 16, run 8
+2024-05-03 15:37:07:  Test - Task CHEMBL3282587 - Size  16 - Run 8 CHEMBL3282587:
+2024-05-03 15:37:07:  Test - Task CHEMBL3282587 - Size  16 - Run 8 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:07: === Evaluating on CHEMBL3282587, #train 16, run 9
+2024-05-03 15:37:07:  Test - Task CHEMBL3282587 - Size  16 - Run 9 CHEMBL3282587:
+2024-05-03 15:37:07:  Test - Task CHEMBL3282587 - Size  16 - Run 9 CHEMBL3282587:  16 support samples,   7 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:07: === Evaluating on CHEMBL3999678, #train 16, run 0
+2024-05-03 15:37:07:  Test - Task CHEMBL3999678 - Size  16 - Run 0 CHEMBL3999678:
+2024-05-03 15:37:08:  Test - Task CHEMBL3999678 - Size  16 - Run 0 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.61220.
+2024-05-03 15:37:08: === Evaluating on CHEMBL3999678, #train 16, run 1
+2024-05-03 15:37:08:  Test - Task CHEMBL3999678 - Size  16 - Run 1 CHEMBL3999678:
+2024-05-03 15:37:08:  Test - Task CHEMBL3999678 - Size  16 - Run 1 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.56625.
+2024-05-03 15:37:08: === Evaluating on CHEMBL3999678, #train 16, run 2
+2024-05-03 15:37:08:  Test - Task CHEMBL3999678 - Size  16 - Run 2 CHEMBL3999678:
+2024-05-03 15:37:08:  Test - Task CHEMBL3999678 - Size  16 - Run 2 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.66050.
+2024-05-03 15:37:08: === Evaluating on CHEMBL3999678, #train 16, run 3
+2024-05-03 15:37:08:  Test - Task CHEMBL3999678 - Size  16 - Run 3 CHEMBL3999678:
+2024-05-03 15:37:09:  Test - Task CHEMBL3999678 - Size  16 - Run 3 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.64613.
+2024-05-03 15:37:09: === Evaluating on CHEMBL3999678, #train 16, run 4
+2024-05-03 15:37:09:  Test - Task CHEMBL3999678 - Size  16 - Run 4 CHEMBL3999678:
+2024-05-03 15:37:09:  Test - Task CHEMBL3999678 - Size  16 - Run 4 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.44117.
+2024-05-03 15:37:09: === Evaluating on CHEMBL3999678, #train 16, run 5
+2024-05-03 15:37:09:  Test - Task CHEMBL3999678 - Size  16 - Run 5 CHEMBL3999678:
+2024-05-03 15:37:10:  Test - Task CHEMBL3999678 - Size  16 - Run 5 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.65152.
+2024-05-03 15:37:10: === Evaluating on CHEMBL3999678, #train 16, run 6
+2024-05-03 15:37:10:  Test - Task CHEMBL3999678 - Size  16 - Run 6 CHEMBL3999678:
+2024-05-03 15:37:10:  Test - Task CHEMBL3999678 - Size  16 - Run 6 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.51667.
+2024-05-03 15:37:10: === Evaluating on CHEMBL3999678, #train 16, run 7
+2024-05-03 15:37:10:  Test - Task CHEMBL3999678 - Size  16 - Run 7 CHEMBL3999678:
+2024-05-03 15:37:10:  Test - Task CHEMBL3999678 - Size  16 - Run 7 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.57753.
+2024-05-03 15:37:10: === Evaluating on CHEMBL3999678, #train 16, run 8
+2024-05-03 15:37:10:  Test - Task CHEMBL3999678 - Size  16 - Run 8 CHEMBL3999678:
+2024-05-03 15:37:11:  Test - Task CHEMBL3999678 - Size  16 - Run 8 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.49583.
+2024-05-03 15:37:11: === Evaluating on CHEMBL3999678, #train 16, run 9
+2024-05-03 15:37:11:  Test - Task CHEMBL3999678 - Size  16 - Run 9 CHEMBL3999678:
+2024-05-03 15:37:11:  Test - Task CHEMBL3999678 - Size  16 - Run 9 CHEMBL3999678:  16 support samples,  16 query samples. Avg. prec. 0.62746.
+2024-05-03 15:37:11: === Evaluating on CHEMBL3385546, #train 16, run 0
+2024-05-03 15:37:11:  Test - Task CHEMBL3385546 - Size  16 - Run 0 CHEMBL3385546:
+2024-05-03 15:37:12:  Test - Task CHEMBL3385546 - Size  16 - Run 0 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.59727.
+2024-05-03 15:37:12: === Evaluating on CHEMBL3385546, #train 16, run 1
+2024-05-03 15:37:12:  Test - Task CHEMBL3385546 - Size  16 - Run 1 CHEMBL3385546:
+2024-05-03 15:37:12:  Test - Task CHEMBL3385546 - Size  16 - Run 1 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.60273.
+2024-05-03 15:37:12: === Evaluating on CHEMBL3385546, #train 16, run 2
+2024-05-03 15:37:12:  Test - Task CHEMBL3385546 - Size  16 - Run 2 CHEMBL3385546:
+2024-05-03 15:37:12:  Test - Task CHEMBL3385546 - Size  16 - Run 2 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.69647.
+2024-05-03 15:37:12: === Evaluating on CHEMBL3385546, #train 16, run 3
+2024-05-03 15:37:12:  Test - Task CHEMBL3385546 - Size  16 - Run 3 CHEMBL3385546:
+2024-05-03 15:37:13:  Test - Task CHEMBL3385546 - Size  16 - Run 3 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.57696.
+2024-05-03 15:37:13: === Evaluating on CHEMBL3385546, #train 16, run 4
+2024-05-03 15:37:13:  Test - Task CHEMBL3385546 - Size  16 - Run 4 CHEMBL3385546:
+2024-05-03 15:37:13:  Test - Task CHEMBL3385546 - Size  16 - Run 4 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.78848.
+2024-05-03 15:37:13: === Evaluating on CHEMBL3385546, #train 16, run 5
+2024-05-03 15:37:13:  Test - Task CHEMBL3385546 - Size  16 - Run 5 CHEMBL3385546:
+2024-05-03 15:37:14:  Test - Task CHEMBL3385546 - Size  16 - Run 5 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.45922.
+2024-05-03 15:37:14: === Evaluating on CHEMBL3385546, #train 16, run 6
+2024-05-03 15:37:14:  Test - Task CHEMBL3385546 - Size  16 - Run 6 CHEMBL3385546:
+2024-05-03 15:37:14:  Test - Task CHEMBL3385546 - Size  16 - Run 6 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.60302.
+2024-05-03 15:37:14: === Evaluating on CHEMBL3385546, #train 16, run 7
+2024-05-03 15:37:14:  Test - Task CHEMBL3385546 - Size  16 - Run 7 CHEMBL3385546:
+2024-05-03 15:37:14:  Test - Task CHEMBL3385546 - Size  16 - Run 7 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.59401.
+2024-05-03 15:37:14: === Evaluating on CHEMBL3385546, #train 16, run 8
+2024-05-03 15:37:14:  Test - Task CHEMBL3385546 - Size  16 - Run 8 CHEMBL3385546:
+2024-05-03 15:37:15:  Test - Task CHEMBL3385546 - Size  16 - Run 8 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.60264.
+2024-05-03 15:37:15: === Evaluating on CHEMBL3385546, #train 16, run 9
+2024-05-03 15:37:15:  Test - Task CHEMBL3385546 - Size  16 - Run 9 CHEMBL3385546:
+2024-05-03 15:37:15:  Test - Task CHEMBL3385546 - Size  16 - Run 9 CHEMBL3385546:  16 support samples,  18 query samples. Avg. prec. 0.62552.
+2024-05-03 15:37:15: === Evaluating on CHEMBL3389955, #train 16, run 0
+2024-05-03 15:37:15:  Test - Task CHEMBL3389955 - Size  16 - Run 0 CHEMBL3389955:
+2024-05-03 15:37:15:  Test - Task CHEMBL3389955 - Size  16 - Run 0 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.63333.
+2024-05-03 15:37:15: === Evaluating on CHEMBL3389955, #train 16, run 1
+2024-05-03 15:37:15:  Test - Task CHEMBL3389955 - Size  16 - Run 1 CHEMBL3389955:
+2024-05-03 15:37:16:  Test - Task CHEMBL3389955 - Size  16 - Run 1 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.69841.
+2024-05-03 15:37:16: === Evaluating on CHEMBL3389955, #train 16, run 2
+2024-05-03 15:37:16:  Test - Task CHEMBL3389955 - Size  16 - Run 2 CHEMBL3389955:
+2024-05-03 15:37:16:  Test - Task CHEMBL3389955 - Size  16 - Run 2 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.55556.
+2024-05-03 15:37:16: === Evaluating on CHEMBL3389955, #train 16, run 3
+2024-05-03 15:37:16:  Test - Task CHEMBL3389955 - Size  16 - Run 3 CHEMBL3389955:
+2024-05-03 15:37:16:  Test - Task CHEMBL3389955 - Size  16 - Run 3 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.47619.
+2024-05-03 15:37:16: === Evaluating on CHEMBL3389955, #train 16, run 4
+2024-05-03 15:37:16:  Test - Task CHEMBL3389955 - Size  16 - Run 4 CHEMBL3389955:
+2024-05-03 15:37:17:  Test - Task CHEMBL3389955 - Size  16 - Run 4 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.44286.
+2024-05-03 15:37:17: === Evaluating on CHEMBL3389955, #train 16, run 5
+2024-05-03 15:37:17:  Test - Task CHEMBL3389955 - Size  16 - Run 5 CHEMBL3389955:
+2024-05-03 15:37:17:  Test - Task CHEMBL3389955 - Size  16 - Run 5 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.36508.
+2024-05-03 15:37:17: === Evaluating on CHEMBL3389955, #train 16, run 6
+2024-05-03 15:37:17:  Test - Task CHEMBL3389955 - Size  16 - Run 6 CHEMBL3389955:
+2024-05-03 15:37:17:  Test - Task CHEMBL3389955 - Size  16 - Run 6 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.64286.
+2024-05-03 15:37:17: === Evaluating on CHEMBL3389955, #train 16, run 7
+2024-05-03 15:37:17:  Test - Task CHEMBL3389955 - Size  16 - Run 7 CHEMBL3389955:
+2024-05-03 15:37:18:  Test - Task CHEMBL3389955 - Size  16 - Run 7 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.50000.
+2024-05-03 15:37:18: === Evaluating on CHEMBL3389955, #train 16, run 8
+2024-05-03 15:37:18:  Test - Task CHEMBL3389955 - Size  16 - Run 8 CHEMBL3389955:
+2024-05-03 15:37:18:  Test - Task CHEMBL3389955 - Size  16 - Run 8 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.38333.
+2024-05-03 15:37:18: === Evaluating on CHEMBL3389955, #train 16, run 9
+2024-05-03 15:37:18:  Test - Task CHEMBL3389955 - Size  16 - Run 9 CHEMBL3389955:
+2024-05-03 15:37:19:  Test - Task CHEMBL3389955 - Size  16 - Run 9 CHEMBL3389955:  16 support samples,   7 query samples. Avg. prec. 0.53175.
+2024-05-03 15:37:19: === Evaluating on CHEMBL3738670, #train 16, run 0
+2024-05-03 15:37:19:  Test - Task CHEMBL3738670 - Size  16 - Run 0 CHEMBL3738670:
+2024-05-03 15:37:19:  Test - Task CHEMBL3738670 - Size  16 - Run 0 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.33333.
+2024-05-03 15:37:19: === Evaluating on CHEMBL3738670, #train 16, run 1
+2024-05-03 15:37:19:  Test - Task CHEMBL3738670 - Size  16 - Run 1 CHEMBL3738670:
+2024-05-03 15:37:19:  Test - Task CHEMBL3738670 - Size  16 - Run 1 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.33333.
+2024-05-03 15:37:19: === Evaluating on CHEMBL3738670, #train 16, run 2
+2024-05-03 15:37:19:  Test - Task CHEMBL3738670 - Size  16 - Run 2 CHEMBL3738670:
+2024-05-03 15:37:19:  Test - Task CHEMBL3738670 - Size  16 - Run 2 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.33333.
+2024-05-03 15:37:19: === Evaluating on CHEMBL3738670, #train 16, run 3
+2024-05-03 15:37:19:  Test - Task CHEMBL3738670 - Size  16 - Run 3 CHEMBL3738670:
+2024-05-03 15:37:20:  Test - Task CHEMBL3738670 - Size  16 - Run 3 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.50000.
+2024-05-03 15:37:20: === Evaluating on CHEMBL3738670, #train 16, run 4
+2024-05-03 15:37:20:  Test - Task CHEMBL3738670 - Size  16 - Run 4 CHEMBL3738670:
+2024-05-03 15:37:20:  Test - Task CHEMBL3738670 - Size  16 - Run 4 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.50000.
+2024-05-03 15:37:20: === Evaluating on CHEMBL3738670, #train 16, run 5
+2024-05-03 15:37:20:  Test - Task CHEMBL3738670 - Size  16 - Run 5 CHEMBL3738670:
+2024-05-03 15:37:20:  Test - Task CHEMBL3738670 - Size  16 - Run 5 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.33333.
+2024-05-03 15:37:20: === Evaluating on CHEMBL3738670, #train 16, run 6
+2024-05-03 15:37:20:  Test - Task CHEMBL3738670 - Size  16 - Run 6 CHEMBL3738670:
+2024-05-03 15:37:20:  Test - Task CHEMBL3738670 - Size  16 - Run 6 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.33333.
+2024-05-03 15:37:20: === Evaluating on CHEMBL3738670, #train 16, run 7
+2024-05-03 15:37:20:  Test - Task CHEMBL3738670 - Size  16 - Run 7 CHEMBL3738670:
+2024-05-03 15:37:21:  Test - Task CHEMBL3738670 - Size  16 - Run 7 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.33333.
+2024-05-03 15:37:21: === Evaluating on CHEMBL3738670, #train 16, run 8
+2024-05-03 15:37:21:  Test - Task CHEMBL3738670 - Size  16 - Run 8 CHEMBL3738670:
+2024-05-03 15:37:21:  Test - Task CHEMBL3738670 - Size  16 - Run 8 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.50000.
+2024-05-03 15:37:21: === Evaluating on CHEMBL3738670, #train 16, run 9
+2024-05-03 15:37:21:  Test - Task CHEMBL3738670 - Size  16 - Run 9 CHEMBL3738670:
+2024-05-03 15:37:21:  Test - Task CHEMBL3738670 - Size  16 - Run 9 CHEMBL3738670:  16 support samples,   3 query samples. Avg. prec. 0.33333.
+2024-05-03 15:37:21: === Evaluating on CHEMBL4197818, #train 16, run 0
+2024-05-03 15:37:21:  Test - Task CHEMBL4197818 - Size  16 - Run 0 CHEMBL4197818:
+2024-05-03 15:37:21:  Test - Task CHEMBL4197818 - Size  16 - Run 0 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 0.85417.
+2024-05-03 15:37:21: === Evaluating on CHEMBL4197818, #train 16, run 1
+2024-05-03 15:37:21:  Test - Task CHEMBL4197818 - Size  16 - Run 1 CHEMBL4197818:
+2024-05-03 15:37:22:  Test - Task CHEMBL4197818 - Size  16 - Run 1 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 0.95000.
+2024-05-03 15:37:22: === Evaluating on CHEMBL4197818, #train 16, run 2
+2024-05-03 15:37:22:  Test - Task CHEMBL4197818 - Size  16 - Run 2 CHEMBL4197818:
+2024-05-03 15:37:22:  Test - Task CHEMBL4197818 - Size  16 - Run 2 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:22: === Evaluating on CHEMBL4197818, #train 16, run 3
+2024-05-03 15:37:22:  Test - Task CHEMBL4197818 - Size  16 - Run 3 CHEMBL4197818:
+2024-05-03 15:37:22:  Test - Task CHEMBL4197818 - Size  16 - Run 3 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 0.91667.
+2024-05-03 15:37:22: === Evaluating on CHEMBL4197818, #train 16, run 4
+2024-05-03 15:37:22:  Test - Task CHEMBL4197818 - Size  16 - Run 4 CHEMBL4197818:
+2024-05-03 15:37:23:  Test - Task CHEMBL4197818 - Size  16 - Run 4 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:23: === Evaluating on CHEMBL4197818, #train 16, run 5
+2024-05-03 15:37:23:  Test - Task CHEMBL4197818 - Size  16 - Run 5 CHEMBL4197818:
+2024-05-03 15:37:23:  Test - Task CHEMBL4197818 - Size  16 - Run 5 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:23: === Evaluating on CHEMBL4197818, #train 16, run 6
+2024-05-03 15:37:23:  Test - Task CHEMBL4197818 - Size  16 - Run 6 CHEMBL4197818:
+2024-05-03 15:37:23:  Test - Task CHEMBL4197818 - Size  16 - Run 6 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 0.91667.
+2024-05-03 15:37:23: === Evaluating on CHEMBL4197818, #train 16, run 7
+2024-05-03 15:37:23:  Test - Task CHEMBL4197818 - Size  16 - Run 7 CHEMBL4197818:
+2024-05-03 15:37:24:  Test - Task CHEMBL4197818 - Size  16 - Run 7 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 0.91667.
+2024-05-03 15:37:24: === Evaluating on CHEMBL4197818, #train 16, run 8
+2024-05-03 15:37:24:  Test - Task CHEMBL4197818 - Size  16 - Run 8 CHEMBL4197818:
+2024-05-03 15:37:24:  Test - Task CHEMBL4197818 - Size  16 - Run 8 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 0.95000.
+2024-05-03 15:37:24: === Evaluating on CHEMBL4197818, #train 16, run 9
+2024-05-03 15:37:24:  Test - Task CHEMBL4197818 - Size  16 - Run 9 CHEMBL4197818:
+2024-05-03 15:37:24:  Test - Task CHEMBL4197818 - Size  16 - Run 9 CHEMBL4197818:  16 support samples,   9 query samples. Avg. prec. 0.81667.
+2024-05-03 15:37:24: === Evaluating on CHEMBL4012802, #train 16, run 0
+2024-05-03 15:37:24:  Test - Task CHEMBL4012802 - Size  16 - Run 0 CHEMBL4012802:
+2024-05-03 15:37:25:  Test - Task CHEMBL4012802 - Size  16 - Run 0 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.64960.
+2024-05-03 15:37:25: === Evaluating on CHEMBL4012802, #train 16, run 1
+2024-05-03 15:37:25:  Test - Task CHEMBL4012802 - Size  16 - Run 1 CHEMBL4012802:
+2024-05-03 15:37:25:  Test - Task CHEMBL4012802 - Size  16 - Run 1 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.60794.
+2024-05-03 15:37:25: === Evaluating on CHEMBL4012802, #train 16, run 2
+2024-05-03 15:37:25:  Test - Task CHEMBL4012802 - Size  16 - Run 2 CHEMBL4012802:
+2024-05-03 15:37:25:  Test - Task CHEMBL4012802 - Size  16 - Run 2 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.56052.
+2024-05-03 15:37:25: === Evaluating on CHEMBL4012802, #train 16, run 3
+2024-05-03 15:37:25:  Test - Task CHEMBL4012802 - Size  16 - Run 3 CHEMBL4012802:
+2024-05-03 15:37:26:  Test - Task CHEMBL4012802 - Size  16 - Run 3 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.66273.
+2024-05-03 15:37:26: === Evaluating on CHEMBL4012802, #train 16, run 4
+2024-05-03 15:37:26:  Test - Task CHEMBL4012802 - Size  16 - Run 4 CHEMBL4012802:
+2024-05-03 15:37:26:  Test - Task CHEMBL4012802 - Size  16 - Run 4 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.62460.
+2024-05-03 15:37:26: === Evaluating on CHEMBL4012802, #train 16, run 5
+2024-05-03 15:37:26:  Test - Task CHEMBL4012802 - Size  16 - Run 5 CHEMBL4012802:
+2024-05-03 15:37:26:  Test - Task CHEMBL4012802 - Size  16 - Run 5 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.70516.
+2024-05-03 15:37:26: === Evaluating on CHEMBL4012802, #train 16, run 6
+2024-05-03 15:37:26:  Test - Task CHEMBL4012802 - Size  16 - Run 6 CHEMBL4012802:
+2024-05-03 15:37:27:  Test - Task CHEMBL4012802 - Size  16 - Run 6 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.62460.
+2024-05-03 15:37:27: === Evaluating on CHEMBL4012802, #train 16, run 7
+2024-05-03 15:37:27:  Test - Task CHEMBL4012802 - Size  16 - Run 7 CHEMBL4012802:
+2024-05-03 15:37:27:  Test - Task CHEMBL4012802 - Size  16 - Run 7 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.73452.
+2024-05-03 15:37:27: === Evaluating on CHEMBL4012802, #train 16, run 8
+2024-05-03 15:37:27:  Test - Task CHEMBL4012802 - Size  16 - Run 8 CHEMBL4012802:
+2024-05-03 15:37:27:  Test - Task CHEMBL4012802 - Size  16 - Run 8 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.56905.
+2024-05-03 15:37:27: === Evaluating on CHEMBL4012802, #train 16, run 9
+2024-05-03 15:37:27:  Test - Task CHEMBL4012802 - Size  16 - Run 9 CHEMBL4012802:
+2024-05-03 15:37:28:  Test - Task CHEMBL4012802 - Size  16 - Run 9 CHEMBL4012802:  16 support samples,  11 query samples. Avg. prec. 0.56905.
+2024-05-03 15:37:28: === Evaluating on CHEMBL4019381, #train 16, run 0
+2024-05-03 15:37:28:  Test - Task CHEMBL4019381 - Size  16 - Run 0 CHEMBL4019381:
+2024-05-03 15:37:28:  Test - Task CHEMBL4019381 - Size  16 - Run 0 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:28: === Evaluating on CHEMBL4019381, #train 16, run 1
+2024-05-03 15:37:28:  Test - Task CHEMBL4019381 - Size  16 - Run 1 CHEMBL4019381:
+2024-05-03 15:37:28:  Test - Task CHEMBL4019381 - Size  16 - Run 1 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 0.58333.
+2024-05-03 15:37:28: === Evaluating on CHEMBL4019381, #train 16, run 2
+2024-05-03 15:37:28:  Test - Task CHEMBL4019381 - Size  16 - Run 2 CHEMBL4019381:
+2024-05-03 15:37:29:  Test - Task CHEMBL4019381 - Size  16 - Run 2 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:29: === Evaluating on CHEMBL4019381, #train 16, run 3
+2024-05-03 15:37:29:  Test - Task CHEMBL4019381 - Size  16 - Run 3 CHEMBL4019381:
+2024-05-03 15:37:29:  Test - Task CHEMBL4019381 - Size  16 - Run 3 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:29: === Evaluating on CHEMBL4019381, #train 16, run 4
+2024-05-03 15:37:29:  Test - Task CHEMBL4019381 - Size  16 - Run 4 CHEMBL4019381:
+2024-05-03 15:37:30:  Test - Task CHEMBL4019381 - Size  16 - Run 4 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:30: === Evaluating on CHEMBL4019381, #train 16, run 5
+2024-05-03 15:37:30:  Test - Task CHEMBL4019381 - Size  16 - Run 5 CHEMBL4019381:
+2024-05-03 15:37:30:  Test - Task CHEMBL4019381 - Size  16 - Run 5 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 0.58333.
+2024-05-03 15:37:30: === Evaluating on CHEMBL4019381, #train 16, run 6
+2024-05-03 15:37:30:  Test - Task CHEMBL4019381 - Size  16 - Run 6 CHEMBL4019381:
+2024-05-03 15:37:30:  Test - Task CHEMBL4019381 - Size  16 - Run 6 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:30: === Evaluating on CHEMBL4019381, #train 16, run 7
+2024-05-03 15:37:30:  Test - Task CHEMBL4019381 - Size  16 - Run 7 CHEMBL4019381:
+2024-05-03 15:37:31:  Test - Task CHEMBL4019381 - Size  16 - Run 7 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 0.75000.
+2024-05-03 15:37:31: === Evaluating on CHEMBL4019381, #train 16, run 8
+2024-05-03 15:37:31:  Test - Task CHEMBL4019381 - Size  16 - Run 8 CHEMBL4019381:
+2024-05-03 15:37:31:  Test - Task CHEMBL4019381 - Size  16 - Run 8 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 0.75000.
+2024-05-03 15:37:31: === Evaluating on CHEMBL4019381, #train 16, run 9
+2024-05-03 15:37:31:  Test - Task CHEMBL4019381 - Size  16 - Run 9 CHEMBL4019381:
+2024-05-03 15:37:31:  Test - Task CHEMBL4019381 - Size  16 - Run 9 CHEMBL4019381:  16 support samples,   5 query samples. Avg. prec. 0.58333.
+2024-05-03 15:37:31: === Evaluating on CHEMBL4222852, #train 16, run 0
+2024-05-03 15:37:31:  Test - Task CHEMBL4222852 - Size  16 - Run 0 CHEMBL4222852:
+2024-05-03 15:37:32:  Test - Task CHEMBL4222852 - Size  16 - Run 0 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 0.96667.
+2024-05-03 15:37:32: === Evaluating on CHEMBL4222852, #train 16, run 1
+2024-05-03 15:37:32:  Test - Task CHEMBL4222852 - Size  16 - Run 1 CHEMBL4222852:
+2024-05-03 15:37:32:  Test - Task CHEMBL4222852 - Size  16 - Run 1 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 0.94286.
+2024-05-03 15:37:32: === Evaluating on CHEMBL4222852, #train 16, run 2
+2024-05-03 15:37:32:  Test - Task CHEMBL4222852 - Size  16 - Run 2 CHEMBL4222852:
+2024-05-03 15:37:32:  Test - Task CHEMBL4222852 - Size  16 - Run 2 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 0.94286.
+2024-05-03 15:37:32: === Evaluating on CHEMBL4222852, #train 16, run 3
+2024-05-03 15:37:32:  Test - Task CHEMBL4222852 - Size  16 - Run 3 CHEMBL4222852:
+2024-05-03 15:37:32:  Test - Task CHEMBL4222852 - Size  16 - Run 3 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 0.96667.
+2024-05-03 15:37:32: === Evaluating on CHEMBL4222852, #train 16, run 4
+2024-05-03 15:37:32:  Test - Task CHEMBL4222852 - Size  16 - Run 4 CHEMBL4222852:
+2024-05-03 15:37:33:  Test - Task CHEMBL4222852 - Size  16 - Run 4 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:33: === Evaluating on CHEMBL4222852, #train 16, run 5
+2024-05-03 15:37:33:  Test - Task CHEMBL4222852 - Size  16 - Run 5 CHEMBL4222852:
+2024-05-03 15:37:33:  Test - Task CHEMBL4222852 - Size  16 - Run 5 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 0.87667.
+2024-05-03 15:37:33: === Evaluating on CHEMBL4222852, #train 16, run 6
+2024-05-03 15:37:33:  Test - Task CHEMBL4222852 - Size  16 - Run 6 CHEMBL4222852:
+2024-05-03 15:37:33:  Test - Task CHEMBL4222852 - Size  16 - Run 6 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 0.96667.
+2024-05-03 15:37:33: === Evaluating on CHEMBL4222852, #train 16, run 7
+2024-05-03 15:37:33:  Test - Task CHEMBL4222852 - Size  16 - Run 7 CHEMBL4222852:
+2024-05-03 15:37:34:  Test - Task CHEMBL4222852 - Size  16 - Run 7 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 0.96667.
+2024-05-03 15:37:34: === Evaluating on CHEMBL4222852, #train 16, run 8
+2024-05-03 15:37:34:  Test - Task CHEMBL4222852 - Size  16 - Run 8 CHEMBL4222852:
+2024-05-03 15:37:34:  Test - Task CHEMBL4222852 - Size  16 - Run 8 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 0.96667.
+2024-05-03 15:37:34: === Evaluating on CHEMBL4222852, #train 16, run 9
+2024-05-03 15:37:34:  Test - Task CHEMBL4222852 - Size  16 - Run 9 CHEMBL4222852:
+2024-05-03 15:37:34:  Test - Task CHEMBL4222852 - Size  16 - Run 9 CHEMBL4222852:  16 support samples,   7 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:34: === Evaluating on CHEMBL4305759, #train 16, run 0
+2024-05-03 15:37:34:  Test - Task CHEMBL4305759 - Size  16 - Run 0 CHEMBL4305759:
+2024-05-03 15:37:35:  Test - Task CHEMBL4305759 - Size  16 - Run 0 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.61111.
+2024-05-03 15:37:35: === Evaluating on CHEMBL4305759, #train 16, run 1
+2024-05-03 15:37:35:  Test - Task CHEMBL4305759 - Size  16 - Run 1 CHEMBL4305759:
+2024-05-03 15:37:35:  Test - Task CHEMBL4305759 - Size  16 - Run 1 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.50119.
+2024-05-03 15:37:35: === Evaluating on CHEMBL4305759, #train 16, run 2
+2024-05-03 15:37:35:  Test - Task CHEMBL4305759 - Size  16 - Run 2 CHEMBL4305759:
+2024-05-03 15:37:35:  Test - Task CHEMBL4305759 - Size  16 - Run 2 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.59028.
+2024-05-03 15:37:35: === Evaluating on CHEMBL4305759, #train 16, run 3
+2024-05-03 15:37:35:  Test - Task CHEMBL4305759 - Size  16 - Run 3 CHEMBL4305759:
+2024-05-03 15:37:36:  Test - Task CHEMBL4305759 - Size  16 - Run 3 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.73611.
+2024-05-03 15:37:36: === Evaluating on CHEMBL4305759, #train 16, run 4
+2024-05-03 15:37:36:  Test - Task CHEMBL4305759 - Size  16 - Run 4 CHEMBL4305759:
+2024-05-03 15:37:36:  Test - Task CHEMBL4305759 - Size  16 - Run 4 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.39861.
+2024-05-03 15:37:36: === Evaluating on CHEMBL4305759, #train 16, run 5
+2024-05-03 15:37:36:  Test - Task CHEMBL4305759 - Size  16 - Run 5 CHEMBL4305759:
+2024-05-03 15:37:36:  Test - Task CHEMBL4305759 - Size  16 - Run 5 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.60000.
+2024-05-03 15:37:36: === Evaluating on CHEMBL4305759, #train 16, run 6
+2024-05-03 15:37:36:  Test - Task CHEMBL4305759 - Size  16 - Run 6 CHEMBL4305759:
+2024-05-03 15:37:37:  Test - Task CHEMBL4305759 - Size  16 - Run 6 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.39881.
+2024-05-03 15:37:37: === Evaluating on CHEMBL4305759, #train 16, run 7
+2024-05-03 15:37:37:  Test - Task CHEMBL4305759 - Size  16 - Run 7 CHEMBL4305759:
+2024-05-03 15:37:37:  Test - Task CHEMBL4305759 - Size  16 - Run 7 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.60000.
+2024-05-03 15:37:37: === Evaluating on CHEMBL4305759, #train 16, run 8
+2024-05-03 15:37:37:  Test - Task CHEMBL4305759 - Size  16 - Run 8 CHEMBL4305759:
+2024-05-03 15:37:37:  Test - Task CHEMBL4305759 - Size  16 - Run 8 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.58452.
+2024-05-03 15:37:37: === Evaluating on CHEMBL4305759, #train 16, run 9
+2024-05-03 15:37:37:  Test - Task CHEMBL4305759 - Size  16 - Run 9 CHEMBL4305759:
+2024-05-03 15:37:38:  Test - Task CHEMBL4305759 - Size  16 - Run 9 CHEMBL4305759:  16 support samples,   9 query samples. Avg. prec. 0.77083.
+2024-05-03 15:37:38: === Evaluating on CHEMBL4328848, #train 16, run 0
+2024-05-03 15:37:38:  Test - Task CHEMBL4328848 - Size  16 - Run 0 CHEMBL4328848:
+2024-05-03 15:37:38:  Test - Task CHEMBL4328848 - Size  16 - Run 0 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.54726.
+2024-05-03 15:37:38: === Evaluating on CHEMBL4328848, #train 16, run 1
+2024-05-03 15:37:38:  Test - Task CHEMBL4328848 - Size  16 - Run 1 CHEMBL4328848:
+2024-05-03 15:37:38:  Test - Task CHEMBL4328848 - Size  16 - Run 1 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.67593.
+2024-05-03 15:37:38: === Evaluating on CHEMBL4328848, #train 16, run 2
+2024-05-03 15:37:38:  Test - Task CHEMBL4328848 - Size  16 - Run 2 CHEMBL4328848:
+2024-05-03 15:37:39:  Test - Task CHEMBL4328848 - Size  16 - Run 2 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.62702.
+2024-05-03 15:37:39: === Evaluating on CHEMBL4328848, #train 16, run 3
+2024-05-03 15:37:39:  Test - Task CHEMBL4328848 - Size  16 - Run 3 CHEMBL4328848:
+2024-05-03 15:37:39:  Test - Task CHEMBL4328848 - Size  16 - Run 3 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.72361.
+2024-05-03 15:37:39: === Evaluating on CHEMBL4328848, #train 16, run 4
+2024-05-03 15:37:39:  Test - Task CHEMBL4328848 - Size  16 - Run 4 CHEMBL4328848:
+2024-05-03 15:37:40:  Test - Task CHEMBL4328848 - Size  16 - Run 4 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.70218.
+2024-05-03 15:37:40: === Evaluating on CHEMBL4328848, #train 16, run 5
+2024-05-03 15:37:40:  Test - Task CHEMBL4328848 - Size  16 - Run 5 CHEMBL4328848:
+2024-05-03 15:37:40:  Test - Task CHEMBL4328848 - Size  16 - Run 5 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.55741.
+2024-05-03 15:37:40: === Evaluating on CHEMBL4328848, #train 16, run 6
+2024-05-03 15:37:40:  Test - Task CHEMBL4328848 - Size  16 - Run 6 CHEMBL4328848:
+2024-05-03 15:37:40:  Test - Task CHEMBL4328848 - Size  16 - Run 6 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.55909.
+2024-05-03 15:37:40: === Evaluating on CHEMBL4328848, #train 16, run 7
+2024-05-03 15:37:40:  Test - Task CHEMBL4328848 - Size  16 - Run 7 CHEMBL4328848:
+2024-05-03 15:37:41:  Test - Task CHEMBL4328848 - Size  16 - Run 7 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.61607.
+2024-05-03 15:37:41: === Evaluating on CHEMBL4328848, #train 16, run 8
+2024-05-03 15:37:41:  Test - Task CHEMBL4328848 - Size  16 - Run 8 CHEMBL4328848:
+2024-05-03 15:37:41:  Test - Task CHEMBL4328848 - Size  16 - Run 8 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.57857.
+2024-05-03 15:37:41: === Evaluating on CHEMBL4328848, #train 16, run 9
+2024-05-03 15:37:41:  Test - Task CHEMBL4328848 - Size  16 - Run 9 CHEMBL4328848:
+2024-05-03 15:37:42:  Test - Task CHEMBL4328848 - Size  16 - Run 9 CHEMBL4328848:  16 support samples,  12 query samples. Avg. prec. 0.74242.
+2024-05-03 15:37:42: === Evaluating on CHEMBL2328235, #train 16, run 0
+2024-05-03 15:37:42:  Test - Task CHEMBL2328235 - Size  16 - Run 0 CHEMBL2328235:
+2024-05-03 15:37:42:  Test - Task CHEMBL2328235 - Size  16 - Run 0 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.96908.
+2024-05-03 15:37:42: === Evaluating on CHEMBL2328235, #train 16, run 1
+2024-05-03 15:37:42:  Test - Task CHEMBL2328235 - Size  16 - Run 1 CHEMBL2328235:
+2024-05-03 15:37:43:  Test - Task CHEMBL2328235 - Size  16 - Run 1 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.96807.
+2024-05-03 15:37:43: === Evaluating on CHEMBL2328235, #train 16, run 2
+2024-05-03 15:37:43:  Test - Task CHEMBL2328235 - Size  16 - Run 2 CHEMBL2328235:
+2024-05-03 15:37:43:  Test - Task CHEMBL2328235 - Size  16 - Run 2 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.99408.
+2024-05-03 15:37:43: === Evaluating on CHEMBL2328235, #train 16, run 3
+2024-05-03 15:37:43:  Test - Task CHEMBL2328235 - Size  16 - Run 3 CHEMBL2328235:
+2024-05-03 15:37:44:  Test - Task CHEMBL2328235 - Size  16 - Run 3 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.98407.
+2024-05-03 15:37:44: === Evaluating on CHEMBL2328235, #train 16, run 4
+2024-05-03 15:37:44:  Test - Task CHEMBL2328235 - Size  16 - Run 4 CHEMBL2328235:
+2024-05-03 15:37:44:  Test - Task CHEMBL2328235 - Size  16 - Run 4 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.95867.
+2024-05-03 15:37:44: === Evaluating on CHEMBL2328235, #train 16, run 5
+2024-05-03 15:37:44:  Test - Task CHEMBL2328235 - Size  16 - Run 5 CHEMBL2328235:
+2024-05-03 15:37:45:  Test - Task CHEMBL2328235 - Size  16 - Run 5 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.95209.
+2024-05-03 15:37:45: === Evaluating on CHEMBL2328235, #train 16, run 6
+2024-05-03 15:37:45:  Test - Task CHEMBL2328235 - Size  16 - Run 6 CHEMBL2328235:
+2024-05-03 15:37:45:  Test - Task CHEMBL2328235 - Size  16 - Run 6 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.96725.
+2024-05-03 15:37:45: === Evaluating on CHEMBL2328235, #train 16, run 7
+2024-05-03 15:37:45:  Test - Task CHEMBL2328235 - Size  16 - Run 7 CHEMBL2328235:
+2024-05-03 15:37:46:  Test - Task CHEMBL2328235 - Size  16 - Run 7 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.98118.
+2024-05-03 15:37:46: === Evaluating on CHEMBL2328235, #train 16, run 8
+2024-05-03 15:37:46:  Test - Task CHEMBL2328235 - Size  16 - Run 8 CHEMBL2328235:
+2024-05-03 15:37:46:  Test - Task CHEMBL2328235 - Size  16 - Run 8 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.95720.
+2024-05-03 15:37:46: === Evaluating on CHEMBL2328235, #train 16, run 9
+2024-05-03 15:37:46:  Test - Task CHEMBL2328235 - Size  16 - Run 9 CHEMBL2328235:
+2024-05-03 15:37:47:  Test - Task CHEMBL2328235 - Size  16 - Run 9 CHEMBL2328235:  16 support samples,  31 query samples. Avg. prec. 0.98084.
+2024-05-03 15:37:47: === Evaluating on CHEMBL3738055, #train 16, run 0
+2024-05-03 15:37:47:  Test - Task CHEMBL3738055 - Size  16 - Run 0 CHEMBL3738055:
+2024-05-03 15:37:47:  Test - Task CHEMBL3738055 - Size  16 - Run 0 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:47: === Evaluating on CHEMBL3738055, #train 16, run 1
+2024-05-03 15:37:47:  Test - Task CHEMBL3738055 - Size  16 - Run 1 CHEMBL3738055:
+2024-05-03 15:37:48:  Test - Task CHEMBL3738055 - Size  16 - Run 1 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:48: === Evaluating on CHEMBL3738055, #train 16, run 2
+2024-05-03 15:37:48:  Test - Task CHEMBL3738055 - Size  16 - Run 2 CHEMBL3738055:
+2024-05-03 15:37:48:  Test - Task CHEMBL3738055 - Size  16 - Run 2 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:48: === Evaluating on CHEMBL3738055, #train 16, run 3
+2024-05-03 15:37:48:  Test - Task CHEMBL3738055 - Size  16 - Run 3 CHEMBL3738055:
+2024-05-03 15:37:48:  Test - Task CHEMBL3738055 - Size  16 - Run 3 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:48: === Evaluating on CHEMBL3738055, #train 16, run 4
+2024-05-03 15:37:48:  Test - Task CHEMBL3738055 - Size  16 - Run 4 CHEMBL3738055:
+2024-05-03 15:37:48:  Test - Task CHEMBL3738055 - Size  16 - Run 4 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:48: === Evaluating on CHEMBL3738055, #train 16, run 5
+2024-05-03 15:37:48:  Test - Task CHEMBL3738055 - Size  16 - Run 5 CHEMBL3738055:
+2024-05-03 15:37:49:  Test - Task CHEMBL3738055 - Size  16 - Run 5 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:49: === Evaluating on CHEMBL3738055, #train 16, run 6
+2024-05-03 15:37:49:  Test - Task CHEMBL3738055 - Size  16 - Run 6 CHEMBL3738055:
+2024-05-03 15:37:49:  Test - Task CHEMBL3738055 - Size  16 - Run 6 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:49: === Evaluating on CHEMBL3738055, #train 16, run 7
+2024-05-03 15:37:49:  Test - Task CHEMBL3738055 - Size  16 - Run 7 CHEMBL3738055:
+2024-05-03 15:37:49:  Test - Task CHEMBL3738055 - Size  16 - Run 7 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:49: === Evaluating on CHEMBL3738055, #train 16, run 8
+2024-05-03 15:37:49:  Test - Task CHEMBL3738055 - Size  16 - Run 8 CHEMBL3738055:
+2024-05-03 15:37:50:  Test - Task CHEMBL3738055 - Size  16 - Run 8 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:50: === Evaluating on CHEMBL3738055, #train 16, run 9
+2024-05-03 15:37:50:  Test - Task CHEMBL3738055 - Size  16 - Run 9 CHEMBL3738055:
+2024-05-03 15:37:50:  Test - Task CHEMBL3738055 - Size  16 - Run 9 CHEMBL3738055:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:50: === Evaluating on CHEMBL4314447, #train 16, run 0
+2024-05-03 15:37:50:  Test - Task CHEMBL4314447 - Size  16 - Run 0 CHEMBL4314447:
+2024-05-03 15:37:50:  Test - Task CHEMBL4314447 - Size  16 - Run 0 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.25290.
+2024-05-03 15:37:50: === Evaluating on CHEMBL4314447, #train 16, run 1
+2024-05-03 15:37:50:  Test - Task CHEMBL4314447 - Size  16 - Run 1 CHEMBL4314447:
+2024-05-03 15:37:51:  Test - Task CHEMBL4314447 - Size  16 - Run 1 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.32670.
+2024-05-03 15:37:51: === Evaluating on CHEMBL4314447, #train 16, run 2
+2024-05-03 15:37:51:  Test - Task CHEMBL4314447 - Size  16 - Run 2 CHEMBL4314447:
+2024-05-03 15:37:51:  Test - Task CHEMBL4314447 - Size  16 - Run 2 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.28514.
+2024-05-03 15:37:51: === Evaluating on CHEMBL4314447, #train 16, run 3
+2024-05-03 15:37:51:  Test - Task CHEMBL4314447 - Size  16 - Run 3 CHEMBL4314447:
+2024-05-03 15:37:52:  Test - Task CHEMBL4314447 - Size  16 - Run 3 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.31828.
+2024-05-03 15:37:52: === Evaluating on CHEMBL4314447, #train 16, run 4
+2024-05-03 15:37:52:  Test - Task CHEMBL4314447 - Size  16 - Run 4 CHEMBL4314447:
+2024-05-03 15:37:52:  Test - Task CHEMBL4314447 - Size  16 - Run 4 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.36472.
+2024-05-03 15:37:52: === Evaluating on CHEMBL4314447, #train 16, run 5
+2024-05-03 15:37:52:  Test - Task CHEMBL4314447 - Size  16 - Run 5 CHEMBL4314447:
+2024-05-03 15:37:53:  Test - Task CHEMBL4314447 - Size  16 - Run 5 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.27715.
+2024-05-03 15:37:53: === Evaluating on CHEMBL4314447, #train 16, run 6
+2024-05-03 15:37:53:  Test - Task CHEMBL4314447 - Size  16 - Run 6 CHEMBL4314447:
+2024-05-03 15:37:53:  Test - Task CHEMBL4314447 - Size  16 - Run 6 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.19972.
+2024-05-03 15:37:53: === Evaluating on CHEMBL4314447, #train 16, run 7
+2024-05-03 15:37:53:  Test - Task CHEMBL4314447 - Size  16 - Run 7 CHEMBL4314447:
+2024-05-03 15:37:53:  Test - Task CHEMBL4314447 - Size  16 - Run 7 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.23751.
+2024-05-03 15:37:53: === Evaluating on CHEMBL4314447, #train 16, run 8
+2024-05-03 15:37:53:  Test - Task CHEMBL4314447 - Size  16 - Run 8 CHEMBL4314447:
+2024-05-03 15:37:54:  Test - Task CHEMBL4314447 - Size  16 - Run 8 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.41889.
+2024-05-03 15:37:54: === Evaluating on CHEMBL4314447, #train 16, run 9
+2024-05-03 15:37:54:  Test - Task CHEMBL4314447 - Size  16 - Run 9 CHEMBL4314447:
+2024-05-03 15:37:54:  Test - Task CHEMBL4314447 - Size  16 - Run 9 CHEMBL4314447:  16 support samples,  23 query samples. Avg. prec. 0.18561.
+2024-05-03 15:37:54: === Evaluating on CHEMBL3999677, #train 16, run 0
+2024-05-03 15:37:54:  Test - Task CHEMBL3999677 - Size  16 - Run 0 CHEMBL3999677:
+2024-05-03 15:37:54:  Test - Task CHEMBL3999677 - Size  16 - Run 0 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.78765.
+2024-05-03 15:37:54: === Evaluating on CHEMBL3999677, #train 16, run 1
+2024-05-03 15:37:54:  Test - Task CHEMBL3999677 - Size  16 - Run 1 CHEMBL3999677:
+2024-05-03 15:37:55:  Test - Task CHEMBL3999677 - Size  16 - Run 1 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.68887.
+2024-05-03 15:37:55: === Evaluating on CHEMBL3999677, #train 16, run 2
+2024-05-03 15:37:55:  Test - Task CHEMBL3999677 - Size  16 - Run 2 CHEMBL3999677:
+2024-05-03 15:37:55:  Test - Task CHEMBL3999677 - Size  16 - Run 2 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.92955.
+2024-05-03 15:37:55: === Evaluating on CHEMBL3999677, #train 16, run 3
+2024-05-03 15:37:55:  Test - Task CHEMBL3999677 - Size  16 - Run 3 CHEMBL3999677:
+2024-05-03 15:37:56:  Test - Task CHEMBL3999677 - Size  16 - Run 3 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.54505.
+2024-05-03 15:37:56: === Evaluating on CHEMBL3999677, #train 16, run 4
+2024-05-03 15:37:56:  Test - Task CHEMBL3999677 - Size  16 - Run 4 CHEMBL3999677:
+2024-05-03 15:37:56:  Test - Task CHEMBL3999677 - Size  16 - Run 4 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.87487.
+2024-05-03 15:37:56: === Evaluating on CHEMBL3999677, #train 16, run 5
+2024-05-03 15:37:56:  Test - Task CHEMBL3999677 - Size  16 - Run 5 CHEMBL3999677:
+2024-05-03 15:37:57:  Test - Task CHEMBL3999677 - Size  16 - Run 5 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.83225.
+2024-05-03 15:37:57: === Evaluating on CHEMBL3999677, #train 16, run 6
+2024-05-03 15:37:57:  Test - Task CHEMBL3999677 - Size  16 - Run 6 CHEMBL3999677:
+2024-05-03 15:37:57:  Test - Task CHEMBL3999677 - Size  16 - Run 6 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.80860.
+2024-05-03 15:37:57: === Evaluating on CHEMBL3999677, #train 16, run 7
+2024-05-03 15:37:57:  Test - Task CHEMBL3999677 - Size  16 - Run 7 CHEMBL3999677:
+2024-05-03 15:37:57:  Test - Task CHEMBL3999677 - Size  16 - Run 7 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.77369.
+2024-05-03 15:37:57: === Evaluating on CHEMBL3999677, #train 16, run 8
+2024-05-03 15:37:57:  Test - Task CHEMBL3999677 - Size  16 - Run 8 CHEMBL3999677:
+2024-05-03 15:37:58:  Test - Task CHEMBL3999677 - Size  16 - Run 8 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.82598.
+2024-05-03 15:37:58: === Evaluating on CHEMBL3999677, #train 16, run 9
+2024-05-03 15:37:58:  Test - Task CHEMBL3999677 - Size  16 - Run 9 CHEMBL3999677:
+2024-05-03 15:37:58:  Test - Task CHEMBL3999677 - Size  16 - Run 9 CHEMBL3999677:  16 support samples,  16 query samples. Avg. prec. 0.87721.
+2024-05-03 15:37:58: === Evaluating on CHEMBL3813389, #train 16, run 0
+2024-05-03 15:37:58:  Test - Task CHEMBL3813389 - Size  16 - Run 0 CHEMBL3813389:
+2024-05-03 15:37:59:  Test - Task CHEMBL3813389 - Size  16 - Run 0 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 0.50000.
+2024-05-03 15:37:59: === Evaluating on CHEMBL3813389, #train 16, run 1
+2024-05-03 15:37:59:  Test - Task CHEMBL3813389 - Size  16 - Run 1 CHEMBL3813389:
+2024-05-03 15:37:59:  Test - Task CHEMBL3813389 - Size  16 - Run 1 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 0.50000.
+2024-05-03 15:37:59: === Evaluating on CHEMBL3813389, #train 16, run 2
+2024-05-03 15:37:59:  Test - Task CHEMBL3813389 - Size  16 - Run 2 CHEMBL3813389:
+2024-05-03 15:37:59:  Test - Task CHEMBL3813389 - Size  16 - Run 2 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:37:59: === Evaluating on CHEMBL3813389, #train 16, run 3
+2024-05-03 15:37:59:  Test - Task CHEMBL3813389 - Size  16 - Run 3 CHEMBL3813389:
+2024-05-03 15:38:00:  Test - Task CHEMBL3813389 - Size  16 - Run 3 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:38:00: === Evaluating on CHEMBL3813389, #train 16, run 4
+2024-05-03 15:38:00:  Test - Task CHEMBL3813389 - Size  16 - Run 4 CHEMBL3813389:
+2024-05-03 15:38:00:  Test - Task CHEMBL3813389 - Size  16 - Run 4 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:38:00: === Evaluating on CHEMBL3813389, #train 16, run 5
+2024-05-03 15:38:00:  Test - Task CHEMBL3813389 - Size  16 - Run 5 CHEMBL3813389:
+2024-05-03 15:38:00:  Test - Task CHEMBL3813389 - Size  16 - Run 5 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:38:00: === Evaluating on CHEMBL3813389, #train 16, run 6
+2024-05-03 15:38:00:  Test - Task CHEMBL3813389 - Size  16 - Run 6 CHEMBL3813389:
+2024-05-03 15:38:01:  Test - Task CHEMBL3813389 - Size  16 - Run 6 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:38:01: === Evaluating on CHEMBL3813389, #train 16, run 7
+2024-05-03 15:38:01:  Test - Task CHEMBL3813389 - Size  16 - Run 7 CHEMBL3813389:
+2024-05-03 15:38:01:  Test - Task CHEMBL3813389 - Size  16 - Run 7 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:38:01: === Evaluating on CHEMBL3813389, #train 16, run 8
+2024-05-03 15:38:01:  Test - Task CHEMBL3813389 - Size  16 - Run 8 CHEMBL3813389:
+2024-05-03 15:38:01:  Test - Task CHEMBL3813389 - Size  16 - Run 8 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 1.00000.
+2024-05-03 15:38:01: === Evaluating on CHEMBL3813389, #train 16, run 9
+2024-05-03 15:38:01:  Test - Task CHEMBL3813389 - Size  16 - Run 9 CHEMBL3813389:
+2024-05-03 15:38:02:  Test - Task CHEMBL3813389 - Size  16 - Run 9 CHEMBL3813389:  16 support samples,   2 query samples. Avg. prec. 0.50000.
+2024-05-03 15:38:02: === Evaluating on CHEMBL4145237, #train 16, run 0
+2024-05-03 15:38:02:  Test - Task CHEMBL4145237 - Size  16 - Run 0 CHEMBL4145237:
+2024-05-03 15:38:02:  Test - Task CHEMBL4145237 - Size  16 - Run 0 CHEMBL4145237:  16 support samples,  48 query samples. Avg. prec. 0.56395.
+2024-05-03 15:38:02: === Evaluating on CHEMBL4145237, #train 16, run 1
+2024-05-03 15:38:02:  Test - Task CHEMBL4145237 - Size  16 - Run 1 CHEMBL4145237:
+2024-05-03 15:38:03:  Test - Task CHEMBL4145237 - Size  16 - Run 1 CHEMBL4145237:  16 support samples,  48 query samples. Avg. prec. 0.52462.
+2024-05-03 15:38:03: === Evaluating on CHEMBL4145237, #train 16, run 2
+2024-05-03 15:38:03:  Test - Task CHEMBL4145237 - Size  16 - Run 2 CHEMBL4145237:
+2024-05-03 15:38:03:  Test - Task CHEMBL4145237 - Size  16 - Run 2 CHEMBL4145237:  16 support samples,  48 query samples. Avg. prec. 0.57587.
+2024-05-03 15:38:03: === Evaluating on CHEMBL4145237, #train 16, run 3
+2024-05-03 15:38:03:  Test - Task CHEMBL4145237 - Size  16 - Run 3 CHEMBL4145237:
+2024-05-03 15:38:04:  Test - Task CHEMBL4145237 - Size  16 - Run 3 CHEMBL4145237:  16 support samples,  48 query samples. Avg. prec. 0.58965.
+2024-05-03 15:38:04: === Evaluating on CHEMBL4145237, #train 16, run 4
+2024-05-03 15:38:04:  Test - Task CHEMBL4145237 - Size  16 - Run 4 CHEMBL4145237:
+2024-05-03 15:38:04:  Test - Task CHEMBL4145237 - Size  16 - Run 4 CHEMBL4145237:  16 support samples,  48 query samples. Avg. prec. 0.64265.
+2024-05-03 15:38:04: === Evaluating on CHEMBL4145237, #train 16, run 5
+2024-05-03 15:38:04:  Test - Task CHEMBL4145237 - Size  16 - Run 5 CHEMBL4145237:
+2024-05-03 15:38:05:  Test - Task CHEMBL4145237 - Size  16 - Run 5 CHEMBL4145237:  16 support samples,  48 query samples. Avg. prec. 0.63639.
+2024-05-03 15:38:05: === Evaluating on CHEMBL4145237, #train 16, run 6
+2024-05-03 15:38:05:  Test - Task CHEMBL4145237 - Size  16 - Run 6 CHEMBL4145237:
+2024-05-03 15:38:05:  Test - Task CHEMBL4145237 - Size  16 - Run 6 CHEMBL4145237:  16 support samples,  48 query samples. Avg. prec. 0.50434.
+2024-05-03 15:38:05: === Evaluating on CHEMBL4145237, #train 16, run 7
+2024-05-03 15:38:05:  Test - Task CHEMBL4145237 - Size  16 - Run 7 CHEMBL4145237:
+2024-05-03 15:38:06:  Test - Task CHEMBL4145237 - Size  16 - Run 7 CHEMBL4145237:  16 support samples,  48 query samples. Avg. prec. 0.59737.
+2024-05-03 15:38:06: === Evaluating on CHEMBL4145237, #train 16, run 8
+2024-05-03 15:38:06:  Test - Task CHEMBL4145237 - Size  16 - Run 8 CHEMBL4145237:

@@ -1,0 +1,38 @@
+2024-04-30 16:49:47: Identified 1226 training tasks.
+2024-04-30 16:49:47: Identified 39 validation tasks.
+2024-04-30 16:49:47: Identified 200 test tasks.
+2024-04-30 16:49:47: Starting test run FSMol_Eval_randomForest_2024-04-30_16-49-47 on 200 assays
+2024-04-30 16:49:47: 	Arguments: Namespace(DATA_PATH=['/home/gridsan/ppaschalidis/Ersilia-FS/dataset'], task_list_file='datasets/fsmol-0.1.json', save_dir='outputs', num_runs=10, seed=0, train_sizes=[16], test_size=None, model='randomForest', grid_search=True, model_params={}, debug=False)
+2024-04-30 16:49:47: 	Output dir: outputs/FSMol_Eval_randomForest_2024-04-30_16-49-47
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 0
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 1
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 2
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 3
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 4
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 5
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 6
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 7
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 8
+2024-04-30 16:49:47: === Evaluating on CHEMBL1931089, #train 16, run 9
+2024-04-30 16:49:47: === Evaluating on CHEMBL1033992, #train 16, run 0
+2024-04-30 16:49:47:  Test - Task CHEMBL1033992 - Size  16 - Run 0  Training randomForest with 16 datapoints.
+/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_split.py:700: UserWarning: The least populated class in y has only 3 members, which is less than n_splits=5.
+  warnings.warn(
+2024-04-30 16:50:24:  Test - Task CHEMBL1033992 - Size  16 - Run 0  Test metrics: BinaryEvalMetrics(size=21, acc=0.8571428571428571, balanced_acc=0.5, f1=0.923076923076923, prec=0.8571428571428571, recall=1.0, roc_auc=0.9629629629629629, avg_precision=0.9944444444444446, kappa=0.0)
+2024-04-30 16:50:24:  Test - Task CHEMBL1033992 - Size  16 - Run 0  Dataset sample has 0.8571 positive label ratio in test data.
+2024-04-30 16:50:24: === Evaluating on CHEMBL1033992, #train 16, run 1
+2024-04-30 16:50:24:  Test - Task CHEMBL1033992 - Size  16 - Run 1  Training randomForest with 16 datapoints.
+/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_split.py:700: UserWarning: The least populated class in y has only 3 members, which is less than n_splits=5.
+  warnings.warn(
+2024-04-30 16:51:00:  Test - Task CHEMBL1033992 - Size  16 - Run 1  Test metrics: BinaryEvalMetrics(size=21, acc=0.9047619047619048, balanced_acc=0.8055555555555556, f1=0.9444444444444444, prec=0.9444444444444444, recall=0.9444444444444444, roc_auc=0.8333333333333334, avg_precision=0.9705559645510626, kappa=0.6111111111111112)
+2024-04-30 16:51:00:  Test - Task CHEMBL1033992 - Size  16 - Run 1  Dataset sample has 0.8571 positive label ratio in test data.
+2024-04-30 16:51:00: === Evaluating on CHEMBL1033992, #train 16, run 2
+2024-04-30 16:51:00:  Test - Task CHEMBL1033992 - Size  16 - Run 2  Training randomForest with 16 datapoints.
+/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_split.py:700: UserWarning: The least populated class in y has only 3 members, which is less than n_splits=5.
+  warnings.warn(
+2024-04-30 16:51:37:  Test - Task CHEMBL1033992 - Size  16 - Run 2  Test metrics: BinaryEvalMetrics(size=21, acc=0.8571428571428571, balanced_acc=0.5, f1=0.923076923076923, prec=0.8571428571428571, recall=1.0, roc_auc=1.0, avg_precision=1.0, kappa=0.0)
+2024-04-30 16:51:37:  Test - Task CHEMBL1033992 - Size  16 - Run 2  Dataset sample has 0.8571 positive label ratio in test data.
+2024-04-30 16:51:37: === Evaluating on CHEMBL1033992, #train 16, run 3
+2024-04-30 16:51:37:  Test - Task CHEMBL1033992 - Size  16 - Run 3  Training randomForest with 16 datapoints.
+/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_split.py:700: UserWarning: The least populated class in y has only 3 members, which is less than n_splits=5.
+  warnings.warn(

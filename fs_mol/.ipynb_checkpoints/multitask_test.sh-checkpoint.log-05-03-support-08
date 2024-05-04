@@ -1,0 +1,145 @@
+2024-05-03 19:12:23: Identified 1487 training tasks.
+2024-05-03 19:12:23: Identified 78 validation tasks.
+2024-05-03 19:12:23: Identified 200 test tasks.
+2024-05-03 19:12:23: Starting test run FSMol_Eval_Multitask_2024-05-03_19-12-23 on 200 assays
+2024-05-03 19:12:23: 	Arguments: Namespace(TRAINED_MODEL='/home/gridsan/ppaschalidis/Ersilia-FS/weights/multitask_best_model.pt', DATA_PATH=['/home/gridsan/ppaschalidis/Ersilia-FS/dataset/min_size_08'], task_list_file='datasets/fsmol-0.1.json', save_dir='/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/outputs/test/FSMol_Eval_Multitask_2024-05-03-support-08', num_runs=10, seed=0, train_sizes=[8], test_size=None, batch_size=128, use_fresh_param_init=False, learning_rate=5e-05, task_specific_lr=0.0001)
+2024-05-03 19:12:23: 	Output dir: /home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/outputs/test/FSMol_Eval_Multitask_2024-05-03-support-08/FSMol_Eval_Multitask_2024-05-03_19-12-23
+2024-05-03 19:12:23: Using model weights loaded from /home/gridsan/ppaschalidis/Ersilia-FS/weights/multitask_best_model.pt.
+2024-05-03 19:12:23: === Evaluating on CHEMBL1033985, #train 8, run 0
+2024-05-03 19:12:23:  Test - Task CHEMBL1033985 - Size   8 - Run 0 CHEMBL1033985:
+2024-05-03 19:12:27:  Test - Task CHEMBL1033985 - Size   8 - Run 0   Re-initialising task-specific parameters.
+2024-05-03 19:12:31:  Test - Task CHEMBL1033985 - Size   8 - Run 0  Test metrics: BinaryEvalMetrics(size=6, acc=0.5, balanced_acc=0.5, f1=0.4, prec=0.5, recall=0.3333333333333333, roc_auc=0.4444444444444445, avg_precision=0.5555555555555556, kappa=0.0)
+2024-05-03 19:12:31:  Test - Task CHEMBL1033985 - Size   8 - Run 0 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:12:31: === Evaluating on CHEMBL1033985, #train 8, run 1
+2024-05-03 19:12:31:  Test - Task CHEMBL1033985 - Size   8 - Run 1 CHEMBL1033985:
+2024-05-03 19:12:32:  Test - Task CHEMBL1033985 - Size   8 - Run 1   Re-initialising task-specific parameters.
+2024-05-03 19:12:34:  Test - Task CHEMBL1033985 - Size   8 - Run 1  Test metrics: BinaryEvalMetrics(size=6, acc=0.5, balanced_acc=0.5, f1=0.5714285714285715, prec=0.5, recall=0.6666666666666666, roc_auc=0.22222222222222224, avg_precision=0.4444444444444445, kappa=0.0)
+2024-05-03 19:12:34:  Test - Task CHEMBL1033985 - Size   8 - Run 1 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:12:34: === Evaluating on CHEMBL1033985, #train 8, run 2
+2024-05-03 19:12:34:  Test - Task CHEMBL1033985 - Size   8 - Run 2 CHEMBL1033985:
+2024-05-03 19:12:34:  Test - Task CHEMBL1033985 - Size   8 - Run 2   Re-initialising task-specific parameters.
+2024-05-03 19:12:36:  Test - Task CHEMBL1033985 - Size   8 - Run 2  Test metrics: BinaryEvalMetrics(size=6, acc=0.16666666666666666, balanced_acc=0.16666666666666666, f1=0.0, prec=0.0, recall=0.0, roc_auc=0.22222222222222224, avg_precision=0.4444444444444445, kappa=-0.6666666666666667)
+2024-05-03 19:12:36:  Test - Task CHEMBL1033985 - Size   8 - Run 2 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:12:36: === Evaluating on CHEMBL1033985, #train 8, run 3
+2024-05-03 19:12:36:  Test - Task CHEMBL1033985 - Size   8 - Run 3 CHEMBL1033985:
+2024-05-03 19:12:37:  Test - Task CHEMBL1033985 - Size   8 - Run 3   Re-initialising task-specific parameters.
+2024-05-03 19:12:40:  Test - Task CHEMBL1033985 - Size   8 - Run 3  Test metrics: BinaryEvalMetrics(size=6, acc=0.3333333333333333, balanced_acc=0.3333333333333333, f1=0.3333333333333333, prec=0.3333333333333333, recall=0.3333333333333333, roc_auc=0.33333333333333337, avg_precision=0.4777777777777778, kappa=-0.33333333333333326)
+2024-05-03 19:12:40:  Test - Task CHEMBL1033985 - Size   8 - Run 3 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:12:40: === Evaluating on CHEMBL1033985, #train 8, run 4
+2024-05-03 19:12:40:  Test - Task CHEMBL1033985 - Size   8 - Run 4 CHEMBL1033985:
+2024-05-03 19:12:40:  Test - Task CHEMBL1033985 - Size   8 - Run 4   Re-initialising task-specific parameters.
+2024-05-03 19:12:48:  Test - Task CHEMBL1033985 - Size   8 - Run 4  Test metrics: BinaryEvalMetrics(size=6, acc=0.5, balanced_acc=0.5, f1=0.0, prec=1.0, recall=0.0, roc_auc=0.33333333333333337, avg_precision=0.5, kappa=0.0)
+2024-05-03 19:12:48:  Test - Task CHEMBL1033985 - Size   8 - Run 4 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:12:48: === Evaluating on CHEMBL1033985, #train 8, run 5
+2024-05-03 19:12:48:  Test - Task CHEMBL1033985 - Size   8 - Run 5 CHEMBL1033985:
+2024-05-03 19:12:49:  Test - Task CHEMBL1033985 - Size   8 - Run 5   Re-initialising task-specific parameters.
+2024-05-03 19:12:50:  Test - Task CHEMBL1033985 - Size   8 - Run 5  Test metrics: BinaryEvalMetrics(size=6, acc=0.5, balanced_acc=0.5, f1=0.4, prec=0.5, recall=0.3333333333333333, roc_auc=0.6666666666666667, avg_precision=0.7555555555555555, kappa=0.0)
+2024-05-03 19:12:50:  Test - Task CHEMBL1033985 - Size   8 - Run 5 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:12:50: === Evaluating on CHEMBL1033985, #train 8, run 6
+2024-05-03 19:12:50:  Test - Task CHEMBL1033985 - Size   8 - Run 6 CHEMBL1033985:
+2024-05-03 19:12:51:  Test - Task CHEMBL1033985 - Size   8 - Run 6   Re-initialising task-specific parameters.
+2024-05-03 19:12:59:  Test - Task CHEMBL1033985 - Size   8 - Run 6  Test metrics: BinaryEvalMetrics(size=6, acc=0.5, balanced_acc=0.5, f1=0.4, prec=0.5, recall=0.3333333333333333, roc_auc=0.5555555555555556, avg_precision=0.7222222222222222, kappa=0.0)
+2024-05-03 19:12:59:  Test - Task CHEMBL1033985 - Size   8 - Run 6 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:12:59: === Evaluating on CHEMBL1033985, #train 8, run 7
+2024-05-03 19:12:59:  Test - Task CHEMBL1033985 - Size   8 - Run 7 CHEMBL1033985:
+2024-05-03 19:12:59:  Test - Task CHEMBL1033985 - Size   8 - Run 7   Re-initialising task-specific parameters.
+2024-05-03 19:13:07:  Test - Task CHEMBL1033985 - Size   8 - Run 7  Test metrics: BinaryEvalMetrics(size=6, acc=0.5, balanced_acc=0.5, f1=0.0, prec=1.0, recall=0.0, roc_auc=0.6666666666666666, avg_precision=0.8333333333333333, kappa=0.0)
+2024-05-03 19:13:07:  Test - Task CHEMBL1033985 - Size   8 - Run 7 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:13:07: === Evaluating on CHEMBL1033985, #train 8, run 8
+2024-05-03 19:13:07:  Test - Task CHEMBL1033985 - Size   8 - Run 8 CHEMBL1033985:
+2024-05-03 19:13:08:  Test - Task CHEMBL1033985 - Size   8 - Run 8   Re-initialising task-specific parameters.
+2024-05-03 19:13:10:  Test - Task CHEMBL1033985 - Size   8 - Run 8  Test metrics: BinaryEvalMetrics(size=6, acc=0.5, balanced_acc=0.5, f1=0.5714285714285715, prec=0.5, recall=0.6666666666666666, roc_auc=0.4444444444444444, avg_precision=0.6666666666666667, kappa=0.0)
+2024-05-03 19:13:10:  Test - Task CHEMBL1033985 - Size   8 - Run 8 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:13:10: === Evaluating on CHEMBL1033985, #train 8, run 9
+2024-05-03 19:13:10:  Test - Task CHEMBL1033985 - Size   8 - Run 9 CHEMBL1033985:
+2024-05-03 19:13:10:  Test - Task CHEMBL1033985 - Size   8 - Run 9   Re-initialising task-specific parameters.
+2024-05-03 19:13:12:  Test - Task CHEMBL1033985 - Size   8 - Run 9  Test metrics: BinaryEvalMetrics(size=6, acc=0.8333333333333334, balanced_acc=0.8333333333333333, f1=0.8, prec=1.0, recall=0.6666666666666666, roc_auc=1.0, avg_precision=1.0, kappa=0.6666666666666667)
+2024-05-03 19:13:12:  Test - Task CHEMBL1033985 - Size   8 - Run 9 Dataset sample has 0.5000 positive label ratio in test data.
+2024-05-03 19:13:12: === Evaluating on CHEMBL1918345, #train 8, run 0
+2024-05-03 19:13:12:  Test - Task CHEMBL1918345 - Size   8 - Run 0 CHEMBL1918345:
+2024-05-03 19:13:13:  Test - Task CHEMBL1918345 - Size   8 - Run 0   Re-initialising task-specific parameters.
+2024-05-03 19:13:16:  Test - Task CHEMBL1918345 - Size   8 - Run 0  Test metrics: BinaryEvalMetrics(size=5, acc=0.4, balanced_acc=0.3333333333333333, f1=0.0, prec=0.0, recall=0.0, roc_auc=0.6666666666666667, avg_precision=0.5833333333333333, kappa=-0.36363636363636354)
+2024-05-03 19:13:16:  Test - Task CHEMBL1918345 - Size   8 - Run 0 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:13:16: === Evaluating on CHEMBL1918345, #train 8, run 1
+2024-05-03 19:13:16:  Test - Task CHEMBL1918345 - Size   8 - Run 1 CHEMBL1918345:
+2024-05-03 19:13:16:  Test - Task CHEMBL1918345 - Size   8 - Run 1   Re-initialising task-specific parameters.
+2024-05-03 19:13:24:  Test - Task CHEMBL1918345 - Size   8 - Run 1  Test metrics: BinaryEvalMetrics(size=5, acc=0.4, balanced_acc=0.41666666666666663, f1=0.4, prec=0.3333333333333333, recall=0.5, roc_auc=0.5, avg_precision=0.5, kappa=-0.15384615384615374)
+2024-05-03 19:13:24:  Test - Task CHEMBL1918345 - Size   8 - Run 1 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:13:24: === Evaluating on CHEMBL1918345, #train 8, run 2
+2024-05-03 19:13:24:  Test - Task CHEMBL1918345 - Size   8 - Run 2 CHEMBL1918345:
+2024-05-03 19:13:25:  Test - Task CHEMBL1918345 - Size   8 - Run 2   Re-initialising task-specific parameters.
+2024-05-03 19:13:27:  Test - Task CHEMBL1918345 - Size   8 - Run 2  Test metrics: BinaryEvalMetrics(size=5, acc=0.4, balanced_acc=0.3333333333333333, f1=0.0, prec=0.0, recall=0.0, roc_auc=0.5, avg_precision=0.5, kappa=-0.36363636363636354)
+2024-05-03 19:13:27:  Test - Task CHEMBL1918345 - Size   8 - Run 2 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:13:27: === Evaluating on CHEMBL1918345, #train 8, run 3
+2024-05-03 19:13:27:  Test - Task CHEMBL1918345 - Size   8 - Run 3 CHEMBL1918345:
+2024-05-03 19:13:27:  Test - Task CHEMBL1918345 - Size   8 - Run 3   Re-initialising task-specific parameters.
+2024-05-03 19:13:35:  Test - Task CHEMBL1918345 - Size   8 - Run 3  Test metrics: BinaryEvalMetrics(size=5, acc=0.6, balanced_acc=0.6666666666666666, f1=0.6666666666666666, prec=0.5, recall=1.0, roc_auc=0.5, avg_precision=0.5, kappa=0.2857142857142857)
+2024-05-03 19:13:35:  Test - Task CHEMBL1918345 - Size   8 - Run 3 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:13:35: === Evaluating on CHEMBL1918345, #train 8, run 4
+2024-05-03 19:13:35:  Test - Task CHEMBL1918345 - Size   8 - Run 4 CHEMBL1918345:
+2024-05-03 19:13:35:  Test - Task CHEMBL1918345 - Size   8 - Run 4   Re-initialising task-specific parameters.
+2024-05-03 19:13:37:  Test - Task CHEMBL1918345 - Size   8 - Run 4  Test metrics: BinaryEvalMetrics(size=5, acc=0.8, balanced_acc=0.75, f1=0.6666666666666666, prec=1.0, recall=0.5, roc_auc=0.5, avg_precision=0.7, kappa=0.5454545454545454)
+2024-05-03 19:13:37:  Test - Task CHEMBL1918345 - Size   8 - Run 4 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:13:37: === Evaluating on CHEMBL1918345, #train 8, run 5
+2024-05-03 19:13:37:  Test - Task CHEMBL1918345 - Size   8 - Run 5 CHEMBL1918345:
+2024-05-03 19:13:38:  Test - Task CHEMBL1918345 - Size   8 - Run 5   Re-initialising task-specific parameters.
+2024-05-03 19:13:40:  Test - Task CHEMBL1918345 - Size   8 - Run 5  Test metrics: BinaryEvalMetrics(size=5, acc=0.6, balanced_acc=0.6666666666666666, f1=0.6666666666666666, prec=0.5, recall=1.0, roc_auc=0.8333333333333334, avg_precision=0.8333333333333333, kappa=0.2857142857142857)
+2024-05-03 19:13:40:  Test - Task CHEMBL1918345 - Size   8 - Run 5 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:13:40: === Evaluating on CHEMBL1918345, #train 8, run 6
+2024-05-03 19:13:40:  Test - Task CHEMBL1918345 - Size   8 - Run 6 CHEMBL1918345:
+2024-05-03 19:13:40:  Test - Task CHEMBL1918345 - Size   8 - Run 6   Re-initialising task-specific parameters.
+2024-05-03 19:13:48:  Test - Task CHEMBL1918345 - Size   8 - Run 6  Test metrics: BinaryEvalMetrics(size=5, acc=0.6, balanced_acc=0.6666666666666666, f1=0.6666666666666666, prec=0.5, recall=1.0, roc_auc=0.5, avg_precision=0.5, kappa=0.2857142857142857)
+2024-05-03 19:13:48:  Test - Task CHEMBL1918345 - Size   8 - Run 6 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:13:48: === Evaluating on CHEMBL1918345, #train 8, run 7
+2024-05-03 19:13:48:  Test - Task CHEMBL1918345 - Size   8 - Run 7 CHEMBL1918345:
+2024-05-03 19:13:49:  Test - Task CHEMBL1918345 - Size   8 - Run 7   Re-initialising task-specific parameters.
+2024-05-03 19:13:51:  Test - Task CHEMBL1918345 - Size   8 - Run 7  Test metrics: BinaryEvalMetrics(size=5, acc=1.0, balanced_acc=1.0, f1=1.0, prec=1.0, recall=1.0, roc_auc=1.0, avg_precision=1.0, kappa=1.0)
+2024-05-03 19:13:51:  Test - Task CHEMBL1918345 - Size   8 - Run 7 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:13:51: === Evaluating on CHEMBL1918345, #train 8, run 8
+2024-05-03 19:13:51:  Test - Task CHEMBL1918345 - Size   8 - Run 8 CHEMBL1918345:
+2024-05-03 19:13:51:  Test - Task CHEMBL1918345 - Size   8 - Run 8   Re-initialising task-specific parameters.
+2024-05-03 19:13:59:  Test - Task CHEMBL1918345 - Size   8 - Run 8  Test metrics: BinaryEvalMetrics(size=5, acc=0.6, balanced_acc=0.5833333333333333, f1=0.5, prec=0.5, recall=0.5, roc_auc=0.6666666666666667, avg_precision=0.75, kappa=0.16666666666666663)
+2024-05-03 19:13:59:  Test - Task CHEMBL1918345 - Size   8 - Run 8 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:13:59: === Evaluating on CHEMBL1918345, #train 8, run 9
+2024-05-03 19:13:59:  Test - Task CHEMBL1918345 - Size   8 - Run 9 CHEMBL1918345:
+2024-05-03 19:14:00:  Test - Task CHEMBL1918345 - Size   8 - Run 9   Re-initialising task-specific parameters.
+2024-05-03 19:14:02:  Test - Task CHEMBL1918345 - Size   8 - Run 9  Test metrics: BinaryEvalMetrics(size=5, acc=0.6, balanced_acc=0.6666666666666666, f1=0.6666666666666666, prec=0.5, recall=1.0, roc_auc=0.6666666666666667, avg_precision=0.75, kappa=0.2857142857142857)
+2024-05-03 19:14:02:  Test - Task CHEMBL1918345 - Size   8 - Run 9 Dataset sample has 0.4000 positive label ratio in test data.
+2024-05-03 19:14:02: === Evaluating on CHEMBL1107216, #train 8, run 0
+2024-05-03 19:14:02:  Test - Task CHEMBL1107216 - Size   8 - Run 0 CHEMBL1107216:
+2024-05-03 19:14:02:  Test - Task CHEMBL1107216 - Size   8 - Run 0   Re-initialising task-specific parameters.
+2024-05-03 19:14:04:  Test - Task CHEMBL1107216 - Size   8 - Run 0  Test metrics: BinaryEvalMetrics(size=34, acc=0.5588235294117647, balanced_acc=0.5265151515151515, f1=0.4, prec=0.38461538461538464, recall=0.4166666666666667, roc_auc=0.5568181818181819, avg_precision=0.512051139555402, kappa=0.052044609665427566)
+2024-05-03 19:14:04:  Test - Task CHEMBL1107216 - Size   8 - Run 0 Dataset sample has 0.3529 positive label ratio in test data.
+2024-05-03 19:14:04: === Evaluating on CHEMBL1107216, #train 8, run 1
+2024-05-03 19:14:04:  Test - Task CHEMBL1107216 - Size   8 - Run 1 CHEMBL1107216:
+2024-05-03 19:14:05:  Test - Task CHEMBL1107216 - Size   8 - Run 1   Re-initialising task-specific parameters.
+2024-05-03 19:14:07:  Test - Task CHEMBL1107216 - Size   8 - Run 1  Test metrics: BinaryEvalMetrics(size=34, acc=0.6176470588235294, balanced_acc=0.4962121212121212, f1=0.13333333333333333, prec=0.3333333333333333, recall=0.08333333333333333, roc_auc=0.553030303030303, avg_precision=0.4601615887964649, kappa=-0.00913242009132409)
+2024-05-03 19:14:07:  Test - Task CHEMBL1107216 - Size   8 - Run 1 Dataset sample has 0.3529 positive label ratio in test data.
+2024-05-03 19:14:07: === Evaluating on CHEMBL1107216, #train 8, run 2
+2024-05-03 19:14:07:  Test - Task CHEMBL1107216 - Size   8 - Run 2 CHEMBL1107216:
+2024-05-03 19:14:07:  Test - Task CHEMBL1107216 - Size   8 - Run 2   Re-initialising task-specific parameters.
+2024-05-03 19:14:09:  Test - Task CHEMBL1107216 - Size   8 - Run 2  Test metrics: BinaryEvalMetrics(size=34, acc=0.7058823529411765, balanced_acc=0.6590909090909092, f1=0.5454545454545454, prec=0.6, recall=0.5, roc_auc=0.7537878787878787, avg_precision=0.6560591820460242, kappa=0.3307086614173228)
+2024-05-03 19:14:09:  Test - Task CHEMBL1107216 - Size   8 - Run 2 Dataset sample has 0.3529 positive label ratio in test data.
+2024-05-03 19:14:09: === Evaluating on CHEMBL1107216, #train 8, run 3
+2024-05-03 19:14:09:  Test - Task CHEMBL1107216 - Size   8 - Run 3 CHEMBL1107216:
+2024-05-03 19:14:10:  Test - Task CHEMBL1107216 - Size   8 - Run 3   Re-initialising task-specific parameters.
+2024-05-03 19:14:17:  Test - Task CHEMBL1107216 - Size   8 - Run 3  Test metrics: BinaryEvalMetrics(size=34, acc=0.6764705882352942, balanced_acc=0.6553030303030303, f1=0.5599999999999999, prec=0.5384615384615384, recall=0.5833333333333334, roc_auc=0.6628787878787878, avg_precision=0.5636607970489549, kappa=0.3048327137546468)
+2024-05-03 19:14:17:  Test - Task CHEMBL1107216 - Size   8 - Run 3 Dataset sample has 0.3529 positive label ratio in test data.
+2024-05-03 19:14:17: === Evaluating on CHEMBL1107216, #train 8, run 4
+2024-05-03 19:14:17:  Test - Task CHEMBL1107216 - Size   8 - Run 4 CHEMBL1107216:
+2024-05-03 19:14:18:  Test - Task CHEMBL1107216 - Size   8 - Run 4   Re-initialising task-specific parameters.
+2024-05-03 19:14:19:  Test - Task CHEMBL1107216 - Size   8 - Run 4  Test metrics: BinaryEvalMetrics(size=34, acc=0.6470588235294118, balanced_acc=0.5757575757575758, f1=0.4, prec=0.5, recall=0.3333333333333333, roc_auc=0.6022727272727273, avg_precision=0.4573792586723621, kappa=0.16393442622950816)
+2024-05-03 19:14:19:  Test - Task CHEMBL1107216 - Size   8 - Run 4 Dataset sample has 0.3529 positive label ratio in test data.
+2024-05-03 19:14:19: === Evaluating on CHEMBL1107216, #train 8, run 5
+2024-05-03 19:14:19:  Test - Task CHEMBL1107216 - Size   8 - Run 5 CHEMBL1107216:
+2024-05-03 19:14:20:  Test - Task CHEMBL1107216 - Size   8 - Run 5   Re-initialising task-specific parameters.
+2024-05-03 19:14:24:  Test - Task CHEMBL1107216 - Size   8 - Run 5  Test metrics: BinaryEvalMetrics(size=34, acc=0.4117647058823529, balanced_acc=0.356060606060606, f1=0.16666666666666666, prec=0.16666666666666666, recall=0.16666666666666666, roc_auc=0.33712121212121215, avg_precision=0.29219527566250103, kappa=-0.28787878787878785)
+2024-05-03 19:14:24:  Test - Task CHEMBL1107216 - Size   8 - Run 5 Dataset sample has 0.3529 positive label ratio in test data.
+2024-05-03 19:14:24: === Evaluating on CHEMBL1107216, #train 8, run 6
+2024-05-03 19:14:24:  Test - Task CHEMBL1107216 - Size   8 - Run 6 CHEMBL1107216:
+2024-05-03 19:14:24:  Test - Task CHEMBL1107216 - Size   8 - Run 6   Re-initialising task-specific parameters.
+2024-05-03 19:14:26:  Test - Task CHEMBL1107216 - Size   8 - Run 6  Test metrics: BinaryEvalMetrics(size=34, acc=0.5294117647058824, balanced_acc=0.5037878787878788, f1=0.3846153846153846, prec=0.35714285714285715, recall=0.4166666666666667, roc_auc=0.5643939393939394, avg_precision=0.501905152835628, kappa=0.007299270072992692)
+2024-05-03 19:14:26:  Test - Task CHEMBL1107216 - Size   8 - Run 6 Dataset sample has 0.3529 positive label ratio in test data.
+2024-05-03 19:14:26: === Evaluating on CHEMBL1107216, #train 8, run 7
+2024-05-03 19:14:26:  Test - Task CHEMBL1107216 - Size   8 - Run 7 CHEMBL1107216:
+2024-05-03 19:14:27:  Test - Task CHEMBL1107216 - Size   8 - Run 7   Re-initialising task-specific parameters.
