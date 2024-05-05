@@ -109,6 +109,13 @@ def parse_command_line():
         help="Path to a pretrained GNN model to use as a starting point.",
     )
 
+    parser.add_argument(
+        "--pretrained_pn",
+        type=str,
+        default=None,
+        help="Path to a pretrained ProtoNet model to use as a starting point.",
+    )
+
     args = parser.parse_args()
     return args
 
@@ -150,6 +157,11 @@ def main():
     if args.pretrained_gnn is not None:
         logger.info(f"Loading pretrained GNN weights from {args.pretrained_gnn}.")
         model_trainer.load_model_gnn_weights(path=args.pretrained_gnn, device=device)
+
+    if args.pretrained_pn is not None:
+        logger.info(f"Loading pretrained ProtoNet weights from {args.pretrained_pn}.")
+        # Load task specific weights does not seem to be used, but is a required argument
+        model_trainer.load_model_pn_weights(path=args.pretrained_pn, device=device)
 
     model_trainer.train_loop(out_dir, dataset, device, aml_run)
 

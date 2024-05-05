@@ -905,8 +905,10 @@ def make_box_plot(
 
     if highlight_class is not None:
         hc = highlight_class
+        bp_dict.ax.set_title(f"Comparison of models with {support_set_size} train points, {highlight_class}")
     else:
         hc = "all"
+        bp_dict.ax.set_title(f"Comparison of models with {support_set_size} train points")
 
     # CHANGED BECAUSE SUPERCLOUD WAS BUGGING
     if plot_output_dir is not None:
@@ -1032,7 +1034,7 @@ def plot_by_size(
         if cls == "all":
             label = model_name
             lw = 1.3
-            ls = "-"
+            ls = "dotted"
             alpha = 1.0
         else:
             label = f"{model_name}, {cls}"
@@ -1097,7 +1099,7 @@ def plot_by_size(
     ax.set_xlabel("$|\mathcal{T}_{u, support}|$")
     ax.set_xticks(train_sizes)
     ax.set_xticklabels(train_sizes)
-    ax.set_ylim([0.0, 0.35])
+    ax.set_ylim([0.0, 0.4])
     plt.grid(True, color="grey", alpha=0.3, linestyle="--")
 
     if plot_output_dir is not None:

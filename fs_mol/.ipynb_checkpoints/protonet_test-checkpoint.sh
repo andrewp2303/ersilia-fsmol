@@ -1,6 +1,6 @@
 #!/bin/bash -l
-#SBATCH -o protonet_test.sh.log-05-03-support-04
-#SBATCH -c 20
+# SBATCH -o protonet_test.sh.log-05-03-support-04
+# SBATCH -c 20
 
 module unload anaconda
 module load anaconda/2023a

@@ -1,0 +1,41 @@
+2024-05-03 22:29:08: Identified 1487 training tasks.
+2024-05-03 22:29:08: Identified 78 validation tasks.
+2024-05-03 22:29:08: Identified 200 test tasks.
+2024-05-03 22:29:08: Starting test run FSMol_Eval_randomForest_2024-05-03_22-29-08 on 200 assays
+2024-05-03 22:29:08: 	Arguments: Namespace(DATA_PATH=['/home/gridsan/ppaschalidis/Ersilia-FS/dataset/min_size_08'], task_list_file='datasets/fsmol-0.1.json', save_dir='/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/outputs/test/FSMol_Eval_randomForest_2024-05-03-support-08', num_runs=5, seed=0, train_sizes=[8], test_size=None, model='randomForest', grid_search=True, model_params={}, debug=False)
+2024-05-03 22:29:08: 	Output dir: /home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/outputs/test/FSMol_Eval_randomForest_2024-05-03-support-08/FSMol_Eval_randomForest_2024-05-03_22-29-08
+2024-05-03 22:29:08: === Evaluating on CHEMBL1918345, #train 8, run 0
+2024-05-03 22:29:08:  Test - Task CHEMBL1918345 - Size   8 - Run 0 CHEMBL1918345:
+2024-05-03 22:29:08:  Test - Task CHEMBL1918345 - Size   8 - Run 0  Training randomForest with 8 datapoints.
+Traceback (most recent call last):
+  File "/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/baseline_test.py", line 158, in <module>
+    run()
+  File "/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/baseline_test.py", line 154, in run
+    run_and_debug(lambda: run_from_args(args), args.debug)
+  File "/home/gridsan/ppaschalidis/.local/lib/python3.9/site-packages/dpu_utils/utils/debughelper.py", line 21, in run_and_debug
+    func()
+  File "/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/baseline_test.py", line 154, in <lambda>
+    run_and_debug(lambda: run_from_args(args), args.debug)
+  File "/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/baseline_test.py", line 109, in run_from_args
+    eval_model(
+  File "/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/utils/test_utils.py", line 237, in eval_model
+    test_metrics = test_model_fn(task_sample, temp_out_folder, local_seed)
+  File "/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/baseline_test.py", line 102, in test_model_fn
+    return test(
+  File "/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/baseline_test.py", line 75, in test
+    grid_search.fit(X_train, y_train)
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_search.py", line 874, in fit
+    self._run_search(evaluate_candidates)
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_search.py", line 1388, in _run_search
+    evaluate_candidates(ParameterGrid(self.param_grid))
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_search.py", line 833, in evaluate_candidates
+    for (cand_idx, parameters), (split_idx, (train, test)) in product(
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_split.py", line 352, in split
+    for train, test in super().split(X, y, groups):
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_split.py", line 85, in split
+    for test_index in self._iter_test_masks(X, y, groups):
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_split.py", line 733, in _iter_test_masks
+    test_folds = self._make_test_folds(X, y)
+  File "/state/partition1/llgrid/pkg/anaconda/anaconda3-2023a/lib/python3.9/site-packages/sklearn/model_selection/_split.py", line 695, in _make_test_folds
+    raise ValueError(
+ValueError: n_splits=5 cannot be greater than the number of members in each class.
