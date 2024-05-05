@@ -295,7 +295,8 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
         self.optimizer = torch.optim.Adam(
             [
                 {"params": other_params, "lr": self.config.learning_rate},
-                {"params": gnn_params, "lr": self.config.learning_rate / 10},
+                # {"params": gnn_params, "lr": self.config.learning_rate / 10},
+                {"params": gnn_params, "lr": self.config.learning_rate},
             ],
         )
 
@@ -303,7 +304,8 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
             optimizer=self.optimizer,
             lr_lambda=[
                 partial(linear_warmup, warmup_steps=0),  # for all params
-                partial(linear_warmup, warmup_steps=100),  # for loaded GNN params
+                # partial(linear_warmup, warmup_steps=100),  # for loaded GNN params
+                partial(linear_warmup, warmup_steps=0),  # for loaded GNN params
             ],
         )
 
