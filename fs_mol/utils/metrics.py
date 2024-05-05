@@ -39,11 +39,7 @@ def compute_binary_task_metrics(predictions: List[float], labels: List[float]) -
         pred >= 0.5 for pred in predictions
     ]  # Normalise probabilities to bool values
 
-    print("------------------------------------------------------")
-    print(f"Labels: {labels}")
-    print(f"Predictions: {predictions}")
-    print(f"Predictions contain nan: {np.isnan(predictions).any()}")
-    if np.sum(labels) == len(labels) or np.sum(labels) == 0 or np.isnan(predictions).any():
+    if np.sum(labels) == len(labels) or np.sum(labels) == 0:
         roc_auc = 0.0
         average_precision = 0.0
     else:
@@ -73,7 +69,8 @@ def avg_metrics_over_tasks(
     aggregated_metrics = {}
     for (task, results) in task_results.items():
         # this returns, for each task, a dictionary of aggregated results
-        aggregated_metrics[task] = avg_task_metrics_list(results)
+        if results != None:
+            aggregated_metrics[task] = avg_task_metrics_list(results)
 
     # compute the mean and std across tasks by going through values (drop within task stds)
     aggregated_over_tasks = {}
@@ -89,7 +86,6 @@ def avg_task_metrics_list(
     results: List[BinaryEvalMetrics],
 ) -> Dict[str, Tuple[float, float]]:
     aggregated_metrics = {}
-
     # Compute mean/std:
     for metric_field in dataclasses.fields(BinaryEvalMetrics):
         metric_values = [getattr(task_metrics, metric_field.name) for task_metrics in results]

@@ -100,7 +100,7 @@ def parse_command_line():
     )
     parser.add_argument("--lr", type=float, default=0.0001, help="Learning rate")
     parser.add_argument(
-        "--clip_value", type=float, default=1.0, help="Gradient norm clipping value"
+        "--clip_value", type=float, default=None, help="Gradient norm clipping value"
     )
     parser.add_argument(
         "--pretrained_gnn",
@@ -158,10 +158,10 @@ def main():
         logger.info(f"Loading pretrained GNN weights from {args.pretrained_gnn}.")
         model_trainer.load_model_gnn_weights(path=args.pretrained_gnn, device=device)
 
-    if args.pretrained_pn is not None:
-        logger.info(f"Loading pretrained ProtoNet weights from {args.pretrained_pn}.")
-        # Load task specific weights does not seem to be used, but is a required argument
-        model_trainer.load_model_pn_weights(path=args.pretrained_pn, device=device)
+    # if args.pretrained_pn is not None:
+    #     logger.info(f"Loading pretrained ProtoNet weights from {args.pretrained_pn}.")
+    #     # Load task specific weights does not seem to be used, but is a required argument
+    #     model_trainer.load_model_pn_weights(path=args.pretrained_pn, device=device)
 
     model_trainer.train_loop(out_dir, dataset, device, aml_run)
 

@@ -73,7 +73,6 @@ def run_on_batches(
     for batch_features, batch_labels in zip(batches, batch_labels):
         # Compute task loss
         batch_logits = model(batch_features)
-        print(batch_logits)
         batch_loss = model.compute_loss(batch_logits, batch_labels)
         # divide this batch loss by the total number of accumulation steps
         batch_loss = batch_loss / num_gradient_accumulation_steps
@@ -126,7 +125,8 @@ def evaluate_protonet_model(
             f"{pn_task_sample.task_name}:"
             f" {pn_task_sample.num_support_samples:3d} support samples,"
             f" {pn_task_sample.num_query_samples:3d} query samples."
-            f" Avg. prec. {result_metrics.avg_precision:.5f}.",
+            f" Avg. prec. {result_metrics.avg_precision:.5f}, "
+            f" Avg. auc {result_metrics.roc_auc:.5f}."
         )
 
         return result_metrics
@@ -373,11 +373,27 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
                 task_batch_metrics.append(task_metrics)
 
             # Now do a training step - run_on_batches will have accumulated gradients
+            total_norm = 0
+            params_with_grad = 0
+            params_without_grad = 0
+            for p in self.parameters():
+                if p.grad is not None:
+                    params_with_grad += len(p.grad)
+                    param_norm = p.grad.detach().data.norm(2)
+                    total_norm += param_norm.item() ** 2
+                else:
+                    params_without_grad += 1
+            total_norm = total_norm ** 0.5
+            print(f"Total norm: {total_norm}")
+            print(f"Params with grad: {params_with_grad}")
+            print(f"Params without grad: {params_without_grad}")
+
             if self.config.clip_value is not None:
                 torch.nn.utils.clip_grad_norm_(self.parameters(), self.config.clip_value)
             self.optimizer.step()
             if self.lr_scheduler is not None:
                 self.lr_scheduler.step()
+                print(f"Current learning rate: {self.lr_scheduler.get_last_lr()}")
 
             task_batch_mean_loss = np.mean(task_batch_losses)
             task_batch_avg_metrics = avg_task_metrics_list(task_batch_metrics)
@@ -386,10 +402,12 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
                 avg_prec=task_batch_avg_metrics["avg_precision"][0],
                 kappa=task_batch_avg_metrics["kappa"][0],
                 acc=task_batch_avg_metrics["acc"][0],
+                auc=task_batch_avg_metrics["roc_auc"][0],
             )
 
             if step % self.config.validate_every_num_steps == 0:
-                valid_metric = validate_by_finetuning_on_tasks(self, dataset, aml_run=aml_run)
+                # valid_metric = validate_by_finetuning_on_tasks(self, dataset, aml_run=aml_run)
+                valid_metric = validate_by_finetuning_on_tasks(self, dataset, aml_run=aml_run, metric_to_use="roc_auc")
 
                 if aml_run:
                     # printing some measure of loss on all validation tasks.
@@ -397,7 +415,8 @@ class PrototypicalNetworkTrainer(PrototypicalNetwork):
 
                 logger.info(
                     f"Validated at train step [{step}/{self.config.num_train_steps}],"
-                    f" Valid Avg. Prec.: {valid_metric:.3f}",
+                    # f" Valid Avg. Prec.: {valid_metric:.3f}",
+                    f" Valid AUC: {valid_metric:.3f}",
                 )
 
                 # save model if validation avg prec is the best so far
