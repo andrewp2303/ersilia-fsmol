@@ -677,16 +677,16 @@ def plot_task_performances_by_id(
         #         alpha=0.3,
         #     )
 
-    frac_pos_to_auprc_ax.set_xlabel("fraction positive points")
+    frac_pos_to_auprc_ax.set_xlabel("Fraction positive points")
     frac_pos_to_auprc_ax.set_ylabel(f"Average precision with {support_set_size} train points")
     frac_pos_to_auprc_ax.legend()
     frac_pos_to_auprc_ax.set_xlim([0.29, 0.51])
-    frac_pos_to_auprc_ax.set_title(f"Class imbalance vs. AUPRC: $|T_s|$ = {support_set_size}")
+    frac_pos_to_auprc_ax.set_title(f"Class imbalance vs. Precision: $|T_s|$ = {support_set_size}")
 
     num_test_to_auprc_ax.set_xlabel("Number of test points")
     num_test_to_auprc_ax.set_ylabel(f"Average precision with {support_set_size} train points")
     num_test_to_auprc_ax.legend()
-    num_test_to_auprc_ax.set_title(f"Test set size vs. AUPRC: $|T_s|$ = {support_set_size}")
+    num_test_to_auprc_ax.set_title(f"Query set size vs. Precision: $|T_s|$ = {support_set_size}")
 
     # assay_id_to_improv_ax.set_xlabel("TASK ID")
     # assay_id_to_improv_ax.set_ylabel(f"AUPRC gain with {support_set_size} train points")
@@ -902,6 +902,10 @@ def make_box_plot(
         box.set_color(dark_color)
     for i, box in enumerate(bp_dict.lines["medians"]):
         box.set_color("black")
+
+    # Add vertical line for MHNfs
+    if support_set_size == 16 and highlight_class is None:
+        bp_dict.ax.axvline(x=.15473, color="red", linestyle="--", linewidth=1.5)
 
     if highlight_class is not None:
         hc = highlight_class
