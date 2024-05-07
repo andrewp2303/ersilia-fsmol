@@ -683,7 +683,7 @@ def plot_task_performances_by_id(
     frac_pos_to_auprc_ax.set_xlim([0.29, 0.51])
     frac_pos_to_auprc_ax.set_title(f"Class imbalance vs. Precision: $|T_s|$ = {support_set_size}")
 
-    num_test_to_auprc_ax.set_xlabel("Number of test points")
+    num_test_to_auprc_ax.set_xlabel("Number of query points")
     num_test_to_auprc_ax.set_ylabel(f"Average precision with {support_set_size} train points")
     num_test_to_auprc_ax.legend()
     num_test_to_auprc_ax.set_title(f"Query set size vs. Precision: $|T_s|$ = {support_set_size}")
@@ -909,10 +909,10 @@ def make_box_plot(
 
     if highlight_class is not None:
         hc = highlight_class
-        bp_dict.ax.set_title(f"Comparison of models with {support_set_size} train points, {highlight_class}")
+        bp_dict.ax.set_title(f"Comparison of models with {support_set_size} support molecules, {highlight_class}")
     else:
         hc = "all"
-        bp_dict.ax.set_title(f"Comparison of models with {support_set_size} train points")
+        bp_dict.ax.set_title(f"Comparison of models with {support_set_size} support molecules")
 
     # CHANGED BECAUSE SUPERCLOUD WAS BUGGING
     if plot_output_dir is not None:
@@ -1103,7 +1103,7 @@ def plot_by_size(
     ax.set_xlabel("$|\mathcal{T}_{u, support}|$")
     ax.set_xticks(train_sizes)
     ax.set_xticklabels(train_sizes)
-    ax.set_ylim([0.0, 0.4])
+    ax.set_ylim([0.0, 0.275])
     plt.grid(True, color="grey", alpha=0.3, linestyle="--")
 
     if plot_output_dir is not None:
