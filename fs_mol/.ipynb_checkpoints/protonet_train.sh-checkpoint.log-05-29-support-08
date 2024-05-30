@@ -1,0 +1,1271 @@
+2024-05-29 22:08:30: Starting train run FSMol_ProtoNet_gnn+ecfp+fc_2024-05-29_22-08-30.
+2024-05-29 22:08:30: 	Arguments: Namespace(DATA_PATH='/home/gridsan/ppaschalidis/Ersilia-FS/dataset/min_size_08', task_list_file='/home/gridsan/ppaschalidis/Ersilia-FS/dataset/min_size_08/entire_train_set.json', save_dir='outputs', seed=0, azureml_logging=False, features='gnn+ecfp+fc', distance_metric='mahalanobis', gnn_type='PNA', node_embed_dim=128, num_heads=4, per_head_dim=64, intermediate_dim=1024, message_function_depth=1, num_gnn_layers=10, readout_type='combined', readout_use_all_states=True, readout_num_heads=12, readout_head_dim=64, readout_output_dim=512, support_set_size=8, query_set_size=256, tasks_per_batch=16, batch_size=256, num_train_steps=10000, validate_every=50, validation_support_set_sizes=[8], validation_query_set_size=512, validation_num_samples=5, lr=0.0001, clip_value=None, pretrained_gnn=None, pretrained_pn=None)
+2024-05-29 22:08:30: 	Output dir: outputs/FSMol_ProtoNet_gnn+ecfp+fc_2024-05-29_22-08-30
+2024-05-29 22:08:30: 	Data path: /home/gridsan/ppaschalidis/Ersilia-FS/dataset/min_size_08
+2024-05-29 22:08:31: Identified 1487 training tasks.
+2024-05-29 22:08:31: Identified 78 validation tasks.
+2024-05-29 22:08:31: Identified 200 test tasks.
+2024-05-29 22:08:31: 	Device: cpu
+2024-05-29 22:08:31: 	Num parameters 19042338
+2024-05-29 22:08:31: 	Model:
+PrototypicalNetworkTrainer(
+  (graph_feature_extractor): GraphFeatureExtractor(
+    (init_node_proj): Linear(in_features=32, out_features=128, bias=False)
+    (gnn): GNN(
+      (gnn_blocks): ModuleList(
+        (0): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+        (1): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+        (2): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+        (3): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+        (4): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+        (5): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+        (6): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+        (7): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+        (8): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+        (9): GNNBlock(
+          (mp_layers): ModuleList(
+            (0): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (1): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (2): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+            (3): RelationalMultiAggrMP(
+              (message_fns): ModuleList(
+                (0): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (1): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+                (2): MLP(
+                  (_layers): Sequential(
+                    (0): Linear(in_features=64, out_features=192, bias=True)
+                  )
+                )
+              )
+            )
+          )
+          (msg_out_projection): Linear(in_features=3072, out_features=128, bias=True)
+          (mp_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (boom_layer): BOOMLayer(
+            (linear1): Linear(in_features=128, out_features=1024, bias=True)
+            (activation): LeakyReLU(negative_slope=0.01)
+            (dropout): Dropout(p=0.0, inplace=False)
+            (linear2): Linear(in_features=1024, out_features=128, bias=True)
+          )
+          (boom_norm_layer): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+          (dropout_layer): Dropout(p=0.0, inplace=False)
+        )
+      )
+    )
+    (readout): CombinedGraphReadout(
+      (_weighted_mean_pooler): MultiHeadWeightedGraphReadout(
+        (_scoring_module): MLP(
+          (_layers): Sequential(
+            (0): Linear(in_features=1408, out_features=768, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=768, out_features=12, bias=True)
+          )
+        )
+        (_transformation_mlp): MLP(
+          (_layers): Sequential(
+            (0): Linear(in_features=1408, out_features=768, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=768, out_features=768, bias=True)
+          )
+        )
+        (_combination_layer): Linear(in_features=768, out_features=512, bias=False)
+      )
+      (_weighted_sum_pooler): MultiHeadWeightedGraphReadout(
+        (_scoring_module): MLP(
+          (_layers): Sequential(
+            (0): Linear(in_features=1408, out_features=768, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=768, out_features=12, bias=True)
+          )
+        )
+        (_transformation_mlp): MLP(
+          (_layers): Sequential(
+            (0): Linear(in_features=1408, out_features=768, bias=True)
+            (1): ReLU()
+            (2): Linear(in_features=768, out_features=768, bias=True)
+          )
+        )
+        (_combination_layer): Linear(in_features=768, out_features=512, bias=False)
+      )
+      (_max_pooler): UnweightedGraphReadout(
+        (_combination_layer): Linear(in_features=1408, out_features=512, bias=False)
+      )
+      (_combination_layer): Linear(in_features=1536, out_features=512, bias=False)
+    )
+  )
+  (fc): Sequential(
+    (0): Linear(in_features=2560, out_features=1024, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=1024, out_features=512, bias=True)
+  )
+)
+2024-05-29 22:08:31: CHEMBL4682691:
+2024-05-29 22:08:31: CHEMBL886921:
+2024-05-29 22:08:31: CHEMBL2379640:
+2024-05-29 22:08:31: CHEMBL687993:
+2024-05-29 22:08:31: CHEMBL920118:
+2024-05-29 22:08:31: CHEMBL4198580:
+2024-05-29 22:08:31: CHEMBL4270096:
+2024-05-29 22:08:31: CHEMBL698868:
+2024-05-29 22:08:31: CHEMBL3751473:
+2024-05-29 22:08:31: CHEMBL4370846:
+2024-05-29 22:08:31: CHEMBL2167767:
+2024-05-29 22:08:31: CHEMBL2214224:
+2024-05-29 22:08:31: CHEMBL866518:
+2024-05-29 22:08:31: CHEMBL2211954:
+2024-05-29 22:08:31: CHEMBL4370759:
+2024-05-29 22:08:31: CHEMBL4370845:
+2024-05-29 22:08:31: CHEMBL1769611:
+2024-05-29 22:08:31: CHEMBL2344064:
+2024-05-29 22:08:31: CHEMBL3373177:
+2024-05-29 22:08:31: CHEMBL1763371:
+2024-05-29 22:08:31: CHEMBL890913:
+2024-05-29 22:08:31: CHEMBL4399377:
+2024-05-29 22:08:31: CHEMBL1671034:
+2024-05-29 22:08:31: CHEMBL1108884:
+2024-05-29 22:08:31: CHEMBL2046228:
+2024-05-29 22:08:31: CHEMBL2388192:
+2024-05-29 22:08:31: CHEMBL1781055:
+2024-05-29 22:08:31: CHEMBL4399381:
+2024-05-29 22:08:31: CHEMBL1063960:
+2024-05-29 22:08:31: CHEMBL708489:
+2024-05-29 22:08:31: CHEMBL1015953:
+2024-05-29 22:08:31: CHEMBL4221063:
+2024-05-29 22:08:31: CHEMBL1918324:
+2024-05-29 22:08:31: CHEMBL3107649:
+2024-05-29 22:08:31: CHEMBL2065304:
+2024-05-29 22:08:31: CHEMBL934825:
+2024-05-29 22:08:31: CHEMBL864212:
+2024-05-29 22:08:31: CHEMBL2399181:
+2024-05-29 22:08:31: CHEMBL3636663:
+2024-05-29 22:08:31: CHEMBL924496:
+2024-05-29 22:08:31: CHEMBL887561:
+2024-05-29 22:08:31: CHEMBL2033223:
+2024-05-29 22:08:31: CHEMBL714338:
+2024-05-29 22:08:31: CHEMBL805604:
+2024-05-29 22:08:31: CHEMBL1670948:
+2024-05-29 22:08:31: CHEMBL994933:
+2024-05-29 22:08:31: CHEMBL3285745:
+2024-05-29 22:08:31: CHEMBL3069079:
+2024-05-29 22:08:31: CHEMBL1030793:
+2024-05-29 22:08:31: CHEMBL706947:
+2024-05-29 22:08:31: CHEMBL659279:
+2024-05-29 22:08:31: CHEMBL2019358:
+2024-05-29 22:08:31: CHEMBL713546:
+2024-05-29 22:08:31: CHEMBL914626:
+2024-05-29 22:08:31: CHEMBL4179629:
+2024-05-29 22:08:31: CHEMBL4156213:
+2024-05-29 22:08:31: CHEMBL867244:
+2024-05-29 22:08:31: CHEMBL956847:
+2024-05-29 22:08:31: CHEMBL712346:
+2024-05-29 22:08:31: CHEMBL4052532:
+2024-05-29 22:08:31: CHEMBL3368544:
+2024-05-29 22:08:31: CHEMBL4264727:
+2024-05-29 22:08:31: CHEMBL3381607:
+2024-05-29 22:08:31: CHEMBL1027472:
+2024-05-29 22:08:31: CHEMBL989020:
+2024-05-29 22:08:31: CHEMBL4719106:
+2024-05-29 22:08:31: CHEMBL3778341:
+2024-05-29 22:08:31: CHEMBL2444618:
+2024-05-29 22:08:31: CHEMBL3389957:
+2024-05-29 22:08:31: CHEMBL1817497:
+2024-05-29 22:08:31: CHEMBL854478:
+2024-05-29 22:08:31: CHEMBL1116449:
+2024-05-29 22:08:31: CHEMBL1646984:
+2024-05-29 22:08:31: CHEMBL1931883:
+2024-05-29 22:08:31: CHEMBL4372507:
+2024-05-29 22:08:31: CHEMBL1960697:
+2024-05-29 22:08:31: CHEMBL1804248:
+2024-05-29 22:08:31: CHEMBL833571:
+2024-05-29 22:08:31: CHEMBL834755:
+2024-05-29 22:08:31: CHEMBL2404680:
+2024-05-29 22:08:31: CHEMBL698789:
+2024-05-29 22:08:31: CHEMBL918456:
+2024-05-29 22:08:31: CHEMBL3777089:
+2024-05-29 22:08:31: CHEMBL3072750:
+2024-05-29 22:08:31: CHEMBL3292845:
+2024-05-29 22:08:31: CHEMBL3135563:
+2024-05-29 22:08:31: CHEMBL4150520:
+2024-05-29 22:08:31: CHEMBL946070:
+2024-05-29 22:08:31: CHEMBL3813267:
+2024-05-29 22:08:31: CHEMBL894311:
+2024-05-29 22:08:31: CHEMBL2399065:
+2024-05-29 22:08:31: CHEMBL2149864:
+2024-05-29 22:08:31: CHEMBL1921081:
+2024-05-29 22:08:31: CHEMBL894319:
+2024-05-29 22:08:31: CHEMBL1821364:
+2024-05-29 22:08:31: CHEMBL1167859:
+2024-05-29 22:08:31: CHEMBL688531:
+2024-05-29 22:08:31: CHEMBL1047059:
+2024-05-29 22:08:31: CHEMBL3994830:
+2024-05-29 22:08:31: CHEMBL4320646:
+2024-05-29 22:08:31: CHEMBL908714:
+2024-05-29 22:08:31: CHEMBL1033992:
+2024-05-29 22:08:31: CHEMBL1051811:
+2024-05-29 22:08:31: CHEMBL981830:
+2024-05-29 22:08:31: CHEMBL3744583:
+2024-05-29 22:08:31: CHEMBL4330230:
+2024-05-29 22:08:31: CHEMBL3096264:
+2024-05-29 22:08:31: CHEMBL984427:
+2024-05-29 22:08:31: CHEMBL4340109:
+2024-05-29 22:08:31: CHEMBL4028610:
+2024-05-29 22:08:31: CHEMBL693410:
+2024-05-29 22:08:31: CHEMBL683837:
+2024-05-29 22:08:31: CHEMBL1913092:
+2024-05-29 22:08:31: CHEMBL697551:
+2024-05-29 22:08:31: CHEMBL3088979:
+2024-05-29 22:08:31: CHEMBL1918204:
+2024-05-29 22:08:31: CHEMBL804255:
+2024-05-29 22:08:31: CHEMBL4363567:
+2024-05-29 22:08:31: CHEMBL3626038:
+2024-05-29 22:08:31: CHEMBL2351677:
+2024-05-29 22:08:31: CHEMBL4404352:
+2024-05-29 22:08:31: CHEMBL4200978:
+2024-05-29 22:08:31: CHEMBL4270093:
+2024-05-29 22:08:31: CHEMBL4767523:
+2024-05-29 22:08:31: CHEMBL1794490:
+2024-05-29 22:08:31: CHEMBL965278:
+2024-05-29 22:08:31: CHEMBL703470:
+2024-05-29 22:08:32: CHEMBL891625:
+2024-05-29 22:08:33: CHEMBL2067378:
+2024-05-29 22:08:34: CHEMBL837207:
+2024-05-29 22:08:35: CHEMBL4179601:
+2024-05-29 22:08:35: CHEMBL3627571:
+2024-05-29 22:08:36: CHEMBL833301:
+2024-05-29 22:08:37: CHEMBL1053306:
+2024-05-29 22:08:38: CHEMBL4135245:
+2024-05-29 22:08:38: CHEMBL4376255:
+2024-05-29 22:08:39: CHEMBL1025578:
+2024-05-29 22:08:40: CHEMBL3095872:
+2024-05-29 22:08:41: CHEMBL2185499:
+2024-05-29 22:08:42: CHEMBL4413180:
+2024-05-29 22:08:42: CHEMBL2439550:
+2024-05-29 22:08:43: CHEMBL3405885:
+2024-05-29 22:08:45: CHEMBL1033168:
+2024-05-29 22:08:46: CHEMBL4370555:
+2024-05-29 22:08:47: CHEMBL688961:
+2024-05-29 22:08:48: CHEMBL3073615:
+2024-05-29 22:08:49: CHEMBL4768748:
+2024-05-29 22:08:50: CHEMBL4191767:
+2024-05-29 22:08:51: CHEMBL2405783:
+2024-05-29 22:08:52: CHEMBL984613:
+2024-05-29 22:08:52: CHEMBL4479167:
+2024-05-29 22:08:53: CHEMBL955136:
+2024-05-29 22:08:54: CHEMBL833080:
+2024-05-29 22:08:54: CHEMBL1260785:
+2024-05-29 22:08:55: CHEMBL1041899:
+2024-05-29 22:08:55: CHEMBL4477285:
+2024-05-29 22:08:57: CHEMBL840816:
+2024-05-29 22:08:57: CHEMBL3108605:
+2024-05-29 22:08:59: CHEMBL917119:
+2024-05-29 22:09:00: CHEMBL2215319:
+2024-05-29 22:09:01: CHEMBL1961051:
+2024-05-29 22:09:02: CHEMBL3128794:
+2024-05-29 22:09:02: CHEMBL687030:
+2024-05-29 22:09:03: CHEMBL969630:
+2024-05-29 22:09:04: CHEMBL3999678:
+2024-05-29 22:09:05: CHEMBL890420:
+2024-05-29 22:09:06: CHEMBL837535:
+2024-05-29 22:09:06: CHEMBL824904:
+2024-05-29 22:09:07: CHEMBL3124190:
+2024-05-29 22:09:11: CHEMBL930744:
+2024-05-29 22:09:12: CHEMBL906386:
+2024-05-29 22:09:12: CHEMBL3122917:
+2024-05-29 22:09:14: CHEMBL656278:
+2024-05-29 22:09:14: CHEMBL3626039:
+2024-05-29 22:09:16: CHEMBL698165:
+2024-05-29 22:09:17: CHEMBL873604:
+2024-05-29 22:09:18: CHEMBL713248:
+2024-05-29 22:09:19: CHEMBL1961319:
+2024-05-29 22:09:19: CHEMBL3389955:
+2024-05-29 22:09:21: CHEMBL1932094:
+2024-05-29 22:09:22: CHEMBL1913090:
+2024-05-29 22:09:23: CHEMBL4002828:
+2024-05-29 22:09:24: CHEMBL906554:
+2024-05-29 22:09:24: CHEMBL2039289:
+2024-05-29 22:09:25: CHEMBL3131181:
+2024-05-29 22:09:25: CHEMBL1827050:
+2024-05-29 22:09:26: CHEMBL4044822:
+2024-05-29 22:09:27: CHEMBL2382461:
+2024-05-29 22:09:28: CHEMBL4184680:
+2024-05-29 22:09:30: CHEMBL3094978:
+2024-05-29 22:09:32: CHEMBL3788085:
+2024-05-29 22:09:32: CHEMBL4220815:
+2024-05-29 22:09:33: CHEMBL818608:
+2024-05-29 22:09:34: CHEMBL2015865:
+2024-05-29 22:09:35: CHEMBL867249:
+2024-05-29 22:09:36: CHEMBL3240111:
+2024-05-29 22:09:37: CHEMBL2339579:
+2024-05-29 22:09:38: CHEMBL4684118:
+2024-05-29 22:09:39: CHEMBL1051809:
+2024-05-29 22:09:40: CHEMBL4721621:
+2024-05-29 22:09:41: CHEMBL939856:
+2024-05-29 22:09:42: CHEMBL3606651:
+2024-05-29 22:09:42: CHEMBL892824:
+2024-05-29 22:09:43: CHEMBL1072701:
+2024-05-29 22:09:43: CHEMBL1073832:
+2024-05-29 22:09:44: CHEMBL1041082:
+2024-05-29 22:09:46: CHEMBL1032546:
+2024-05-29 22:09:46: CHEMBL3292859:
+2024-05-29 22:09:47: CHEMBL909968:
+2024-05-29 22:09:47: CHEMBL1071243:
+2024-05-29 22:09:48: CHEMBL3088594:
+2024-05-29 22:09:49: CHEMBL995902:
+2024-05-29 22:09:50: CHEMBL980716:
+2024-05-29 22:09:51: CHEMBL4335367:
+2024-05-29 22:09:52: CHEMBL833117:
+2024-05-29 22:09:52: CHEMBL2383183:
+2024-05-29 22:09:53: CHEMBL1100447:
+2024-05-29 22:09:53: CHEMBL4012796:
+2024-05-29 22:09:54: CHEMBL3106982:
+2024-05-29 22:09:55: CHEMBL705091:
+2024-05-29 22:09:55: CHEMBL4019374:
+2024-05-29 22:09:56: CHEMBL4056639:
+2024-05-29 22:09:58: CHEMBL833081:
+2024-05-29 22:09:59: CHEMBL4005386:
+2024-05-29 22:10:00: CHEMBL1259557:
+2024-05-29 22:10:01: CHEMBL1046345:
+2024-05-29 22:10:01: CHEMBL2344303:
+2024-05-29 22:10:04: CHEMBL4770785:
+2024-05-29 22:10:05: CHEMBL3122259:
+2024-05-29 22:10:05: CHEMBL4150681:
+2024-05-29 22:10:06: CHEMBL1053167:
+2024-05-29 22:10:07: CHEMBL655136:
+2024-05-29 22:10:08: CHEMBL3421428:
+2024-05-29 22:10:08: CHEMBL1816086:
+2024-05-29 22:10:09: CHEMBL3271228:
+2024-05-29 22:10:10: CHEMBL4256494:
+2024-05-29 22:10:11: CHEMBL2215188:
+2024-05-29 22:10:12: CHEMBL4369768:
+2024-05-29 22:10:14: CHEMBL906000:
+2024-05-29 22:10:15: CHEMBL4054625:
+2024-05-29 22:10:15: CHEMBL833082:
+2024-05-29 22:10:15: CHEMBL683621:
+2024-05-29 22:10:16: CHEMBL1032387:
+2024-05-29 22:10:17: CHEMBL1067297:
+2024-05-29 22:10:18: CHEMBL1118335:
+2024-05-29 22:10:18: CHEMBL2393999:
+2024-05-29 22:10:18: CHEMBL1833573:
+2024-05-29 22:10:19: CHEMBL1794497:
+2024-05-29 22:10:19: CHEMBL1033787:
+2024-05-29 22:10:20: CHEMBL648369:
+2024-05-29 22:10:22: CHEMBL3242444:
+2024-05-29 22:10:23: CHEMBL3243833:
+2024-05-29 22:10:24: CHEMBL2037884:
+2024-05-29 22:10:24: CHEMBL4629182:
+2024-05-29 22:10:25: CHEMBL918567:
+2024-05-29 22:10:25: CHEMBL1000357:
+2024-05-29 22:10:26: CHEMBL756465:
+2024-05-29 22:10:26: CHEMBL3794968:
+2024-05-29 22:10:27: CHEMBL4191875:
+2024-05-29 22:10:28: CHEMBL921449:
+2024-05-29 22:10:28: CHEMBL933048:
+2024-05-29 22:10:29: CHEMBL698085:
+2024-05-29 22:10:30: CHEMBL4775018:
+2024-05-29 22:10:30: CHEMBL3094976:
+2024-05-29 22:10:31: CHEMBL833354:
+2024-05-29 22:10:31: CHEMBL3412552:
+2024-05-29 22:10:32: CHEMBL858832:
+2024-05-29 22:10:33: CHEMBL1031556:
+2024-05-29 22:10:33: CHEMBL2072116:
+2024-05-29 22:10:34: CHEMBL956772:
+2024-05-29 22:10:35: CHEMBL1646096:
+2024-05-29 22:10:36: CHEMBL711578:
+2024-05-29 22:10:36: CHEMBL3088595:
+2024-05-29 22:10:39: CHEMBL894312:
+2024-05-29 22:10:39: CHEMBL2439404:
+2024-05-29 22:10:40: CHEMBL684714:
+2024-05-29 22:10:41: CHEMBL4179602:
+2024-05-29 22:10:42: CHEMBL4044824:
+2024-05-29 22:10:43: CHEMBL4610431:
+2024-05-29 22:10:44: CHEMBL4328848:
+2024-05-29 22:10:45: CHEMBL4011459:
+2024-05-29 22:10:46: CHEMBL4434230:
+2024-05-29 22:10:48: CHEMBL956777:
+2024-05-29 22:10:48: CHEMBL4349578:
+2024-05-29 22:10:49: CHEMBL4150684:
+2024-05-29 22:10:49: CHEMBL4401326:
+2024-05-29 22:10:50: CHEMBL968905:
+2024-05-29 22:10:51: CHEMBL4039492:
+2024-05-29 22:10:51: CHEMBL1930594:
+2024-05-29 22:10:52:  Step 0010 || Mean metrics so far: loss: 0.64814, avg_prec: 0.72504, kappa: 0.24768, acc: 0.66995, auc: 0.64104 || This window: loss: 0.64814, avg_prec: 0.72504, kappa: 0.24768, acc: 0.66995, auc: 0.64104
+2024-05-29 22:10:52: CHEMBL1012640:
+2024-05-29 22:10:52: CHEMBL1925638:
+2024-05-29 22:10:53: CHEMBL1931089:
+2024-05-29 22:10:54: CHEMBL4775027:
+2024-05-29 22:10:54: CHEMBL4179593:
+2024-05-29 22:10:55: CHEMBL2173142:
+2024-05-29 22:10:55: CHEMBL4152920:
+2024-05-29 22:10:56: CHEMBL4770527:
+2024-05-29 22:10:57: CHEMBL950929:
+2024-05-29 22:10:58: CHEMBL715738:
+2024-05-29 22:10:58: CHEMBL4256493:
+2024-05-29 22:10:59: CHEMBL3796331:
+2024-05-29 22:11:00: CHEMBL3243451:
+2024-05-29 22:11:00: CHEMBL2339577:
+2024-05-29 22:11:01: CHEMBL1116129:
+2024-05-29 22:11:01: CHEMBL977321:
+2024-05-29 22:11:02: CHEMBL1259551:

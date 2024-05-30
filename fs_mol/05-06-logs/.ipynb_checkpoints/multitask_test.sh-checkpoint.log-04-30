@@ -1,0 +1,8 @@
+2024-04-30 16:45:21: Identified 1226 training tasks.
+2024-04-30 16:45:21: Identified 39 validation tasks.
+2024-04-30 16:45:21: Identified 200 test tasks.
+2024-04-30 16:45:21: Starting test run FSMol_Eval_Multitask_2024-04-30_16-45-21 on 200 assays
+2024-04-30 16:45:21: 	Arguments: Namespace(TRAINED_MODEL='/home/gridsan/ppaschalidis/Ersilia-FS/weights/multitask_best_model.pt', DATA_PATH=['/home/gridsan/ppaschalidis/Ersilia-FS/dataset'], task_list_file='datasets/fsmol-0.1.json', save_dir='outputs', num_runs=10, seed=0, train_sizes=[16], test_size=None, batch_size=128, use_fresh_param_init=False, learning_rate=5e-05, task_specific_lr=0.0001)
+2024-04-30 16:45:21: 	Output dir: outputs/FSMol_Eval_Multitask_2024-04-30_16-45-21
+2024-04-30 16:45:21: Using model weights loaded from /home/gridsan/ppaschalidis/Ersilia-FS/weights/multitask_best_model.pt.
+2024-04-30 16:45:21: === Evaluating on CHEMBL1033992, #train 16, run 0

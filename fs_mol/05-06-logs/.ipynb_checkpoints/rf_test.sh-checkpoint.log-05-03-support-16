@@ -1,0 +1,14 @@
+2024-05-03 22:07:07: Identified 655 training tasks.
+2024-05-03 22:07:07: Identified 34 validation tasks.
+2024-05-03 22:07:07: Identified 200 test tasks.
+2024-05-03 22:07:07: Starting test run FSMol_Eval_randomForest_2024-05-03_22-07-07 on 200 assays
+2024-05-03 22:07:07: 	Arguments: Namespace(DATA_PATH=['/home/gridsan/ppaschalidis/Ersilia-FS/dataset/min_size_16'], task_list_file='datasets/fsmol-0.1.json', save_dir='/home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/outputs/test/FSMol_Eval_randomForest_2024-05-03-support-16', num_runs=5, seed=0, train_sizes=[16], test_size=None, model='randomForest', grid_search=True, model_params={}, debug=False)
+2024-05-03 22:07:07: 	Output dir: /home/gridsan/ppaschalidis/Ersilia-FS/fs_mol/outputs/test/FSMol_Eval_randomForest_2024-05-03-support-16/FSMol_Eval_randomForest_2024-05-03_22-07-07
+2024-05-03 22:07:07: === Evaluating on CHEMBL1033643, #train 16, run 0
+2024-05-03 22:07:07:  Test - Task CHEMBL1033643 - Size  16 - Run 0 CHEMBL1033643:
+2024-05-03 22:07:07:  Test - Task CHEMBL1033643 - Size  16 - Run 0  Training randomForest with 16 datapoints.
+2024-05-03 22:07:44:  Test - Task CHEMBL1033643 - Size  16 - Run 0  Test metrics: BinaryEvalMetrics(size=3, acc=0.3333333333333333, balanced_acc=0.25, f1=0.0, prec=0.0, recall=0.0, roc_auc=0.5, avg_precision=0.5, kappa=-0.5)
+2024-05-03 22:07:44:  Test - Task CHEMBL1033643 - Size  16 - Run 0  Dataset sample has 0.3333 positive label ratio in test data.
+2024-05-03 22:07:44: === Evaluating on CHEMBL1033643, #train 16, run 1
+2024-05-03 22:07:44:  Test - Task CHEMBL1033643 - Size  16 - Run 1 CHEMBL1033643:
+2024-05-03 22:07:44:  Test - Task CHEMBL1033643 - Size  16 - Run 1  Training randomForest with 16 datapoints.

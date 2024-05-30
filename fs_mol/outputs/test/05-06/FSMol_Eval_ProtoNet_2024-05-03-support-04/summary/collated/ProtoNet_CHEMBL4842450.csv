@@ -1,0 +1,2 @@
+num_train_requested,num_train,fraction_positive_train,num_test,fraction_positive_test,valid_score,average_precision_score,roc_auc,acc,balanced_acc,precision,recall,f1_score,delta_auprc,acc_std,average_precision_score_std,balanced_acc_std,delta_auprc_std,f1_score_std,fraction_positive_test_std,fraction_positive_train_std,precision_std,recall_std,roc_auc_std,valid_score_std
+4,4.0,0.5,7.0,0.4285714285714285,,1.0,1.0,0.8,0.825,0.72,1.0,0.8261904761904761,0.5714285714285714,0.1535668142533057,0.0,0.13437096247164249,0.0,0.11867667074615078,0.0,0.0,0.17826322609494585,0.0,0.0,
